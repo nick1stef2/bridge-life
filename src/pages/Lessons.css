@@ -1,0 +1,49 @@
+.lessons-page {
+  padding: 30px;
+}
+
+.lessons-title {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 24px;
+}
+
+.lesson-card {
+  background: #1c2229;
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lesson-card:hover {
+  transform: translateY(-6px);
+  background: #252d36;
+}
+
+.lesson-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.lesson-content {
+  padding: 20px;
+}
+
+.lesson-content h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.lesson-content p {
+  color: #bbbbbb;
+}

@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101418;
+  color: white;
+}
+
+.app {
+  padding: 30px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 20px;
+  color: #bbbbbb;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1c2229;
+  padding: 25px;
+  border-radius: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #252d36;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #bbbbbb;
+}
+.card-link {
+  text-decoration: none;
+  color: white;
+}
