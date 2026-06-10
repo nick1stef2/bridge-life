@@ -2,6 +2,7 @@ import "./index.css";
 import { Routes, Route, Link } from "react-router-dom";
 
 import Lessons from "./pages/Lessons";
+import LessonDetail from "./pages/LessonDetail";
 
 function HomePage() {
   return (
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/lessons" element={<Lessons />} />
+        <Route path="/lesson/:lessonId" element={<LessonDetail />} />
       </Routes>
     </div>
   );
