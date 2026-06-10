@@ -9,7 +9,6 @@ import opening2clubsImg from "../assets/images/lessons/opening-2-clubs.jpg";
 import opening2ntImg from "../assets/images/lessons/opening-2nt.jpg";
 import majorOpeningImg from "../assets/images/lessons/major-opening-rules.jpg";
 import minorOpeningImg from "../assets/images/lessons/minor-opening-rules.jpg";
-import minorOpening2Img from "../assets/images/lessons/minor-opening-rules-2.jpg";
 import preemptiveImg from "../assets/images/lessons/preemptive-openings.jpg";
 import overcallImg from "../assets/images/lessons/overcall-rules.jpg";
 import responseAfterOvercallImg from "../assets/images/lessons/response-after-overcall.jpg";
@@ -58,7 +57,7 @@ const lessons = {
 
   minor: {
     title: "Ανοίγματα Minor",
-    images: [minorOpeningImg, minorOpening2Img],
+    images: [minorOpeningImg],
   },
 
   preemptive: {
@@ -91,7 +90,7 @@ function LessonDetail() {
     return (
       <div style={{ padding: "30px" }}>
         <h2>Το μάθημα δεν βρέθηκε</h2>
-        <Link to="/lessons">⬅ Επιστροφή</Link>
+        <Link to="/lessons">⬅ Επιστροφή στα Μαθήματα</Link>
       </div>
     );
   }
