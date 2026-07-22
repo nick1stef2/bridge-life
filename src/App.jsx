@@ -3,6 +3,9 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import Lessons from "./pages/Lessons";
 import LessonDetail from "./pages/LessonDetail";
+import Results from "./pages/Results";
+import Gallery from "./pages/Gallery";
+import TournamentDetail from "./pages/TournamentDetail";
 
 function HomePage() {
   return (
@@ -25,15 +28,19 @@ function HomePage() {
           <p>Διανομές και αναλύσεις</p>
         </div>
 
-        <div className="card">
-          <h2>🏆 Results</h2>
-          <p>Αποτελέσματα αγώνων</p>
-        </div>
+        <Link to="/results" className="card-link">
+          <div className="card">
+            <h2>🏆 Results</h2>
+            <p>Αποτελέσματα αγώνων</p>
+          </div>
+        </Link>
 
-        <div className="card">
-          <h2>📸 Gallery</h2>
-          <p>Φωτογραφίες bridge</p>
-        </div>
+        <Link to="/gallery" className="card-link">
+          <div className="card">
+            <h2>📸 Gallery</h2>
+            <p>Φωτογραφίες bridge</p>
+          </div>
+        </Link>
 
         <div className="card">
           <h2>🎥 Videos</h2>
@@ -51,6 +58,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/lesson/:lessonId" element={<LessonDetail />} />
+        <Route path="/results" element={<Results />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/tournament/:tournamentId" element={<TournamentDetail />} />
       </Routes>
     </div>
   );
