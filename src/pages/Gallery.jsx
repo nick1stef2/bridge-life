@@ -5,15 +5,41 @@ import { galleryData } from "../data/galleryData";
 import "./Gallery.css";
 
 const filters = ["Όλα", "Αγώνες", "Μαθήματα", "Παρέες", "Εκδηλώσεις"];
+const missingValue = "—";
+
+function toDisplay(value) {
+  return value === null || value === undefined || value === "" ? missingValue : value;
+}
+
+function sortByDateDesc(a, b) {
+  if (a.date && b.date) {
+    return b.date.localeCompare(a.date);
+  }
+
+  if (a.date) {
+    return -1;
+  }
+
+  if (b.date) {
+    return 1;
+  }
+
+  return a.id.localeCompare(b.id);
+}
 
 function Gallery() {
   const [activeFilter, setActiveFilter] = useState("Όλα");
   const [selectedIndex, setSelectedIndex] = useState(null);
 
+  const uniqueGalleryItems = useMemo(
+    () => galleryData.filter((item) => !item.duplicateOf).sort(sortByDateDesc),
+    [],
+  );
+
   const filteredItems = useMemo(() => {
-    if (activeFilter === "Όλα") return galleryData;
-    return galleryData.filter((item) => item.category === activeFilter);
-  }, [activeFilter]);
+    if (activeFilter === "Όλα") return uniqueGalleryItems;
+    return uniqueGalleryItems.filter((item) => item.category === activeFilter);
+  }, [activeFilter, uniqueGalleryItems]);
 
   const selectedItem =
     selectedIndex === null ? null : filteredItems[selectedIndex] || null;
@@ -80,12 +106,12 @@ function Gallery() {
       <main className="gallery-grid">
         {filteredItems.map((item, index) => (
           <GalleryCard
-            key={`${item.title}-${item.date}`}
+            key={item.id}
             image={item.image}
-            title={item.title}
-            text={item.text}
-            date={item.date}
-            category={item.category}
+            title={toDisplay(item.title)}
+            text={toDisplay(item.description)}
+            date={toDisplay(item.date)}
+            category={toDisplay(item.category)}
             onClick={() => setSelectedIndex(index)}
           />
         ))}
@@ -96,7 +122,7 @@ function Gallery() {
           className="gallery-lightbox"
           role="dialog"
           aria-modal="true"
-          aria-label={selectedItem.title}
+          aria-label={toDisplay(selectedItem.title)}
           onClick={closeModal}
         >
           <button
@@ -124,12 +150,12 @@ function Gallery() {
             className="gallery-modal-content"
             onClick={(event) => event.stopPropagation()}
           >
-            <img src={selectedItem.image} alt={selectedItem.title} />
+            <img src={selectedItem.image} alt={toDisplay(selectedItem.title)} />
             <figcaption>
-              <span>{selectedItem.category}</span>
-              <h2>{selectedItem.title}</h2>
-              <time>{selectedItem.date}</time>
-              <p>{selectedItem.details || selectedItem.text}</p>
+              <span>{toDisplay(selectedItem.category)}</span>
+              <h2>{toDisplay(selectedItem.title)}</h2>
+              <time>{toDisplay(selectedItem.date)}</time>
+              <p>{toDisplay(selectedItem.description)}</p>
             </figcaption>
           </figure>
 
