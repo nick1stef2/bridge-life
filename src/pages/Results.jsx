@@ -28,6 +28,24 @@ function formatScore(value) {
   return `${value.toFixed(2).replace(".", ",")}%`;
 }
 
+function formatResultScore(result) {
+  const parsedScore = parseScore(result.score);
+
+  if (parsedScore === null) {
+    return missingValue;
+  }
+
+  return result.scoreType === "percentage" ? formatScore(parsedScore) : toDisplay(result.score);
+}
+
+function isPercentageResult(result) {
+  return (
+    result.eventFormat === "pairs" &&
+    result.scoreType === "percentage" &&
+    result.includeInPersonalStats !== false
+  );
+}
+
 function formatDate(date) {
   if (!date) {
     return missingValue;
@@ -51,7 +69,7 @@ function formatPlayerCategories(result) {
 
 function getPersonalScoredResults(results) {
   return results
-    .filter((result) => result.includeInPersonalStats !== false)
+    .filter(isPercentageResult)
     .map((result) => ({ ...result, scoreValue: parseScore(result.score) }))
     .filter((result) => result.scoreValue !== null);
 }
@@ -266,7 +284,7 @@ function Results() {
                   </td>
                   <td>{toDisplay(result.partner)}</td>
                   <td>{toDisplay(result.position)}</td>
-                  <td>{parseScore(result.score) !== null ? formatScore(parseScore(result.score)) : missingValue}</td>
+                  <td>{formatResultScore(result)}</td>
                   <td>{formatPlayerCategories(result)}</td>
                 </tr>
               ))}

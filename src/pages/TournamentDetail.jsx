@@ -25,12 +25,16 @@ function formatDate(date) {
   return year && month && day ? `${day}/${month}/${year}` : date;
 }
 
-function formatScore(score) {
-  if (!score) {
+function formatScore(tournament) {
+  if (!tournament.score) {
     return missingValue;
   }
 
-  return String(score).includes("%") ? score : `${score}%`;
+  if (tournament.scoreType !== "percentage") {
+    return tournament.score;
+  }
+
+  return String(tournament.score).includes("%") ? tournament.score : `${tournament.score}%`;
 }
 
 function formatPlayerCategories(tournament) {
@@ -49,7 +53,7 @@ function buildDetailItems(tournament) {
   return {
     results: [
       { label: "Θέση", value: toDisplay(tournament.position) },
-      { label: "Ποσοστό", value: formatScore(tournament.score) },
+      { label: tournament.scoreType === "percentage" ? "Ποσοστό" : "Σκορ", value: formatScore(tournament) },
       { label: "Σύνολο συμμετοχών", value: toDisplay(tournament.participants) },
       { label: "Master points / M", value: toDisplay(tournament.masterPoints) },
       { label: "Κατηγορίες παικτών", value: formatPlayerCategories(tournament) },
@@ -167,8 +171,8 @@ function TournamentDetail() {
           <strong>{toDisplay(tournament.position)}</strong>
         </article>
         <article>
-          <span>Ποσοστό</span>
-          <strong>{formatScore(tournament.score)}</strong>
+          <span>{tournament.scoreType === "percentage" ? "Ποσοστό" : "Σκορ"}</span>
+          <strong>{formatScore(tournament)}</strong>
         </article>
         <article>
           <span>Κατηγορίες παικτών</span>
