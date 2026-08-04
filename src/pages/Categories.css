@@ -45,7 +45,7 @@
 
 .categories-overview {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   margin-bottom: 24px;
 }
@@ -144,6 +144,47 @@
 
 .warning-text {
   margin: 0;
+  border-left: 4px solid #d9ae48;
+  background: #2b261b;
+  padding: 14px 16px;
+  color: #f1d99d;
+  font-weight: 700;
+}
+
+.pending-targets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.pending-targets div {
+  border: 1px solid #5d4b23;
+  border-radius: 14px;
+  background: #17140e;
+  padding: 16px;
+}
+
+.pending-targets span,
+.pending-targets small {
+  display: block;
+  color: #c9b98e;
+}
+
+.pending-targets strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 28px;
+}
+
+.remaining-points {
+  margin: 0;
+  border-radius: 14px;
+  background: #d9ae48;
+  color: #17140e;
+  padding: 16px;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .categories-section-heading {
@@ -214,6 +255,10 @@
   }
 
   .points-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pending-targets {
     grid-template-columns: 1fr;
   }
 }

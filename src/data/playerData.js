@@ -1,6 +1,6 @@
 export const playerData = {
-  currentCategory: 1,
-  currentCategoryName: "Κατηγορία Δ'",
+  officialCategory: 1,
+  officialCategoryName: "Κατηγορία Δ'",
   officialPoints: {
     black: 14,
     gold: 0,
@@ -10,11 +10,6 @@ export const playerData = {
     black: 872,
     gold: 35,
     platinum: 1.8,
-  },
-  nextCategory: {
-    blackNeeded: 86,
-    goldNeeded: 0,
-    platinumNeeded: 0,
   },
   officialStatus: {
     lastUpdated: "2026-05-03",

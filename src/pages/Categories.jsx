@@ -16,14 +16,36 @@ function formatDate(date) {
   return year && month && day ? `${day}/${month}/${year}` : date;
 }
 
-function getTotalBlackProgress(player) {
-  const officialBlack = Number(player.officialPoints.black) || 0;
-  const neededBlack = Number(player.nextCategory.blackNeeded) || 0;
-  const total = officialBlack + neededBlack;
+function toNumber(value) {
+  if (value === null || value === undefined || value === "") return 0;
+  return Number(String(value).replaceAll(".", "")) || 0;
+}
 
-  if (!total) return 0;
+function meetsCategory(points, category) {
+  return Object.entries(category.requiredPoints).every(
+    ([pointType, requirement]) =>
+      requirement === null || toNumber(points[pointType]) >= toNumber(requirement),
+  );
+}
 
-  return Math.min(100, Math.round((officialBlack / total) * 100));
+function getPendingEstimate(points, categories) {
+  const ascendingCategories = [...categories].sort(
+    (first, second) => first.category - second.category,
+  );
+  const estimatedCategory = [...ascendingCategories]
+    .reverse()
+    .find((category) => meetsCategory(points, category));
+  const nextCategory = ascendingCategories.find(
+    (category) => category.category === estimatedCategory.category + 1,
+  );
+  const remainingPoints = Object.fromEntries(
+    Object.entries(nextCategory.requiredPoints).map(([pointType, requirement]) => [
+      pointType,
+      Math.max(0, toNumber(requirement) - toNumber(points[pointType])),
+    ]),
+  );
+
+  return { estimatedCategory, nextCategory, remainingPoints };
 }
 
 function formatPoints(points) {
@@ -35,9 +57,11 @@ function formatPoints(points) {
 }
 
 function Categories() {
-  const progress = getTotalBlackProgress(playerData);
   const officialPoints = formatPoints(playerData.officialPoints);
-  const pendingPoints = formatPoints(playerData.pendingPoints);
+  const { estimatedCategory, nextCategory, remainingPoints } = getPendingEstimate(
+    playerData.pendingPoints,
+    categoriesData,
+  );
 
   return (
     <div className="categories-page">
@@ -55,14 +79,17 @@ function Categories() {
       </section>
 
       <section className="categories-overview">
-        <article className="categories-card progress-card">
+        <article className="categories-card official-card">
           <div className="categories-card-heading">
-            <span>Η πρόοδός μου</span>
-            <strong>{playerData.currentCategoryName}</strong>
+            <span>Επίσημη κατηγορία</span>
+            <strong>
+              Κατηγορία {playerData.officialCategory} —{" "}
+              {playerData.officialCategoryName}
+            </strong>
           </div>
 
           <p className="categories-status">
-            Επίσημη κατάσταση έως την τελευταία οριστικοποίηση
+            Ισχύει μέχρι την επόμενη οριστικοποίηση
           </p>
           <p className="categories-status muted">
             Τελευταία ενημέρωση: {formatDate(playerData.officialStatus.lastUpdated)}
@@ -81,44 +108,37 @@ function Categories() {
             ))}
           </div>
 
-          <div className="progress-block">
-            <div className="progress-label">
-              <span>Πρόοδος προς την επόμενη κατηγορία</span>
-              <strong>{progress}%</strong>
-            </div>
-            <div className="progress-track">
-              <i style={{ width: `${progress}%` }} />
-            </div>
-            <p>
-              Απομένουν {toDisplay(playerData.nextCategory.blackNeeded)} μαύροι
-              βαθμοί
-            </p>
-          </div>
         </article>
 
         <article className="categories-card pending-card">
           <div className="categories-card-heading">
-            <span>Προσωρινοί βαθμοί</span>
-            <strong>Προσωρινή εκτίμηση — όχι επίσημη κατηγορία</strong>
+            <span>Προσωρινή εκτίμηση</span>
+            <strong>
+              Προσωρινή Κατηγορία {estimatedCategory.category} —{" "}
+              {estimatedCategory.name}
+            </strong>
           </div>
 
           <p className="warning-text">
-            Οι βαθμοί αυτοί ΔΕΝ έχουν οριστικοποιηθεί από την ΕΟΜ και μπορεί να
-            αλλάξουν μέχρι την επόμενη οριστικοποίηση. Δεν προστίθενται στους
-            επίσημους βαθμούς και δεν υπολογίζουν νέα επίσημη κατηγορία.
+            Δεν αποτελεί επίσημη κατηγορία μέχρι την οριστικοποίηση της ΕΟΜ στις{" "}
+            {formatDate(playerData.officialStatus.nextFinalizationDate)}.
           </p>
 
-          <div className="points-grid">
-            {pendingPoints.map((point) => (
-              <div key={point.label}>
-                <span>{point.label}</span>
-                <strong>{toDisplay(point.value)}</strong>
-              </div>
-            ))}
+          <div className="pending-targets">
+            <div>
+              <span>Μαύροι</span>
+              <strong>{playerData.pendingPoints.black} / {toNumber(nextCategory.requiredPoints.black)}</strong>
+            </div>
+            <div>
+              <span>Χρυσοί</span>
+              <strong>{playerData.pendingPoints.gold} / {toNumber(nextCategory.requiredPoints.gold)}</strong>
+              <small>Το όριο έχει καλυφθεί</small>
+            </div>
           </div>
 
-          <p className="categories-status muted">
-            Κύκλος ενημέρωσης: {playerData.officialStatus.updateCycle}
+          <p className="remaining-points">
+            Απομένουν {remainingPoints.black} μαύροι βαθμοί για την Κατηγορία{" "}
+            {nextCategory.category} — {nextCategory.name}
           </p>
         </article>
       </section>
@@ -146,7 +166,7 @@ function Categories() {
                 categoriesData.map((category) => (
                   <tr
                     className={
-                      category.category === playerData.currentCategory
+                      category.category === playerData.officialCategory
                         ? "current-category-row"
                         : ""
                     }
