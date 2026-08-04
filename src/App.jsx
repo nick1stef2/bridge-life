@@ -7,6 +7,7 @@ import Results from "./pages/Results";
 import Gallery from "./pages/Gallery";
 import TournamentDetail from "./pages/TournamentDetail";
 import Videos from "./pages/Videos";
+import Categories from "./pages/Categories";
 
 function HomePage() {
   return (
@@ -47,6 +48,10 @@ function HomePage() {
           <h2>🎥 Videos</h2>
           <p>Βίντεο και μαθήματα</p>
         </Link>
+        <Link to="/categories" className="card card-link">
+          <h2>Categories</h2>
+          <p>Player category and points progress</p>
+        </Link>
       </main>
     </>
   );
@@ -62,6 +67,7 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/videos" element={<Videos />} />
+        <Route path="/categories" element={<Categories />} />
         <Route path="/tournament/:tournamentId" element={<TournamentDetail />} />
       </Routes>
     </div>
