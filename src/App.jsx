@@ -8,6 +8,7 @@ import Gallery from "./pages/Gallery";
 import TournamentDetail from "./pages/TournamentDetail";
 import Videos from "./pages/Videos";
 import Categories from "./pages/Categories";
+import Boards from "./pages/Boards";
 
 function HomePage() {
   return (
@@ -25,10 +26,12 @@ function HomePage() {
           </div>
         </Link>
 
-        <div className="card">
-          <h2>🃏 Boards</h2>
-          <p>Διανομές και αναλύσεις</p>
-        </div>
+        <Link to="/boards" className="card-link">
+          <div className="card">
+            <h2>🃏 Boards</h2>
+            <p>Διανομές από πραγματικά PBN</p>
+          </div>
+        </Link>
 
         <Link to="/results" className="card-link">
           <div className="card">
@@ -68,6 +71,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/boards" element={<Boards />} />
+        <Route path="/boards/:tournamentId" element={<Boards />} />
         <Route path="/tournament/:tournamentId" element={<TournamentDetail />} />
       </Routes>
     </div>

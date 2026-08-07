@@ -1,0 +1,63 @@
+{
+  "source": "Bridge Solver Online (John Goacher / Bo Haglund DDS module)",
+  "url": "https://dds.krtschil.net/",
+  "checkedAt": "2026-08-07T08:22:00.000Z",
+  "entries": [
+    {
+      "tournamentId": "aot-26404-2026-08-04",
+      "boardNumber": 1,
+      "dataContracts": "2617126171a7b6ba7b6b",
+      "parContracts": ["4H+1"],
+      "parScore": -450
+    },
+    {
+      "tournamentId": "aot-26404-2026-08-04",
+      "boardNumber": 2,
+      "dataContracts": "67448674486698566995",
+      "parContracts": ["2H+1"],
+      "parScore": -140
+    },
+    {
+      "tournamentId": "aot-26406-2026-08-06",
+      "boardNumber": 1,
+      "dataContracts": "76986769864744747447",
+      "parContracts": ["3H="],
+      "parScore": 140
+    },
+    {
+      "tournamentId": "aot-26406-2026-08-06",
+      "boardNumber": 2,
+      "dataContracts": "a9bc6a9bc62221722217",
+      "parContracts": ["6D="],
+      "parScore": 1370
+    },
+    {
+      "tournamentId": "aot-26404-2026-08-04",
+      "boardNumber": 7,
+      "dataContracts": "99876998764346743467",
+      "parContracts": ["3NT="],
+      "parScore": 600
+    },
+    {
+      "tournamentId": "aot-26404-2026-08-04",
+      "boardNumber": 19,
+      "dataContracts": "55567555677876688766",
+      "parContracts": ["2NT="],
+      "parScore": -120
+    },
+    {
+      "tournamentId": "aot-26406-2026-08-06",
+      "boardNumber": 7,
+      "dataContracts": "b5b96b5b962814728147",
+      "parContracts": ["4NT+1"],
+      "parScore": 660
+    },
+    {
+      "tournamentId": "aot-26406-2026-08-06",
+      "boardNumber": 19,
+      "dataContracts": "34743347438969989699",
+      "parContracts": ["2S+1"],
+      "parScore": -140
+    }
+  ]
+}
