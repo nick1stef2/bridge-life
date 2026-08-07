@@ -8,7 +8,7 @@ const detailSections = [
   { key: "results", title: "Αποτελέσματα" },
   { key: "photos", title: "Φωτογραφίες" },
   { key: "videos", title: "Βίντεο" },
-  { key: "boards", title: "Διανομές / Boards" },
+  { key: "boardImages", title: "Board screenshots" },
   { key: "lessons", title: "Μαθήματα / Lessons" },
 ];
 
@@ -61,13 +61,49 @@ function buildDetailItems(tournament) {
     ],
     photos: [],
     videos: [],
-    boards: tournament.boardImages.map((image, index) => ({
+    boardImages: tournament.boardImages.map((image, index) => ({
       title: `Board screenshot ${index + 1}`,
       image,
       text: "Πραγματικό screenshot από τον φάκελο boards.",
     })),
     lessons: [],
   };
+}
+
+function BoardResultsSection({ boardResults }) {
+  if (!boardResults?.length) {
+    return null;
+  }
+
+  const sortedBoardResults = [...boardResults].sort((a, b) => a.boardNumber - b.boardNumber);
+
+  return (
+    <section className="tournament-section tournament-boards-section">
+      <div className="tournament-section-heading">
+        <h2>Boards</h2>
+        <span>{sortedBoardResults.length}</span>
+      </div>
+
+      <div className="tournament-boards-table-wrap">
+        <table className="tournament-boards-table">
+          <thead>
+            <tr>
+              <th>Board</th>
+              <th>Ποσοστό</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedBoardResults.map((board) => (
+              <tr key={`${board.tournamentId}-${board.boardNumber}`}>
+                <td>{board.boardNumber}</td>
+                <td>{board.percentage === null || board.percentage === undefined ? missingValue : `${board.percentage}%`}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
 }
 
 function TournamentSection({ title, items }) {
@@ -181,6 +217,7 @@ function TournamentDetail() {
       </section>
 
       <main className="tournament-sections">
+        <BoardResultsSection boardResults={tournament.boardResults} />
         {detailSections.map((section) => (
           <TournamentSection
             key={section.key}

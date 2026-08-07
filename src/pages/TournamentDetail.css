@@ -188,6 +188,44 @@
   border-style: dashed;
 }
 
+.tournament-boards-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #303842;
+  border-radius: 16px;
+}
+
+.tournament-boards-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.tournament-boards-table th,
+.tournament-boards-table td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.tournament-boards-table th {
+  background: #101418;
+  color: #bbbbbb;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tournament-boards-table tbody tr + tr {
+  border-top: 1px solid #303842;
+}
+
+.tournament-boards-table tbody tr:hover {
+  background: #252d36;
+}
+
+.tournament-boards-table td:last-child {
+  font-weight: 700;
+}
+
 @media (max-width: 760px) {
   .tournament-detail-page {
     padding: 20px;

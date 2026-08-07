@@ -40,20 +40,11 @@ import result20260711 from "../assets/images/results/2026-07-11.png";
 import result20260714 from "../assets/images/results/2026-07-14.png";
 import result20260716 from "../assets/images/results/2026-07-16.png";
 import result20260721 from "../assets/images/results/2026-07-21.png";
+import result20260804 from "../assets/images/results/2026-08-04.png";
+import result20260806 from "../assets/images/results/2026-08-06.png";
 
-import board20260425 from "../assets/images/boards/2026-04-25.png";
-import board20260429 from "../assets/images/boards/2026-04-29.png";
-import board20260509 from "../assets/images/boards/2026-05-09.png";
-import board20260512 from "../assets/images/boards/2026-05-12.png";
-import board20260514 from "../assets/images/boards/2026-05-14.png";
-import board20260516 from "../assets/images/boards/2026-05-16.png";
-import board20260517 from "../assets/images/boards/2026-05-17.png";
-import board2026052401 from "../assets/images/boards/2026-05-24-01.png";
-import board2026052402 from "../assets/images/boards/2026-05-24-02.png";
-import board20260528 from "../assets/images/boards/2026-05-28.png";
-import board20260530 from "../assets/images/boards/2026-05-30.png";
-import board20260602 from "../assets/images/boards/2026-06-02.png";
-import board20260603 from "../assets/images/boards/2026-06-03.png";
+import board20260804 from "../assets/images/boards/2026-08-04.png";
+import board20260806 from "../assets/images/boards/2026-08-06.png";
 
 export const tournamentsData = [
   {
@@ -75,7 +66,7 @@ export const tournamentsData = [
     location: null,
     notes: "Επιβεβαιωμένο από το result screenshot 2026-04-25.",
     resultImage: result20260425,
-    boardImages: [board20260425],
+    boardImages: [],
     relatedResultImages: [result20260429],
   },
   {
@@ -101,7 +92,7 @@ export const tournamentsData = [
       "Το screenshot αναγράφει 25/04/2026 και ΑΟΤ 26199, αλλά το filename είναι 2026-04-29.png. Χρειάζεται χειροκίνητη επιβεβαίωση.",
     notes: "Αμφισβητούμενη εγγραφή με ίδιο ΑΟΤ και ίδια ημερομηνία με το 2026-04-25.",
     resultImage: result20260429,
-    boardImages: [board20260429],
+    boardImages: [],
     relatedResultImages: [result20260425],
   },
   {
@@ -123,7 +114,7 @@ export const tournamentsData = [
     location: null,
     notes: "Η θέση δεν επιβεβαιώνεται ως αριθμητική κατάταξη στο screenshot.",
     resultImage: result20260509,
-    boardImages: [board20260509],
+    boardImages: [],
   },
   {
     id: "aot-26238-2026-05-12",
@@ -144,7 +135,7 @@ export const tournamentsData = [
     location: null,
     notes: "Δεν φαίνονται master points στη γραμμή του παίκτη.",
     resultImage: result20260512,
-    boardImages: [board20260512],
+    boardImages: [],
   },
   {
     id: "aot-26241-2026-05-14",
@@ -165,7 +156,7 @@ export const tournamentsData = [
     location: null,
     notes: "Επιβεβαιωμένο από το result screenshot 2026-05-14.",
     resultImage: result20260514,
-    boardImages: [board20260514],
+    boardImages: [],
   },
   {
     id: "aot-26243-2026-05-16",
@@ -186,7 +177,7 @@ export const tournamentsData = [
     location: null,
     notes: "Επιβεβαιωμένο από το result screenshot 2026-05-16.",
     resultImage: result20260516,
-    boardImages: [board20260516],
+    boardImages: [],
   },
   {
     id: "aot-26246-2026-05-17",
@@ -207,7 +198,7 @@ export const tournamentsData = [
     location: null,
     notes: "Δεν φαίνονται master points στη γραμμή του παίκτη.",
     resultImage: result20260517,
-    boardImages: [board20260517],
+    boardImages: [],
   },
   {
     id: "eom-202394-2026-05-23",
@@ -229,7 +220,7 @@ export const tournamentsData = [
     includeInPersonalStats: false,
     notes: "Δεν εντοπίστηκε καθαρά προσωπική γραμμή του Νίκου στο μεγάλο screenshot.",
     resultImage: result2026052401,
-    boardImages: [board2026052401],
+    boardImages: [],
     verificationNotes: [
       "Η εικόνα περιέχει γενική κατάταξη 141 θέσεων.",
       "Ημερομηνία screenshot: 23/05/2026.",
@@ -279,7 +270,7 @@ export const tournamentsData = [
     location: null,
     notes: "Το σύνολο συμμετοχών δεν επιβεβαιώνεται καθαρά από το ορατό crop.",
     resultImage: result2026052402,
-    boardImages: [board2026052402],
+    boardImages: [],
     extraPoints: {
       x: "4",
       p: "0,3",
@@ -304,7 +295,7 @@ export const tournamentsData = [
     location: null,
     notes: "Η θέση δεν επιβεβαιώνεται ως αριθμητική κατάταξη και δεν φαίνονται master points στη γραμμή του παίκτη.",
     resultImage: result20260528,
-    boardImages: [board20260528],
+    boardImages: [],
   },
   {
     id: "aot-26274-2026-05-30",
@@ -325,7 +316,7 @@ export const tournamentsData = [
     location: null,
     notes: "Επιβεβαιωμένο από το result screenshot 2026-05-30.",
     resultImage: result20260530,
-    boardImages: [board20260530],
+    boardImages: [],
   },
   {
     id: "aot-26280-2026-06-02",
@@ -346,7 +337,7 @@ export const tournamentsData = [
     location: null,
     notes: "Επιβεβαιωμένο από το result screenshot 2026-06-02.",
     resultImage: result20260602,
-    boardImages: [board20260602],
+    boardImages: [],
   },
   {
     id: "aot-26282-2026-06-03",
@@ -367,7 +358,7 @@ export const tournamentsData = [
     location: null,
     notes: "Επιβεβαιωμένο από το result screenshot 2026-06-03.",
     resultImage: result20260603,
-    boardImages: [board20260603],
+    boardImages: [],
   },
   {
     id: "aot-26288-2026-06-07",
@@ -916,5 +907,102 @@ export const tournamentsData = [
     verificationNotes: "Επιβεβαιωμένο από το result screenshot 2026-07-21.png.",
     resultImage: result20260721,
     boardImages: [],
+  },
+  {
+    id: "aot-26404-2026-08-04",
+    date: "2026-08-04",
+    title: "Ζεύγη 1 - 6 Τριτης,3η",
+    eventName: "Ζεύγη 1 - 6 Τριτης,3η",
+    organization: "ΑΟΤ 26404",
+    organizer: "ΑΟΤ 26404",
+    type: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventType: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventFormat: "pairs",
+    scoreType: "percentage",
+    grade: "5ης βαθμίδας",
+    level: "5ης βαθμίδας",
+    partner: "Κωνσταντίνος Ζαγγογιάννης",
+    position: "9",
+    participants: 9,
+    score: "33,03",
+    playerCategory: 1,
+    partnerCategory: 1,
+    masterPoints: null,
+    location: null,
+    includeInPersonalStats: true,
+    verificationStatus: "verified",
+    verificationNotes: "Επιβεβαιωμένο από τα screenshots 2026-08-04 στους φακέλους results και boards.",
+    resultImage: result20260804,
+    boardImages: [board20260804],
+    boardResults: [
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 10, percentage: 0 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 11, percentage: 67 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 12, percentage: 67 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 16, percentage: 0 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 17, percentage: 67 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 18, percentage: 95 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 13, percentage: 17 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 14, percentage: 17 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 15, percentage: 33 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 4, percentage: 17 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 5, percentage: 67 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 6, percentage: 0 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 19, percentage: 67 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 20, percentage: 17 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 21, percentage: 33 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 7, percentage: 0 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 8, percentage: 17 },
+      { tournamentId: "aot-26404-2026-08-04", boardNumber: 9, percentage: 17 },
+    ],
+  },
+  {
+    id: "aot-26406-2026-08-06",
+    date: "2026-08-06",
+    title: "Ζεύγη 1-9 Πέμπτης 5η Ημερίδα 6/8/26",
+    eventName: "Ζεύγη 1-9 Πέμπτης 5η Ημερίδα 6/8/26",
+    organization: "ΑΟΤ 26406",
+    organizer: "ΑΟΤ 26406",
+    type: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventType: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventFormat: "pairs",
+    scoreType: "percentage",
+    grade: "5ης βαθμίδας",
+    level: "5ης βαθμίδας",
+    partner: "Κωνσταντίνος Ζαγγογιάννης",
+    position: "11",
+    participants: 13,
+    score: "38,57",
+    playerCategory: 1,
+    partnerCategory: 1,
+    masterPoints: null,
+    location: null,
+    includeInPersonalStats: true,
+    verificationStatus: "verified",
+    verificationNotes: "Επιβεβαιωμένο από τα screenshots 2026-08-06 στους φακέλους results και boards.",
+    resultImage: result20260806,
+    boardImages: [board20260806],
+    boardResults: [
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 13, percentage: 40 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 14, percentage: 20 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 15, percentage: 30 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 19, percentage: 100 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 20, percentage: 0 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 21, percentage: 20 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 4, percentage: 70 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 5, percentage: 20 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 6, percentage: 40 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 10, percentage: 80 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 11, percentage: 80 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 12, percentage: 40 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 16, percentage: 40 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 17, percentage: 60 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 18, percentage: 20 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 1, percentage: 50 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 2, percentage: 0 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 3, percentage: 20 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 7, percentage: 60 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 8, percentage: 0 },
+      { tournamentId: "aot-26406-2026-08-06", boardNumber: 9, percentage: 20 },
+    ],
   },
 ];
