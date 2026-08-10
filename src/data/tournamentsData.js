@@ -42,9 +42,11 @@ import result20260716 from "../assets/images/results/2026-07-16.png";
 import result20260721 from "../assets/images/results/2026-07-21.png";
 import result20260804 from "../assets/images/results/2026-08-04.png";
 import result20260806 from "../assets/images/results/2026-08-06.png";
+import result20260809 from "../assets/images/results/2026-08-09.png";
 
 import board20260804 from "../assets/images/boards/2026-08-04.png";
 import board20260806 from "../assets/images/boards/2026-08-06.png";
+import board20260809 from "../assets/images/boards/2026-08-09.png";
 
 export const tournamentsData = [
   {
@@ -1003,6 +1005,55 @@ export const tournamentsData = [
       { tournamentId: "aot-26406-2026-08-06", boardNumber: 7, percentage: 60 },
       { tournamentId: "aot-26406-2026-08-06", boardNumber: 8, percentage: 0 },
       { tournamentId: "aot-26406-2026-08-06", boardNumber: 9, percentage: 20 },
+    ],
+  },
+  {
+    id: "aot-26407-2026-08-09",
+    date: "2026-08-09",
+    title: "Ζεύγη 1-6 Κυριακής 4 Ημερίδα 9/8/26",
+    eventName: "Ζεύγη 1-6 Κυριακής 4 Ημερίδα 9/8/26",
+    organization: "ΑΟΤ 26407",
+    organizer: "ΑΟΤ 26407",
+    type: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventType: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventFormat: "pairs",
+    scoreType: "percentage",
+    grade: "5ης βαθμίδας",
+    level: "5ης βαθμίδας",
+    partner: "Κωνσταντίνος Ζαγγογιάννης",
+    position: "4",
+    participants: 8,
+    score: "55,50",
+    playerCategory: 1,
+    partnerCategory: 1,
+    masterPoints: "2",
+    location: null,
+    includeInPersonalStats: true,
+    verificationStatus: "verified",
+    verificationNotes: "Επιβεβαιωμένο από τα screenshots 2026-08-09 στους φακέλους results και boards.",
+    resultImage: result20260809,
+    boardImages: [board20260809],
+    boardResults: [
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 1, percentage: 17 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 2, percentage: 33 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 3, percentage: 50 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 4, percentage: 100 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 5, percentage: 17 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 6, percentage: 33 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 7, percentage: 67 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 8, percentage: 100 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 9, percentage: 67 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 10, percentage: 60 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 11, percentage: 33 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 12, percentage: 100 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 13, percentage: 100 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 14, percentage: 50 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 15, percentage: 67 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 16, percentage: 0 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 17, percentage: 83 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 18, percentage: 67 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 19, percentage: 67 },
+      { tournamentId: "aot-26407-2026-08-09", boardNumber: 20, percentage: 0 },
     ],
   },
 ];

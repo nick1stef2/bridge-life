@@ -3971,6 +3971,2632 @@
       "parScore": -2140,
       "optimumScore": -2140,
       "parResult": "EW 7C=; -2140 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 1,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "59defa430305b16692efb82993510fd7bf1fddcb4300d8ef5c21fde8f3375f6e",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "None",
+        "deal": "N:96.J43.K3.AJ8742 J872.K76.J654.K6 AQT53.AQT.AQ8.Q5 K4.9852.T972.T93"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 11,
+          "H": 10,
+          "D": 9,
+          "C": 12,
+          "NT": 11
+        },
+        "E": {
+          "S": 2,
+          "H": 3,
+          "D": 4,
+          "C": 1,
+          "NT": 1
+        },
+        "S": {
+          "S": 11,
+          "H": 10,
+          "D": 9,
+          "C": 12,
+          "NT": 12
+        },
+        "W": {
+          "S": 2,
+          "H": 3,
+          "D": 4,
+          "C": 1,
+          "NT": 1
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "6NT=",
+          "level": 6,
+          "denomination": "NT",
+          "declarer": "S",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "S",
+      "parContracts": [
+        {
+          "contract": "6NT=",
+          "level": 6,
+          "denomination": "NT",
+          "declarer": "S",
+          "result": "="
+        }
+      ],
+      "parScore": 990,
+      "optimumScore": 990,
+      "parResult": "S 6NT=; +990 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 2,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "f1f940281fa8a64f2f7f8b50230a826bc34d739ffd4ed244ba75abc56df2c960",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "NS",
+        "deal": "N:AKQT8.T97.5.AK83 54.KQ654.Q7.7542 9762.J2.T432.JT9 J3.A83.AKJ986.Q6"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 10,
+          "H": 2,
+          "D": 2,
+          "C": 7,
+          "NT": 2
+        },
+        "E": {
+          "S": 2,
+          "H": 9,
+          "D": 9,
+          "C": 4,
+          "NT": 4
+        },
+        "S": {
+          "S": 10,
+          "H": 2,
+          "D": 2,
+          "C": 7,
+          "NT": 2
+        },
+        "W": {
+          "S": 3,
+          "H": 9,
+          "D": 9,
+          "C": 4,
+          "NT": 4
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "5H-2",
+          "level": 5,
+          "denomination": "H",
+          "declarer": "EW",
+          "result": "-2"
+        },
+        {
+          "contract": "5D-2",
+          "level": 5,
+          "denomination": "D",
+          "declarer": "EW",
+          "result": "-2"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "5H-2",
+          "level": 5,
+          "denomination": "H",
+          "declarer": "EW",
+          "result": "-2"
+        },
+        {
+          "contract": "5D-2",
+          "level": 5,
+          "denomination": "D",
+          "declarer": "EW",
+          "result": "-2"
+        }
+      ],
+      "parScore": 300,
+      "optimumScore": 300,
+      "parResult": "EW 5H-2 / EW 5D-2; +300 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 3,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "f4ac2a6027b0c942ebac078e667d3b4ccc5624777c70eccb2fa578b17895f51b",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "EW",
+        "deal": "N:843.J987.J9762.5 AQT9.5.KT8.AQT94 75.QT64.A4.KJ863 KJ62.AK32.Q53.72"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 2,
+          "H": 4,
+          "D": 4,
+          "C": 3,
+          "NT": 4
+        },
+        "E": {
+          "S": 11,
+          "H": 8,
+          "D": 9,
+          "C": 10,
+          "NT": 9
+        },
+        "S": {
+          "S": 2,
+          "H": 4,
+          "D": 4,
+          "C": 3,
+          "NT": 4
+        },
+        "W": {
+          "S": 11,
+          "H": 8,
+          "D": 8,
+          "C": 9,
+          "NT": 9
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "4S+1",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "4S+1",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "parScore": -650,
+      "optimumScore": -650,
+      "parResult": "EW 4S+1; -650 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 4,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "cf502846aaab66066eb5ee92d5e62ee861c1fa92a68268fced435d7543f6b6fd",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "All",
+        "deal": "N:42.Q72.KJ65.AQ87 J763.JT654.A84.3 Q.AK93.QT7.KJ954 AKT985.8.932.T62"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 4,
+          "H": 9,
+          "D": 10,
+          "C": 11,
+          "NT": 6
+        },
+        "E": {
+          "S": 9,
+          "H": 4,
+          "D": 3,
+          "C": 2,
+          "NT": 4
+        },
+        "S": {
+          "S": 4,
+          "H": 9,
+          "D": 10,
+          "C": 11,
+          "NT": 6
+        },
+        "W": {
+          "S": 9,
+          "H": 4,
+          "D": 3,
+          "C": 2,
+          "NT": 4
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "5S-2",
+          "level": 5,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "-2"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "5S-2",
+          "level": 5,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "-2"
+        }
+      ],
+      "parScore": 500,
+      "optimumScore": 500,
+      "parResult": "EW 5S-2; +500 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 5,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "319bbc920252db96d72896f1200af05d7d0d8980ae1b5aafde17a3f532df01fe",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "NS",
+        "deal": "N:AQT.J642.Q9.KT62 .K7.K865432.Q843 85.QT983.AJT7.95 KJ976432.A5..AJ7"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 4,
+          "H": 8,
+          "D": 5,
+          "C": 5,
+          "NT": 8
+        },
+        "E": {
+          "S": 8,
+          "H": 4,
+          "D": 8,
+          "C": 8,
+          "NT": 5
+        },
+        "S": {
+          "S": 4,
+          "H": 8,
+          "D": 5,
+          "C": 5,
+          "NT": 8
+        },
+        "W": {
+          "S": 9,
+          "H": 4,
+          "D": 8,
+          "C": 8,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3S=",
+          "level": 3,
+          "denomination": "S",
+          "declarer": "W",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "W",
+      "parContracts": [
+        {
+          "contract": "3S=",
+          "level": 3,
+          "denomination": "S",
+          "declarer": "W",
+          "result": "="
+        }
+      ],
+      "parScore": -140,
+      "optimumScore": -140,
+      "parResult": "W 3S=; -140 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 6,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "42e348f01ed5c3da8ade5eff7cd11617f74fc4b54c959ff7232ae2034f5fa892",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "EW",
+        "deal": "N:JT754.6.J84.T654 Q86.KT97.A93.J93 A.A5432.QT52.AQ8 K932.QJ8.K76.K72"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 6,
+          "D": 6,
+          "C": 7,
+          "NT": 5
+        },
+        "E": {
+          "S": 6,
+          "H": 7,
+          "D": 5,
+          "C": 5,
+          "NT": 8
+        },
+        "S": {
+          "S": 7,
+          "H": 6,
+          "D": 6,
+          "C": 7,
+          "NT": 5
+        },
+        "W": {
+          "S": 6,
+          "H": 7,
+          "D": 5,
+          "C": 5,
+          "NT": 8
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "2NT=",
+          "level": 2,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "2NT=",
+          "level": 2,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "parScore": -120,
+      "optimumScore": -120,
+      "parResult": "EW 2NT=; -120 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 7,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "7c5c7b2803cc39e9e896a4b946e1897338beb2fc8aacf2a3bd9161425dde3f45",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "All",
+        "deal": "N:QT.JT753.65.AKQ2 83.KQ98.AK94.943 J9542.A6.873.JT6 AK76.42.QJT2.875"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 6,
+          "H": 6,
+          "D": 4,
+          "C": 7,
+          "NT": 5
+        },
+        "E": {
+          "S": 7,
+          "H": 7,
+          "D": 9,
+          "C": 6,
+          "NT": 8
+        },
+        "S": {
+          "S": 6,
+          "H": 6,
+          "D": 4,
+          "C": 7,
+          "NT": 5
+        },
+        "W": {
+          "S": 7,
+          "H": 7,
+          "D": 9,
+          "C": 6,
+          "NT": 8
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1NT+1",
+          "level": 1,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "1NT+1",
+          "level": 1,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "parScore": -120,
+      "optimumScore": -120,
+      "parResult": "EW 1NT+1; -120 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 8,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "359a9594afc475169350bd5bb13dfba98ee070de75c517af8d516ec5e0024ab8",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "None",
+        "deal": "N:A5.AJ86.A7543.76 KQJT7.KT.Q8.KT83 9842.542.J6.AQJ9 63.Q973.KT92.542"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 8,
+          "D": 8,
+          "C": 7,
+          "NT": 6
+        },
+        "E": {
+          "S": 6,
+          "H": 4,
+          "D": 5,
+          "C": 5,
+          "NT": 6
+        },
+        "S": {
+          "S": 7,
+          "H": 8,
+          "D": 8,
+          "C": 7,
+          "NT": 6
+        },
+        "W": {
+          "S": 6,
+          "H": 4,
+          "D": 5,
+          "C": 5,
+          "NT": 6
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "2H=",
+          "level": 2,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "2H=",
+          "level": 2,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 110,
+      "optimumScore": 110,
+      "parResult": "NS 2H=; +110 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 9,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "c6ab10d6533066dce2f129b167aae644849965d499a40a781ab1053608605c33",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "EW",
+        "deal": "N:A62.42.KQ9.QT872 J9743.K85.52.J94 K8.AT.AJT8763.A3 QT5.QJ9763.4.K65"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 6,
+          "D": 11,
+          "C": 11,
+          "NT": 11
+        },
+        "E": {
+          "S": 6,
+          "H": 6,
+          "D": 1,
+          "C": 1,
+          "NT": 1
+        },
+        "S": {
+          "S": 7,
+          "H": 6,
+          "D": 11,
+          "C": 11,
+          "NT": 11
+        },
+        "W": {
+          "S": 6,
+          "H": 6,
+          "D": 1,
+          "C": 1,
+          "NT": 1
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "parScore": 460,
+      "optimumScore": 460,
+      "parResult": "NS 3NT+2; +460 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 10,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "4ecd79567961bce3d578c74236e8f925aa823b1c16818cfb864e3a1fac578b5e",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "All",
+        "deal": "N:T965.A8.KQ542.T9 K82.T92.J8.A8762 Q43.K743.A976.K4 AJ7.QJ65.T3.QJ53"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 6,
+          "D": 9,
+          "C": 5,
+          "NT": 8
+        },
+        "E": {
+          "S": 4,
+          "H": 6,
+          "D": 4,
+          "C": 7,
+          "NT": 5
+        },
+        "S": {
+          "S": 8,
+          "H": 6,
+          "D": 9,
+          "C": 5,
+          "NT": 8
+        },
+        "W": {
+          "S": 4,
+          "H": 6,
+          "D": 4,
+          "C": 7,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1NT+1",
+          "level": 1,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "1NT+1",
+          "level": 1,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "parScore": 120,
+      "optimumScore": 120,
+      "parResult": "NS 1NT+1; +120 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 11,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "32369984d8e7084ec9d41527d9b4e017230c0bafad9ebf9cedc981e7d1a46ac7",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "None",
+        "deal": "N:AKQT.QJT8.K5.AT4 J963.97643.A6.K3 52.AK2.QT732.QJ5 874.5.J984.98762"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 10,
+          "H": 10,
+          "D": 9,
+          "C": 9,
+          "NT": 11
+        },
+        "E": {
+          "S": 3,
+          "H": 3,
+          "D": 4,
+          "C": 4,
+          "NT": 2
+        },
+        "S": {
+          "S": 10,
+          "H": 10,
+          "D": 9,
+          "C": 9,
+          "NT": 11
+        },
+        "W": {
+          "S": 3,
+          "H": 3,
+          "D": 4,
+          "C": 4,
+          "NT": 2
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "parScore": 460,
+      "optimumScore": 460,
+      "parResult": "NS 3NT+2; +460 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 12,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "ffa58cc6cbefe0d0fe559d29090c86a950926717f9787861c9f6ed86c7c82b5a",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "NS",
+        "deal": "N:8.AK4.AQT6.KJT65 AQ974.JT8.74.Q98 JT3.Q92.KJ532.74 K652.7653.98.A32"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 6,
+          "H": 7,
+          "D": 11,
+          "C": 9,
+          "NT": 7
+        },
+        "E": {
+          "S": 7,
+          "H": 6,
+          "D": 2,
+          "C": 3,
+          "NT": 5
+        },
+        "S": {
+          "S": 6,
+          "H": 7,
+          "D": 11,
+          "C": 9,
+          "NT": 7
+        },
+        "W": {
+          "S": 7,
+          "H": 6,
+          "D": 2,
+          "C": 3,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "5D=",
+          "level": 5,
+          "denomination": "D",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "5D=",
+          "level": 5,
+          "denomination": "D",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 600,
+      "optimumScore": 600,
+      "parResult": "NS 5D=; +600 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 13,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "69fbf95a4d62f412377e4600d7ff9167cf5fc154d25c62cbfbb4f1f7dc6432e5",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "All",
+        "deal": "N:KJ972.J7.J954.QT T643.K3.Q6.J7654 AQ.864.AT7.A9832 85.AQT952.K832.K"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 9,
+          "H": 5,
+          "D": 7,
+          "C": 8,
+          "NT": 7
+        },
+        "E": {
+          "S": 3,
+          "H": 7,
+          "D": 5,
+          "C": 4,
+          "NT": 5
+        },
+        "S": {
+          "S": 9,
+          "H": 5,
+          "D": 7,
+          "C": 8,
+          "NT": 7
+        },
+        "W": {
+          "S": 3,
+          "H": 7,
+          "D": 4,
+          "C": 4,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1S+2",
+          "level": 1,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "1S+2",
+          "level": 1,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "parScore": 140,
+      "optimumScore": 140,
+      "parResult": "NS 1S+2; +140 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 14,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "badb020b420f0c1708ecbaa677320cdb6523529cb70f69cf669c225776a0dc63",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "None",
+        "deal": "N:5.K6532.A864.JT9 KJ8632.A.KT32.K7 974.QJ94.Q9.8543 AQT.T87.J75.AQ62"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 2,
+          "H": 7,
+          "D": 3,
+          "C": 3,
+          "NT": 2
+        },
+        "E": {
+          "S": 11,
+          "H": 6,
+          "D": 10,
+          "C": 9,
+          "NT": 10
+        },
+        "S": {
+          "S": 2,
+          "H": 7,
+          "D": 3,
+          "C": 2,
+          "NT": 2
+        },
+        "W": {
+          "S": 11,
+          "H": 6,
+          "D": 10,
+          "C": 9,
+          "NT": 10
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "4S+1",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "4S+1",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "parScore": -450,
+      "optimumScore": -450,
+      "parResult": "EW 4S+1; -450 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 15,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "09ce32bd54d4fa5b8a11642431697d3bcb800ac8afc6010fedb7ff99a6dc3e6f",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "NS",
+        "deal": "N:A9843.J63.8.JT94 Q76.K4.AK6542.86 T2.T9875.Q9.A732 KJ5.AQ2.JT73.KQ5"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 4,
+          "H": 5,
+          "D": 2,
+          "C": 5,
+          "NT": 2
+        },
+        "E": {
+          "S": 8,
+          "H": 8,
+          "D": 11,
+          "C": 7,
+          "NT": 11
+        },
+        "S": {
+          "S": 4,
+          "H": 5,
+          "D": 2,
+          "C": 5,
+          "NT": 2
+        },
+        "W": {
+          "S": 8,
+          "H": 8,
+          "D": 11,
+          "C": 7,
+          "NT": 11
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "+2"
+        }
+      ],
+      "parScore": -460,
+      "optimumScore": -460,
+      "parResult": "EW 3NT+2; -460 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 16,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "f1dda90fa76bada5326e961810b39096e142193542c4a57a8d0f986a8aa600e8",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "EW",
+        "deal": "N:J873.KQJ62.J5.32 A42.T.AKT763.964 KT.A73.Q842.AK75 Q965.9854.9.QJT8"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 9,
+          "D": 6,
+          "C": 7,
+          "NT": 8
+        },
+        "E": {
+          "S": 6,
+          "H": 4,
+          "D": 6,
+          "C": 5,
+          "NT": 4
+        },
+        "S": {
+          "S": 7,
+          "H": 9,
+          "D": 6,
+          "C": 7,
+          "NT": 8
+        },
+        "W": {
+          "S": 6,
+          "H": 3,
+          "D": 6,
+          "C": 5,
+          "NT": 4
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1H+2",
+          "level": 1,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "1H+2",
+          "level": 1,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "parScore": 140,
+      "optimumScore": 140,
+      "parResult": "NS 1H+2; +140 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 17,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "7c95829abb1b6b57fb64dcbc2fd80bc4a538d03e00796e1e8f9976edfb6bd517",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "None",
+        "deal": "N:Q8.QJ976.J54.J94 K75.T854.T73.A65 T964.K32.986.KQ3 AJ32.A.AKQ2.T872"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 3,
+          "H": 5,
+          "D": 3,
+          "C": 3,
+          "NT": 4
+        },
+        "E": {
+          "S": 10,
+          "H": 7,
+          "D": 9,
+          "C": 10,
+          "NT": 9
+        },
+        "S": {
+          "S": 3,
+          "H": 5,
+          "D": 3,
+          "C": 3,
+          "NT": 4
+        },
+        "W": {
+          "S": 10,
+          "H": 7,
+          "D": 9,
+          "C": 10,
+          "NT": 9
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "4S=",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "4S=",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "parScore": -420,
+      "optimumScore": -420,
+      "parResult": "EW 4S=; -420 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 18,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "5ad291499e1a2147abdf6dce66d5dd542583b7d9e4f5a98418c3eca08e2b4ffe",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "NS",
+        "deal": "N:T98652.7.KQ83.K6 AK4.JT984.A972.3 J.K532.JT54.AT74 Q73.AQ6.6.QJ9852"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 6,
+          "H": 3,
+          "D": 7,
+          "C": 3,
+          "NT": 5
+        },
+        "E": {
+          "S": 6,
+          "H": 9,
+          "D": 5,
+          "C": 10,
+          "NT": 8
+        },
+        "S": {
+          "S": 6,
+          "H": 3,
+          "D": 7,
+          "C": 3,
+          "NT": 5
+        },
+        "W": {
+          "S": 6,
+          "H": 9,
+          "D": 5,
+          "C": 10,
+          "NT": 8
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1H+2",
+          "level": 1,
+          "denomination": "H",
+          "declarer": "EW",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "1H+2",
+          "level": 1,
+          "denomination": "H",
+          "declarer": "EW",
+          "result": "+2"
+        }
+      ],
+      "parScore": -140,
+      "optimumScore": -140,
+      "parResult": "EW 1H+2; -140 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 19,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "310f6e5bb5012e4ab9ef21a54390a5083e069a08c9416c939335a561ac24ca6c",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "EW",
+        "deal": "N:T7.A432.Q52.KT84 KQ843.KJT7.T8.Q2 AJ96.Q86.73.A763 52.95.AKJ964.J95"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 8,
+          "D": 6,
+          "C": 8,
+          "NT": 7
+        },
+        "E": {
+          "S": 6,
+          "H": 5,
+          "D": 7,
+          "C": 5,
+          "NT": 6
+        },
+        "S": {
+          "S": 7,
+          "H": 8,
+          "D": 6,
+          "C": 8,
+          "NT": 7
+        },
+        "W": {
+          "S": 6,
+          "H": 5,
+          "D": 7,
+          "C": 5,
+          "NT": 6
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1H+1",
+          "level": 1,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "1H+1",
+          "level": 1,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "parScore": 110,
+      "optimumScore": 110,
+      "parResult": "NS 1H+1; +110 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 20,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "91fb4172ef2d83d732327f7dcdb3c182177556053ed25fea7aa84142bc619bb7",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "All",
+        "deal": "N:AKT976.A84.842.2 852.T762.JT3.986 Q3.KQ.Q975.KQT74 J4.J953.AK6.AJ53"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 9,
+          "H": 7,
+          "D": 9,
+          "C": 8,
+          "NT": 9
+        },
+        "E": {
+          "S": 3,
+          "H": 6,
+          "D": 4,
+          "C": 4,
+          "NT": 3
+        },
+        "S": {
+          "S": 10,
+          "H": 7,
+          "D": 9,
+          "C": 8,
+          "NT": 10
+        },
+        "W": {
+          "S": 3,
+          "H": 6,
+          "D": 4,
+          "C": 4,
+          "NT": 3
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+1",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "S",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "S",
+      "parContracts": [
+        {
+          "contract": "3NT+1",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "S",
+          "result": "+1"
+        }
+      ],
+      "parScore": 630,
+      "optimumScore": 630,
+      "parResult": "S 3NT+1; +630 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 21,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "bcd176dfa873562a865755501e3714ff321500c776727fe60bf712b94b95d934",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "NS",
+        "deal": "N:T3.QT.AT42.AJ732 KQ.2.J9865.KQ864 J9752.9754.3.T95 A864.AKJ863.KQ7."
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 4,
+          "H": 2,
+          "D": 2,
+          "C": 5,
+          "NT": 2
+        },
+        "E": {
+          "S": 9,
+          "H": 10,
+          "D": 11,
+          "C": 8,
+          "NT": 10
+        },
+        "S": {
+          "S": 4,
+          "H": 2,
+          "D": 2,
+          "C": 5,
+          "NT": 2
+        },
+        "W": {
+          "S": 9,
+          "H": 10,
+          "D": 11,
+          "C": 8,
+          "NT": 10
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+1",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "3NT+1",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "parScore": -430,
+      "optimumScore": -430,
+      "parResult": "EW 3NT+1; -430 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 22,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "f2f7b138b67b837d238e0f819400c0584aaaf52826699ae4153336399e4d10ea",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "EW",
+        "deal": "N:K6542..AKJ7.AT53 A97.T976532.Q5.Q QJT8.AKQ8.84.874 3.J4.T9632.KJ962"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 12,
+          "H": 8,
+          "D": 8,
+          "C": 9,
+          "NT": 11
+        },
+        "E": {
+          "S": 1,
+          "H": 4,
+          "D": 4,
+          "C": 4,
+          "NT": 2
+        },
+        "S": {
+          "S": 12,
+          "H": 8,
+          "D": 8,
+          "C": 9,
+          "NT": 11
+        },
+        "W": {
+          "S": 1,
+          "H": 5,
+          "D": 4,
+          "C": 4,
+          "NT": 2
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "6S=",
+          "level": 6,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "6S=",
+          "level": 6,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 980,
+      "optimumScore": 980,
+      "parResult": "NS 6S=; +980 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 23,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "32b2d817db81d1b321cbe36870993a24088498408555e2111a854b7f22d45ea6",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "All",
+        "deal": "N:KQJ.A8632.32.843 AT8.7.J9876.AQ92 763.KQT5.KT54.J6 9542.J94.AQ.KT75"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 4,
+          "H": 8,
+          "D": 5,
+          "C": 3,
+          "NT": 6
+        },
+        "E": {
+          "S": 8,
+          "H": 5,
+          "D": 8,
+          "C": 10,
+          "NT": 7
+        },
+        "S": {
+          "S": 4,
+          "H": 8,
+          "D": 5,
+          "C": 3,
+          "NT": 6
+        },
+        "W": {
+          "S": 8,
+          "H": 5,
+          "D": 8,
+          "C": 10,
+          "NT": 7
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3C+1",
+          "level": 3,
+          "denomination": "C",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "3C+1",
+          "level": 3,
+          "denomination": "C",
+          "declarer": "EW",
+          "result": "+1"
+        }
+      ],
+      "parScore": -130,
+      "optimumScore": -130,
+      "parResult": "EW 3C+1; -130 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 24,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "7b1c2b13ce76becfc5c2fdcc4ba58f2fe7f2d9412ef3357933bed9a09a86ef1c",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "None",
+        "deal": "N:AJT732.42.86.QT8 954.853.932.J654 8.KJT6.AKJT75.K3 KQ6.AQ97.Q4.A972"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 8,
+          "D": 9,
+          "C": 7,
+          "NT": 9
+        },
+        "E": {
+          "S": 4,
+          "H": 5,
+          "D": 3,
+          "C": 6,
+          "NT": 3
+        },
+        "S": {
+          "S": 9,
+          "H": 8,
+          "D": 9,
+          "C": 7,
+          "NT": 9
+        },
+        "W": {
+          "S": 4,
+          "H": 5,
+          "D": 3,
+          "C": 6,
+          "NT": 3
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT=",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3NT=",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 400,
+      "optimumScore": 400,
+      "parResult": "NS 3NT=; +400 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 25,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "16f2fd0ca140908a350bc6debf0442386da06e862c5c4bead2494b2076644e4d",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "EW",
+        "deal": "N:Q532.K9.92.KT532 T8.7632.T653.AJ9 A74.QT54.AQJ4.Q6 KJ96.AJ8.K87.874"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 7,
+          "D": 8,
+          "C": 8,
+          "NT": 7
+        },
+        "E": {
+          "S": 4,
+          "H": 5,
+          "D": 5,
+          "C": 4,
+          "NT": 5
+        },
+        "S": {
+          "S": 8,
+          "H": 7,
+          "D": 8,
+          "C": 9,
+          "NT": 7
+        },
+        "W": {
+          "S": 4,
+          "H": 6,
+          "D": 5,
+          "C": 4,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1S+1",
+          "level": 1,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "+1"
+        },
+        {
+          "contract": "1C+2",
+          "level": 1,
+          "denomination": "C",
+          "declarer": "S",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "NS / S",
+      "parContracts": [
+        {
+          "contract": "1S+1",
+          "level": 1,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "+1"
+        },
+        {
+          "contract": "1C+2",
+          "level": 1,
+          "denomination": "C",
+          "declarer": "S",
+          "result": "+2"
+        }
+      ],
+      "parScore": 110,
+      "optimumScore": 110,
+      "parResult": "NS 1S+1 / S 1C+2; +110 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 26,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "d6349b70ea3198fd208e23ad8ab24981f5f10cd73deb87cf7349a6cc037f1540",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "All",
+        "deal": "N:AKQT8.AKT.97.Q96 74.Q54.J6.AJ8754 J632.J982.QT5.T3 95.763.AK8432.K2"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 8,
+          "D": 4,
+          "C": 4,
+          "NT": 5
+        },
+        "E": {
+          "S": 5,
+          "H": 5,
+          "D": 8,
+          "C": 9,
+          "NT": 6
+        },
+        "S": {
+          "S": 8,
+          "H": 8,
+          "D": 4,
+          "C": 4,
+          "NT": 5
+        },
+        "W": {
+          "S": 5,
+          "H": 5,
+          "D": 8,
+          "C": 9,
+          "NT": 6
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3C=",
+          "level": 3,
+          "denomination": "C",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "3C=",
+          "level": 3,
+          "denomination": "C",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "parScore": -110,
+      "optimumScore": -110,
+      "parResult": "EW 3C=; -110 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 27,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "219d9dd09d416ce357dfff17fa9ccca5b71753acb6b2df146cb1e19ab773e3df",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "None",
+        "deal": "N:J4.A7432.754.T63 AKQ65.85.AK93.J7 932.QJT.Q8.AQ985 T87.K96.JT62.K42"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 3,
+          "H": 7,
+          "D": 2,
+          "C": 8,
+          "NT": 4
+        },
+        "E": {
+          "S": 10,
+          "H": 6,
+          "D": 10,
+          "C": 5,
+          "NT": 9
+        },
+        "S": {
+          "S": 3,
+          "H": 7,
+          "D": 2,
+          "C": 8,
+          "NT": 4
+        },
+        "W": {
+          "S": 10,
+          "H": 6,
+          "D": 10,
+          "C": 5,
+          "NT": 9
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "4S=",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "4S=",
+          "level": 4,
+          "denomination": "S",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "parScore": -420,
+      "optimumScore": -420,
+      "parResult": "EW 4S=; -420 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 28,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "8eb75fbe15964c16219537526667f294526f0b1eed590229f029b4cabde70942",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "NS",
+        "deal": "N:QJ84.T43.A83.T94 K653.Q96.T94.AJ6 A9.A75.KQ75.Q853 T72.KJ82.J62.K72"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 7,
+          "D": 8,
+          "C": 8,
+          "NT": 7
+        },
+        "E": {
+          "S": 5,
+          "H": 6,
+          "D": 5,
+          "C": 5,
+          "NT": 5
+        },
+        "S": {
+          "S": 7,
+          "H": 7,
+          "D": 8,
+          "C": 8,
+          "NT": 7
+        },
+        "W": {
+          "S": 5,
+          "H": 5,
+          "D": 4,
+          "C": 4,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "1NT=",
+          "level": 1,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "="
+        },
+        {
+          "contract": "1D+1",
+          "level": 1,
+          "denomination": "D",
+          "declarer": "NS",
+          "result": "+1"
+        },
+        {
+          "contract": "1C+1",
+          "level": 1,
+          "denomination": "C",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "1NT=",
+          "level": 1,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "="
+        },
+        {
+          "contract": "1D+1",
+          "level": 1,
+          "denomination": "D",
+          "declarer": "NS",
+          "result": "+1"
+        },
+        {
+          "contract": "1C+1",
+          "level": 1,
+          "denomination": "C",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "parScore": 90,
+      "optimumScore": 90,
+      "parResult": "NS 1NT= / NS 1D+1 / NS 1C+1; +90 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 29,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "aa6bf0603dcd9c2f102d7ffd9d0f7ea31f24b0feec84c59d5bca773b806bcf91",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "All",
+        "deal": "N:K42.KT65432.6.72 T96.AQ7.J53.AQ53 AQJ.8.AKQT84.KT9 8753.J9.972.J864"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 9,
+          "H": 9,
+          "D": 10,
+          "C": 7,
+          "NT": 10
+        },
+        "E": {
+          "S": 4,
+          "H": 3,
+          "D": 3,
+          "C": 5,
+          "NT": 3
+        },
+        "S": {
+          "S": 9,
+          "H": 9,
+          "D": 10,
+          "C": 7,
+          "NT": 10
+        },
+        "W": {
+          "S": 4,
+          "H": 3,
+          "D": 3,
+          "C": 5,
+          "NT": 3
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+1",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3NT+1",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "parScore": 630,
+      "optimumScore": 630,
+      "parResult": "NS 3NT+1; +630 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 30,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "b9aef319a717af6a4ff6bff814061aed3bf030ea3811a736093d7f4223af6db8",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "None",
+        "deal": "N:T973.Q5.AJ32.KQ8 AQ5.KT73.T74.JT2 J2.A94.986.A9643 K864.J862.KQ5.75"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 6,
+          "H": 5,
+          "D": 8,
+          "C": 9,
+          "NT": 7
+        },
+        "E": {
+          "S": 7,
+          "H": 8,
+          "D": 4,
+          "C": 4,
+          "NT": 4
+        },
+        "S": {
+          "S": 6,
+          "H": 5,
+          "D": 8,
+          "C": 9,
+          "NT": 7
+        },
+        "W": {
+          "S": 7,
+          "H": 8,
+          "D": 5,
+          "C": 4,
+          "NT": 4
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3H-1",
+          "level": 3,
+          "denomination": "H",
+          "declarer": "EW",
+          "result": "-1"
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "3H-1",
+          "level": 3,
+          "denomination": "H",
+          "declarer": "EW",
+          "result": "-1"
+        }
+      ],
+      "parScore": 100,
+      "optimumScore": 100,
+      "parResult": "EW 3H-1; +100 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 31,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "d11541cf20b41c4125dffec8541ae3dee2e87e6dbb5154225d57b9c060bc74e6",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "NS",
+        "deal": "N:J8765.T.AT94.K72 T42.A953.7.J9853 .J87642.KQ6.AQT6 AKQ93.KQ.J8532.4"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 5,
+          "H": 9,
+          "D": 7,
+          "C": 7,
+          "NT": 8
+        },
+        "E": {
+          "S": 7,
+          "H": 4,
+          "D": 6,
+          "C": 6,
+          "NT": 5
+        },
+        "S": {
+          "S": 5,
+          "H": 9,
+          "D": 7,
+          "C": 7,
+          "NT": 8
+        },
+        "W": {
+          "S": 7,
+          "H": 4,
+          "D": 6,
+          "C": 5,
+          "NT": 5
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3H=",
+          "level": 3,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3H=",
+          "level": 3,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 140,
+      "optimumScore": 140,
+      "parResult": "NS 3H=; +140 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 32,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "6f24bb87195a7ff2a08f99580f42299fd00dc924ce223defefb1e934b84d95c8",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "EW",
+        "deal": "N:A.AKQJ7.765.Q874 KQ95.32.KT83.AJ2 T8732.96.AJ2.KT5 J64.T854.Q94.963"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 10,
+          "D": 6,
+          "C": 10,
+          "NT": 9
+        },
+        "E": {
+          "S": 5,
+          "H": 3,
+          "D": 5,
+          "C": 3,
+          "NT": 3
+        },
+        "S": {
+          "S": 8,
+          "H": 10,
+          "D": 7,
+          "C": 10,
+          "NT": 9
+        },
+        "W": {
+          "S": 5,
+          "H": 3,
+          "D": 5,
+          "C": 3,
+          "NT": 3
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "4H=",
+          "level": 4,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "4H=",
+          "level": 4,
+          "denomination": "H",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 420,
+      "optimumScore": 420,
+      "parResult": "NS 4H=; +420 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 33,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "f28d8586c1f7efc65c96a1c8877de3cfa624a7ce9012c8a3af3cd7c53157068c",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "N",
+        "vulnerability": "None",
+        "deal": "N:9872.Q72.K7.AT74 KJ3.AK.Q65.KQJ32 AT4.T965.T98.985 Q65.J843.AJ432.6"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 5,
+          "H": 4,
+          "D": 3,
+          "C": 4,
+          "NT": 4
+        },
+        "E": {
+          "S": 8,
+          "H": 8,
+          "D": 10,
+          "C": 9,
+          "NT": 9
+        },
+        "S": {
+          "S": 5,
+          "H": 4,
+          "D": 3,
+          "C": 4,
+          "NT": 4
+        },
+        "W": {
+          "S": 8,
+          "H": 9,
+          "D": 10,
+          "C": 9,
+          "NT": 9
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT=",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "EW",
+      "parContracts": [
+        {
+          "contract": "3NT=",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "EW",
+          "result": "="
+        }
+      ],
+      "parScore": -400,
+      "optimumScore": -400,
+      "parResult": "EW 3NT=; -400 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 34,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "e9a18977232bad6fc6e17dd82537bbf28f6f4df9587b7cb7223566a314066f7b",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "E",
+        "vulnerability": "NS",
+        "deal": "N:4.Q6.A87.AJT8654 A83.AT852.T642.2 KQ75.KJ9.KJ53.K3 JT962.743.Q9.Q97"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 8,
+          "D": 10,
+          "C": 11,
+          "NT": 11
+        },
+        "E": {
+          "S": 5,
+          "H": 5,
+          "D": 3,
+          "C": 2,
+          "NT": 2
+        },
+        "S": {
+          "S": 8,
+          "H": 8,
+          "D": 10,
+          "C": 11,
+          "NT": 11
+        },
+        "W": {
+          "S": 4,
+          "H": 5,
+          "D": 3,
+          "C": 2,
+          "NT": 2
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3NT+2",
+          "level": 3,
+          "denomination": "NT",
+          "declarer": "NS",
+          "result": "+2"
+        }
+      ],
+      "parScore": 660,
+      "optimumScore": 660,
+      "parResult": "NS 3NT+2; +660 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 35,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "20596289ec07823b1d3b115721f57f698d696a8c7e5a3f9e81ed1a3836303a6d",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "S",
+        "vulnerability": "EW",
+        "deal": "N:KT3.A3.T9743.JT6 54.KQJT97.852.92 AQJ.85.AJ6.KQ875 98762.642.KQ.A43"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 7,
+          "H": 5,
+          "D": 10,
+          "C": 10,
+          "NT": 7
+        },
+        "E": {
+          "S": 5,
+          "H": 8,
+          "D": 3,
+          "C": 3,
+          "NT": 4
+        },
+        "S": {
+          "S": 7,
+          "H": 5,
+          "D": 10,
+          "C": 10,
+          "NT": 7
+        },
+        "W": {
+          "S": 5,
+          "H": 8,
+          "D": 3,
+          "C": 3,
+          "NT": 4
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "3D+1",
+          "level": 3,
+          "denomination": "D",
+          "declarer": "NS",
+          "result": "+1"
+        },
+        {
+          "contract": "3C+1",
+          "level": 3,
+          "denomination": "C",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "3D+1",
+          "level": 3,
+          "denomination": "D",
+          "declarer": "NS",
+          "result": "+1"
+        },
+        {
+          "contract": "3C+1",
+          "level": 3,
+          "denomination": "C",
+          "declarer": "NS",
+          "result": "+1"
+        }
+      ],
+      "parScore": 130,
+      "optimumScore": 130,
+      "parResult": "NS 3D+1 / NS 3C+1; +130 NS"
+    },
+    {
+      "tournamentId": "aot-26407-2026-08-09",
+      "boardNumber": 36,
+      "pbnFingerprint": "pbn-82a72089",
+      "solverInputFingerprint": "7d7aa16134642f7d92373ced7e4ba836cfdf9c17293ec598834a773e0b4517c0",
+      "ddsVersion": {
+        "tag": "v2.9.0",
+        "commit": "8d75755c8df81999557758c9757514edb94017bc",
+        "sourceArchiveSha256": "5443dd51a539747192344223ee8726b72e272176226a98d57ac9ae98560336d8"
+      },
+      "generatedAt": "2026-08-10T15:36:53.961Z",
+      "validationStatus": "validated",
+      "independentValidation": null,
+      "source": {
+        "dealer": "W",
+        "vulnerability": "All",
+        "deal": "N:KQ543.JT.AK9.AJ2 AJ8.Q872.Q42.653 T762.543.J753.QT 9.AK96.T86.K9874"
+      },
+      "doubleDummyTricks": {
+        "N": {
+          "S": 8,
+          "H": 5,
+          "D": 7,
+          "C": 5,
+          "NT": 6
+        },
+        "E": {
+          "S": 5,
+          "H": 8,
+          "D": 6,
+          "C": 8,
+          "NT": 6
+        },
+        "S": {
+          "S": 8,
+          "H": 5,
+          "D": 7,
+          "C": 5,
+          "NT": 6
+        },
+        "W": {
+          "S": 5,
+          "H": 8,
+          "D": 6,
+          "C": 8,
+          "NT": 6
+        }
+      },
+      "optimumContracts": [
+        {
+          "contract": "2S=",
+          "level": 2,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "optimumDeclarer": "NS",
+      "parContracts": [
+        {
+          "contract": "2S=",
+          "level": 2,
+          "denomination": "S",
+          "declarer": "NS",
+          "result": "="
+        }
+      ],
+      "parScore": 110,
+      "optimumScore": 110,
+      "parResult": "NS 2S=; +110 NS"
     }
   ]
 }

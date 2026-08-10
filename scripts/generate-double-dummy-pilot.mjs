@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -30,6 +30,7 @@ const parSeats = ["N", "E", "S", "W", "NS", "EW"];
 const targets = [
   { source: "src/assets/pbn/2026-08-04.pbn", tournamentId: "aot-26404-2026-08-04", expectedBoards: 32 },
   { source: "src/assets/pbn/2026-08-06.pbn", tournamentId: "aot-26406-2026-08-06", expectedBoards: 32 },
+  { source: "src/assets/pbn/2026-08-09.pbn", tournamentId: "aot-26407-2026-08-09", expectedBoards: 36 },
 ];
 
 function sha256(value) {
@@ -102,6 +103,10 @@ function decodeBsolTable(encoded) {
 }
 
 const generatedAt = new Date().toISOString();
+const outputPath = resolve(root, "src/data/generated/doubleDummyData.json");
+const existingEntries = existsSync(outputPath)
+  ? JSON.parse(readFileSync(outputPath, "utf8")).entries ?? []
+  : [];
 const entries = [];
 for (const target of targets) {
   const source = readFileSync(resolve(root, target.source), "utf8");
@@ -112,6 +117,14 @@ for (const target of targets) {
     || new Set(boardNumbers).size !== target.expectedBoards
     || boardNumbers.some((boardNumber) => !Number.isInteger(boardNumber))) {
     throw new Error(`Expected ${target.expectedBoards} unique boards in ${target.source}`);
+  }
+  const cachedEntries = existingEntries.filter((entry) => (
+    entry.tournamentId === target.tournamentId && entry.pbnFingerprint === pbnFingerprint
+  ));
+  if (cachedEntries.length === target.expectedBoards
+    && new Set(cachedEntries.map((entry) => entry.boardNumber)).size === target.expectedBoards) {
+    entries.push(...cachedEntries);
+    continue;
   }
   for (const tags of records.sort((a, b) => Number(a.Board) - Number(b.Board))) {
     const boardNumber = Number(tags.Board);
@@ -164,6 +177,8 @@ for (const target of targets) {
         deal: tags.Deal,
       },
       doubleDummyTricks: solved.table,
+      optimumContracts: solved.contracts,
+      optimumDeclarer: [...new Set(solved.contracts.map((contract) => contract.declarer))].join(" / "),
       parContracts: solved.contracts,
       parScore: solved.score,
       optimumScore: solved.score,
@@ -173,14 +188,14 @@ for (const target of targets) {
 }
 
 const entryKeys = entries.map((entry) => `${entry.tournamentId}/${entry.boardNumber}`);
-if (entries.length !== 64 || new Set(entryKeys).size !== 64) {
-  throw new Error(`Expected 64 unique DDS entries, received ${entries.length}`);
+const expectedEntryCount = targets.reduce((sum, target) => sum + target.expectedBoards, 0);
+if (entries.length !== expectedEntryCount || new Set(entryKeys).size !== expectedEntryCount) {
+  throw new Error(`Expected ${expectedEntryCount} unique DDS entries, received ${entries.length}`);
 }
 if (independentCheck.entries.length < 8) {
   throw new Error("At least eight independent checks are required: four pilot and four additional boards");
 }
 
-const outputPath = resolve(root, "src/data/generated/doubleDummyData.json");
 mkdirSync(dirname(outputPath), { recursive: true });
 writeFileSync(outputPath, `${JSON.stringify({ schemaVersion: 1, entries }, null, 2)}\n`, "utf8");
 console.log(`Generated and validated ${entries.length} DDS results at ${outputPath}`);
