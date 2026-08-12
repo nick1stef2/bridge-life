@@ -80,4 +80,13 @@ export const videosData = [
     poster: null,
     featured: false,
   },
+  {
+    id: "video10",
+    src: "/videos/video10.mp4",
+    title: "Video 10",
+    description: "Νέο βίντεο από το αρχείο του Bridge Life.",
+    category: null,
+    poster: null,
+    featured: false,
+  },
 ];

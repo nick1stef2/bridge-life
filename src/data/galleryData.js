@@ -22,6 +22,13 @@ import gallery08 from "../assets/images/gallery/gallery08.jpg";
 import gallery09 from "../assets/images/gallery/gallery09.jpg";
 import gallery10 from "../assets/images/gallery/gallery10.jpg";
 import gallery11 from "../assets/images/gallery/gallery11.jpg";
+import gallery12 from "../assets/images/gallery/gallery12.jpg";
+import gallery13 from "../assets/images/gallery/gallery13.jpg";
+import gallery14 from "../assets/images/gallery/gallery14.jpg";
+import gallery15 from "../assets/images/gallery/gallery15.jpg";
+import gallery16 from "../assets/images/gallery/gallery16.jpg";
+import gallery17 from "../assets/images/gallery/galllery17.jpg";
+import gallery18 from "../assets/images/gallery/gallery18.jpg";
 
 export const galleryData = [
   {
@@ -266,5 +273,75 @@ export const galleryData = [
     description: null,
     featured: false,
     duplicateOf: "gallery10",
+  },
+  {
+    id: "gallery12",
+    image: gallery12,
+    title: "Με τον Κώστα Ζαγγογιάννη — διάκριση στον αγώνα 1–9",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "4οι στη γενική κατάταξη και 1οι στην κατηγορία 1–6. Κερδίσαμε από ένα μπουκάλι κρασί.",
+    featured: false,
+  },
+  {
+    id: "gallery13",
+    image: gallery13,
+    title: "Με τον Κώστα Ζαγγογιάννη — τα έπαθλα της βραδιάς",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "Στον αγώνα 1–9 ήρθαμε 4οι γενικά και 1οι στην κατηγορία 1–6, κερδίζοντας από ένα μπουκάλι κρασί.",
+    featured: false,
+  },
+  {
+    id: "gallery14",
+    image: gallery14,
+    title: "Παναγιώτης Εξαρχόπουλος",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "Στιγμιότυπο από τη βραδιά του αγώνα.",
+    featured: false,
+  },
+  {
+    id: "gallery15",
+    image: gallery15,
+    title: "Νίκος Βακάλης",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "Στιγμιότυπο από τη βραδιά του αγώνα.",
+    featured: false,
+  },
+  {
+    id: "gallery16",
+    image: gallery16,
+    title: "Κώστας Ζαγγογιάννης",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "Στιγμιότυπο από τη βραδιά του αγώνα.",
+    featured: false,
+  },
+  {
+    id: "gallery17",
+    image: gallery17,
+    title: "Νίκος Στεφανάκης",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "Στιγμιότυπο από τη βραδιά του αγώνα.",
+    featured: false,
+  },
+  {
+    id: "gallery18",
+    image: gallery18,
+    title: "Νίκος Στεφανάκης — αγώνας 1–9",
+    date: "2026-08-11",
+    category: null,
+    tournamentId: "aot-26411-2026-08-11",
+    description: "Στιγμιότυπο από τη βραδιά του αγώνα.",
+    featured: false,
   },
 ];

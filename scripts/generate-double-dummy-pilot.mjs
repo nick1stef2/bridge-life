@@ -31,6 +31,7 @@ const targets = [
   { source: "src/assets/pbn/2026-08-04.pbn", tournamentId: "aot-26404-2026-08-04", expectedBoards: 32 },
   { source: "src/assets/pbn/2026-08-06.pbn", tournamentId: "aot-26406-2026-08-06", expectedBoards: 32 },
   { source: "src/assets/pbn/2026-08-09.pbn", tournamentId: "aot-26407-2026-08-09", expectedBoards: 36 },
+  { source: "src/assets/pbn/2026-08-11.pbn", tournamentId: "aot-26411-2026-08-11", expectedBoards: 32 },
 ];
 
 function sha256(value) {
