@@ -44,11 +44,38 @@ import result20260804 from "../assets/images/results/2026-08-04.png";
 import result20260806 from "../assets/images/results/2026-08-06.png";
 import result20260809 from "../assets/images/results/2026-08-09.png";
 import result20260811 from "../assets/images/results/2026-08-11.png";
+import result20260813Teams from "../assets/images/results/2026-08-13 ΟΜΑΔΙΚΟ.png";
+import result20260814Teams from "../assets/images/results/2026-08-14 ΟΜΑΔΙΚΟ.png";
+import result20260815Teams from "../assets/images/results/2026-08-15 ΟΜΑΔΙΚΟ.png";
+import result20260815TeamPoints from "../assets/images/results/2026-08-15 ΟΜΑΔΙΚΟΙ ΒΑΘΜΟΙ.png";
 
 import board20260804 from "../assets/images/boards/2026-08-04.png";
 import board20260806 from "../assets/images/boards/2026-08-06.png";
 import board20260809 from "../assets/images/boards/2026-08-09.png";
 import board20260811 from "../assets/images/boards/2026-08-11.png";
+import board20260813Teams1 from "../assets/images/boards/2026-08-13 ΔΙΑΝΟΜΕΣ1.png";
+import board20260813Teams2 from "../assets/images/boards/2026-08-13 ΔΙΑΝΟΜΕ2.png";
+import board20260814Teams1 from "../assets/images/boards/2026-08-14 ΔΙΑΝΟΜΕ1.png";
+import board20260814Teams2 from "../assets/images/boards/2026-08-14 ΔΙΑΝΟΜΕ2.png";
+import board20260815Teams1 from "../assets/images/boards/2026-08-15 ΔΙΑΝΟΜΕΣ1.png";
+import board20260815Teams2 from "../assets/images/boards/2026-08-15 ΔΙΑΝΟΜΕΣ2.png";
+
+function teamBoard(boardNumber, teamResult, opponentResult, teamImps = 0, opponentImps = 0) {
+  const toRoomResult = (result) => result && ({
+    contract: result[0],
+    declarer: result[1],
+    openingLead: result[2],
+    score: result[3],
+  });
+
+  return {
+    boardNumber,
+    teamResult: toRoomResult(teamResult),
+    opponentResult: toRoomResult(opponentResult),
+    teamImps,
+    opponentImps,
+  };
+}
 
 export const tournamentsData = [
   {
@@ -1105,6 +1132,222 @@ export const tournamentsData = [
       { tournamentId: "aot-26411-2026-08-11", boardNumber: 18, percentage: 38 },
       { tournamentId: "aot-26411-2026-08-11", boardNumber: 19, percentage: 88 },
       { tournamentId: "aot-26411-2026-08-11", boardNumber: 20, percentage: 100 },
+    ],
+  },
+  {
+    id: "oamle-26256-2026-08-13-15",
+    date: "2026-08-15",
+    startDate: "2026-08-13",
+    endDate: "2026-08-15",
+    title: "GrandPrix Ομάδες 1-9",
+    eventName: "GrandPrix Ομάδες 1-9",
+    organization: "ΟΑΜΛΕ 26256",
+    organizer: "ΟΑΜΛΕ 26256",
+    sourceResultIds: ["205416", "205421", "205426"],
+    type: "Ομάδες - πλήρες Swiss | Περιορισμένος",
+    eventType: "Ομάδες - πλήρες Swiss | Περιορισμένος",
+    eventFormat: "teams",
+    scoreType: "teamVp",
+    scoreUnit: "VP",
+    grade: "4ης βαθμίδας",
+    level: "4ης βαθμίδας",
+    partner: null,
+    teamName: "ΒΑΚΑΛΗΣ",
+    teamMembers: [
+      "Μαριέλα Ντάικου",
+      "Νίκος Στεφανάκης",
+      "Παναγιώτης Εξαρχόπουλος",
+      "Νικόλαος Βακάλης",
+    ],
+    position: "8",
+    participants: 8,
+    score: "24,34",
+    playerCategory: 1,
+    partnerCategory: null,
+    masterPoints: "30",
+    extraPoints: {
+      x: "2",
+      p: "0,2",
+    },
+    location: null,
+    includeInPersonalStats: true,
+    verificationStatus: "verified",
+    verificationNotes:
+      "Επιβεβαιωμένο αποκλειστικά από τα τέσσερα result screenshots και τα έξι board screenshots 13–15/08/2026. Δεν υπάρχει PBN και δεν δημιουργήθηκαν PBN/DDS δεδομένα.",
+    notes: "Τελική κατάταξη: 8η θέση σε 8 ομάδες με 24,34 VP.",
+    resultImage: result20260815Teams,
+    relatedResultImages: [result20260813Teams, result20260814Teams, result20260815TeamPoints],
+    boardImages: [
+      board20260813Teams1,
+      board20260813Teams2,
+      board20260814Teams1,
+      board20260814Teams2,
+      board20260815Teams1,
+      board20260815Teams2,
+    ],
+    teamDays: [
+      {
+        dayNumber: 1,
+        date: "2026-08-13",
+        dateSource: "filename",
+        sourceDisplayedDate: "2026-08-14",
+        position: "8",
+        participants: 8,
+        cumulativeVps: "5,72",
+        resultImage: result20260813Teams,
+        rounds: [
+          {
+            roundNumber: 1,
+            opponent: "ΜΠΕΡΜΠΕΡΑΚΗΣ",
+            teamImps: 18,
+            opponentImps: 31,
+            teamVps: "5,72",
+            opponentVps: "14,28",
+            sourceImage: board20260813Teams1,
+            boards: [
+              teamBoard(1, ["3NT+1", "N", "♦5", 430], ["3♣+2", "N", "♠2", 150], 7, 0),
+              teamBoard(2, ["1NT-1", "W", "♠3", 50], ["3♥-3", "E", "♠7", 150], 0, 3),
+              teamBoard(3, ["4♠X-3", "S", "♥A", -500], ["3♥", "W", "♠A", -140], 0, 8),
+              teamBoard(4, ["3♦-1", "E", "♣K", 100], ["4♠+1", "N", "♦10", 650], 0, 11),
+              teamBoard(5, ["2♥+1", "N", "♦4", 140], ["Pass", null, null, null], 4, 0),
+              teamBoard(6, ["2♥+1", "N", "♠Q", 140], ["3NT+2", "S", "♥2", 460], 0, 8),
+              teamBoard(7, ["4♥+1", "N", "♣3", 650], ["4♥+1", "N", "♣K", 650]),
+              teamBoard(8, ["4♠+1", "S", "♦9", 450], ["3♦-3", "E", "♠K", 150], 7, 0),
+              teamBoard(9, ["3♥-2", "E", "♣2", 200], ["3♠+2", "S", "♥8", 200]),
+              teamBoard(10, ["1♦+3", "S", "♣6", 130], ["3♠+1", "S", "♣6", 170], 0, 1),
+            ],
+          },
+          {
+            roundNumber: 2,
+            opponent: "ΤΑΛΙΑΔΟΥΡΟΥ",
+            teamImps: 5,
+            opponentImps: 61,
+            teamVps: "0,00",
+            opponentVps: "20,00",
+            sourceImage: board20260813Teams2,
+            boards: [
+              teamBoard(11, ["4♠X-2", "N", "♥A", -300], ["4♠-1", "N", "♥A", -50], 0, 6),
+              teamBoard(12, ["4♠-1", "E", "♥A", 50], ["2♠+1", "E", "♣A", -140], 5, 0),
+              teamBoard(13, ["3♣+3", "S", "♦9", 170], ["5♣+1", "N", "♦3", 620], 0, 10),
+              teamBoard(14, ["4♥+1", "W", "♦A", -450], ["4♥+1", "W", "♦A", -450]),
+              teamBoard(15, ["3♥X-3", "S", "♠A", -800], ["3♦+1", "E", "♠Q", -130], 0, 12),
+              teamBoard(16, ["4♠X", "W", "♣7", -790], ["4♠", "W", "♣7", -620], 0, 5),
+              teamBoard(17, ["5♠X-2", "N", "♥2", -300], ["4♠+1", "N", "♥3", 450], 0, 13),
+              teamBoard(18, ["2♠X-2", "N", "♣8", -200], ["3NT-1", "S", "♣A", -100], 0, 3),
+              teamBoard(19, ["3♠+1", "W", "♦8", -170], ["4♥-2", "S", "♣K", -100], 0, 2),
+              teamBoard(20, ["3♠", "N", "♦A", 140], ["4♠", "S", "♦Q", 620], 0, 10),
+            ],
+          },
+        ],
+      },
+      {
+        dayNumber: 2,
+        date: "2026-08-14",
+        dateSource: "filename",
+        sourceDisplayedDate: "2026-08-14",
+        position: "8",
+        participants: 8,
+        cumulativeVps: "21,31",
+        resultImage: result20260814Teams,
+        rounds: [
+          {
+            roundNumber: 3,
+            opponent: "ΣΑΚΚΑΛΟΓΛΟΥ",
+            teamImps: 27,
+            opponentImps: 21,
+            teamVps: "12,18",
+            opponentVps: "7,82",
+            sourceImage: board20260814Teams1,
+            boards: [
+              teamBoard(1, ["4♠", "S", "♥A", 420], ["3♥+1", "W", "♠A", -170], 11, 0),
+              teamBoard(2, ["3NT-2", "S", "♣10", -200], ["5♦-1", "N", "♠3", -100], 0, 3),
+              teamBoard(3, ["1NT+1", "N", "♦8", 120], ["3NT", "N", "♥K", 400], 0, 7),
+              teamBoard(4, ["4♠-2", "W", "♦3", 200], ["4♠-2", "W", "♥10", 200]),
+              teamBoard(5, ["3♠-2", "N", "♦3", -200], ["3♣-1", "S", "♠A", -100], 0, 3),
+              teamBoard(6, ["4♥+1", "S", "♣7", 450], ["4♥+2", "S", "♠A", 480], 0, 1),
+              teamBoard(7, ["1♥", "E", "♠A", -80], ["2♣", "S", "♠4", 90], 0, 5),
+              teamBoard(8, ["4♠+1", "S", "♦5", 450], ["4♠+3", "S", "♥K", 510], 0, 2),
+              teamBoard(9, ["3NT-4", "E", "♣3", 400], ["1NT+4", "N", "♦A", 210], 5, 0),
+              teamBoard(10, ["3NT+1", "N", "♣10", 630], ["3♦+1", "N", "♣10", 130], 11, 0),
+            ],
+          },
+          {
+            roundNumber: 4,
+            opponent: "ΑΝΘΥΜΙΔΟΥ",
+            teamImps: 20,
+            opponentImps: 43,
+            teamVps: "3,41",
+            opponentVps: "16,59",
+            sourceImage: board20260814Teams2,
+            boards: [
+              teamBoard(11, ["1♥+4", "N", "♦K", 200], ["3NT+1", "N", "♣Q", 430], 0, 6),
+              teamBoard(12, ["4♣-1", "N", "♦A", -100], ["4♥-1", "S", "♦6", -100]),
+              teamBoard(13, ["2♠+3", "S", "♥7", 200], ["6♠", "S", "♦8", 1430], 0, 15),
+              teamBoard(14, ["4♣", "N", "♦A", 130], ["2♣+2", "N", "♦9", 130]),
+              teamBoard(15, ["3♥", "S", "♠J", 140], ["4♥-1", "S", "♠J", -100], 6, 0),
+              teamBoard(16, ["4♥-1", "W", "♠3", 100], ["4♥-1", "E", "♠A", 100]),
+              teamBoard(17, ["3♥+2", "N", "♦J", 200], ["3NT-2", "S", "♠Q", -100], 7, 0),
+              teamBoard(18, ["4♠-2", "N", "♦K", -200], ["3♥+2", "S", "♣2", 200], 0, 9),
+              teamBoard(19, ["1NT-2", "E", "♥5", 200], ["1♥", "E", "♠A", -80], 7, 0),
+              teamBoard(20, ["4♥-1", "N", "♠Q", -100], ["3NT+2", "S", "♠3", 660], 0, 13),
+            ],
+          },
+        ],
+      },
+      {
+        dayNumber: 3,
+        date: "2026-08-15",
+        dateSource: "filename",
+        sourceDisplayedDate: null,
+        position: "8",
+        participants: 8,
+        cumulativeVps: "24,34",
+        resultImage: result20260815Teams,
+        rounds: [
+          {
+            roundNumber: 5,
+            opponent: "ΣΤΑΣΙΝΟΠΟΥΛΟΣ",
+            teamImps: 5,
+            opponentImps: 61,
+            teamVps: "0,00",
+            opponentVps: "20,00",
+            sourceImage: board20260815Teams1,
+            boards: [
+              teamBoard(1, ["3NT+1", "W", "♥Q", -430], ["3♣", "E", "♦J", -110], 0, 8),
+              teamBoard(2, ["3♥", "S", "♠J", 140], ["3♥+2", "S", "♠6", 200], 0, 2),
+              teamBoard(3, ["3♦+1", "W", "♣A", -130], ["4♠", "S", "♦A", 420], 0, 11),
+              teamBoard(4, ["3♥-2", "N", "♦A", -200], ["2♣-2", "W", "♠3", 200], 0, 9),
+              teamBoard(5, ["3♠-2", "W", "♥10", 100], ["4♠-4", "W", "♥A", 200], 0, 3),
+              teamBoard(6, ["3♦", "N", "♥2", 110], ["3NT-2", "N", "♥2", -100], 5, 0),
+              teamBoard(7, ["3NT+2", "N", "♥2", 660], ["4♥X-4", "W", "♦A", 1100], 0, 10),
+              teamBoard(8, ["4♥-2", "N", "♣4", -100], ["3NT+1", "N", "♠3", 430], 0, 11),
+              teamBoard(9, ["2♠", "E", "♥A", -110], ["4♠-2", "W", "♦4", 200], 0, 7),
+              teamBoard(10, ["3♦+3", "N", "♠K", -300], ["2♥-3", "S", "♠5", -300]),
+            ],
+          },
+          {
+            roundNumber: 6,
+            opponent: "ΤΑΛΙΑΔΟΥΡΟΥ",
+            teamImps: 10,
+            opponentImps: 35,
+            teamVps: "3,03",
+            opponentVps: "16,97",
+            sourceImage: board20260815Teams2,
+            boards: [
+              teamBoard(11, ["3NT-1", "S", "♠9", -50], ["3NT+1", "S", "♣6", 430], 0, 10),
+              teamBoard(12, ["2♠-2", "W", "♥A", 100], ["2♣-2", "W", "♥A", 100]),
+              teamBoard(13, ["3♥-1", "E", "♦6", 100], ["4♠-1", "S", "♥8", -100], 5, 0),
+              teamBoard(14, ["3♥X-4", "S", "♦10", -800], ["3♠-1", "W", "♠9", 50], 0, 13),
+              teamBoard(15, ["2♥", "N", "♦4", 110], ["3NT-1", "S", "♣5", -100], 5, 0),
+              teamBoard(16, ["3♠-3", "S", "♥Q", -150], ["2♠-1", "S", "♥Q", -50], 0, 3),
+              teamBoard(17, ["4♥", "N", "♠4", 420], ["4♥+1", "N", "♣4", 450], 0, 1),
+              teamBoard(18, ["2NT+2", "E", "♦6", -180], ["1♠+3", "E", "♥4", -170]),
+              teamBoard(19, ["3♠-2", "S", "♦J", -100], ["4♠-1", "S", "♠Q", -50], 0, 2),
+              teamBoard(20, ["1♦-1", "N", "♣9", -100], ["4♣", "S", "♦A", 130], 0, 6),
+            ],
+          },
+        ],
+      },
     ],
   },
 ];

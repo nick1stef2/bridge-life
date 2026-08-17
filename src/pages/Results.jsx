@@ -35,7 +35,17 @@ function formatResultScore(result) {
     return missingValue;
   }
 
-  return result.scoreType === "percentage" ? formatScore(parsedScore) : toDisplay(result.score);
+  if (result.scoreType === "percentage") {
+    return formatScore(parsedScore);
+  }
+
+  return result.scoreUnit ? `${toDisplay(result.score)} ${result.scoreUnit}` : toDisplay(result.score);
+}
+
+function formatPartnerOrTeam(result) {
+  return result.eventFormat === "teams" && result.teamName
+    ? `Ομάδα ${result.teamName}`
+    : toDisplay(result.partner);
 }
 
 function isPercentageResult(result) {
@@ -266,7 +276,7 @@ function Results() {
                 <th>Αγώνας</th>
                 <th>Συμπαίκτης</th>
                 <th>Θέση</th>
-                <th>Ποσοστό</th>
+                <th>Σκορ</th>
                 <th>Κατηγορίες παικτών</th>
               </tr>
             </thead>
@@ -282,7 +292,7 @@ function Results() {
                       {toDisplay(result.title)}
                     </Link>
                   </td>
-                  <td>{toDisplay(result.partner)}</td>
+                  <td>{formatPartnerOrTeam(result)}</td>
                   <td>{toDisplay(result.position)}</td>
                   <td>{formatResultScore(result)}</td>
                   <td>{formatPlayerCategories(result)}</td>
