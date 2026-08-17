@@ -228,10 +228,12 @@
 
 .team-days-list {
   display: grid;
+  min-width: 0;
   gap: 20px;
 }
 
 .team-day {
+  min-width: 0;
   padding: 20px;
   border: 1px solid #303842;
   border-radius: 16px;
@@ -293,6 +295,8 @@
 }
 
 .team-round-details {
+  min-width: 0;
+  max-width: 100%;
   margin-top: 12px;
   border: 1px solid #303842;
   border-radius: 12px;
@@ -307,6 +311,7 @@
 }
 
 .team-round-details .tournament-boards-table-wrap {
+  max-width: 100%;
   border: 0;
   border-top: 1px solid #303842;
   border-radius: 0;
@@ -346,6 +351,7 @@
 
   .team-day {
     padding: 14px;
+    overflow: hidden;
   }
 
   .team-day-header {
