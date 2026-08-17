@@ -6,10 +6,7 @@ const missingValue = "—";
 
 const detailSections = [
   { key: "results", title: "Αποτελέσματα" },
-  { key: "photos", title: "Φωτογραφίες" },
-  { key: "videos", title: "Βίντεο" },
   { key: "boardImages", title: "Board screenshots" },
-  { key: "lessons", title: "Μαθήματα / Lessons" },
 ];
 
 function toDisplay(value) {
@@ -71,14 +68,11 @@ function buildDetailItems(tournament) {
 
   return {
     results: resultItems,
-    photos: [],
-    videos: [],
     boardImages: (tournament.boardImages || []).map((image, index) => ({
       title: `Board screenshot ${index + 1}`,
       image,
       text: "Πραγματικό screenshot από τον φάκελο boards.",
     })),
-    lessons: [],
   };
 }
 

@@ -181,8 +181,12 @@ function Results() {
         .toLowerCase();
       const matchesFilter =
         activeFilter === "Όλοι" ||
-        (result.type && result.type.toLowerCase().includes(activeFilter.toLowerCase())) ||
-        (result.title && result.title.toLowerCase().includes(activeFilter.toLowerCase()));
+        (activeFilter === "Ζεύγη" && result.eventFormat === "pairs") ||
+        (activeFilter === "Ομαδικά" && result.eventFormat === "teams") ||
+        (!["Ζεύγη", "Ομαδικά"].includes(activeFilter) && (
+          (result.type && result.type.toLowerCase().includes(activeFilter.toLowerCase())) ||
+          (result.title && result.title.toLowerCase().includes(activeFilter.toLowerCase()))
+        ));
       const matchesSearch = !normalizedSearch || searchableText.includes(normalizedSearch);
 
       return matchesFilter && matchesSearch;
