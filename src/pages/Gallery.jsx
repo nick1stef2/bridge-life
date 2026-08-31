@@ -13,7 +13,9 @@ function toDisplay(value) {
 
 function sortByDateDesc(a, b) {
   if (a.date && b.date) {
-    return b.date.localeCompare(a.date);
+    const dateComparison = b.date.localeCompare(a.date);
+    if (dateComparison !== 0) return dateComparison;
+    return a.id.localeCompare(b.id);
   }
 
   if (a.date) {
