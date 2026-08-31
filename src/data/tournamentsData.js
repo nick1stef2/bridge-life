@@ -44,6 +44,7 @@ import result20260804 from "../assets/images/results/2026-08-04.png";
 import result20260806 from "../assets/images/results/2026-08-06.png";
 import result20260809 from "../assets/images/results/2026-08-09.png";
 import result20260811 from "../assets/images/results/2026-08-11.png";
+import result20260830 from "../assets/images/results/2026-08-30.png";
 import result20260813Teams from "../assets/images/results/2026-08-13 ΟΜΑΔΙΚΟ.png";
 import result20260814Teams from "../assets/images/results/2026-08-14 ΟΜΑΔΙΚΟ.png";
 import result20260815Teams from "../assets/images/results/2026-08-15 ΟΜΑΔΙΚΟ.png";
@@ -53,6 +54,7 @@ import board20260804 from "../assets/images/boards/2026-08-04.png";
 import board20260806 from "../assets/images/boards/2026-08-06.png";
 import board20260809 from "../assets/images/boards/2026-08-09.png";
 import board20260811 from "../assets/images/boards/2026-08-11.png";
+import board20260830 from "../assets/images/boards/2026-08-30.png";
 import board20260813Teams1 from "../assets/images/boards/2026-08-13 ΔΙΑΝΟΜΕΣ1.png";
 import board20260813Teams2 from "../assets/images/boards/2026-08-13 ΔΙΑΝΟΜΕ2.png";
 import board20260814Teams1 from "../assets/images/boards/2026-08-14 ΔΙΑΝΟΜΕ1.png";
@@ -1132,6 +1134,55 @@ export const tournamentsData = [
       { tournamentId: "aot-26411-2026-08-11", boardNumber: 18, percentage: 38 },
       { tournamentId: "aot-26411-2026-08-11", boardNumber: 19, percentage: 88 },
       { tournamentId: "aot-26411-2026-08-11", boardNumber: 20, percentage: 100 },
+    ],
+  },
+  {
+    id: "aot-26425-2026-08-30",
+    date: "2026-08-30",
+    title: "Ζεύγη 1-6 Κυριακής 6 Ημερίδα 30/8/26",
+    eventName: "Ζεύγη 1-6 Κυριακής 6 Ημερίδα 30/8/26",
+    organization: "ΑΟΤ 26425",
+    organizer: "ΑΟΤ 26425",
+    type: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventType: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventFormat: "pairs",
+    scoreType: "percentage",
+    grade: "5ης βαθμίδας",
+    level: "5ης βαθμίδας",
+    partner: "Νικόλαος Βακάλης",
+    position: "2",
+    participants: 12,
+    score: "68,75",
+    playerCategory: 1,
+    partnerCategory: 2,
+    masterPoints: "14",
+    location: "ΑΟΤ Παλαιό Φάληρο",
+    includeInPersonalStats: true,
+    verificationStatus: "verified",
+    verificationNotes: "Επιβεβαιωμένο από τα screenshots 2026-08-30 στους φακέλους results και boards.",
+    resultImage: result20260830,
+    boardImages: [board20260830],
+    boardResults: [
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 1, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 2, percentage: 88 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 3, percentage: 75 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 4, percentage: 0 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 5, percentage: 0 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 6, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 7, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 8, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 13, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 14, percentage: 75 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 15, percentage: 75 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 16, percentage: 88 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 17, percentage: 13 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 18, percentage: 25 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 19, percentage: 50 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 20, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 21, percentage: 100 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 22, percentage: 63 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 23, percentage: 25 },
+      { tournamentId: "aot-26425-2026-08-30", boardNumber: 24, percentage: 100 },
     ],
   },
   {

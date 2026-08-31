@@ -13,6 +13,7 @@ const tournamentIdByContentId = {
   "pbn-837036ee": "aot-26406-2026-08-06",
   "pbn-82a72089": "aot-26407-2026-08-09",
   "pbn-439b81f8": "aot-26411-2026-08-11",
+  "pbn-d6d99a88": "aot-26425-2026-08-30",
 };
 
 export const boardCollections = Object.entries(pbnSources)
