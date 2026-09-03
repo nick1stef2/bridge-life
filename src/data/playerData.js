@@ -7,7 +7,7 @@ export const playerData = {
     platinum: 0,
   },
   pendingPoints: {
-    black: 922,
+    black: 926,
     gold: 37,
     platinum: 2,
   },
