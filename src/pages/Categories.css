@@ -137,6 +137,18 @@
   line-height: 1.55;
 }
 
+.provisional-points-label {
+  margin: 20px 0 0;
+  color: #f1d99d;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.provisional-points-grid {
+  margin-top: 10px;
+}
+
 .pending-card {
   border-color: #5d4b23;
   background: #211f1a;

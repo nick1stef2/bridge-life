@@ -1,19 +1,25 @@
 export const playerData = {
-  officialCategory: 1,
-  officialCategoryName: "Κατηγορία Δ'",
+  officialCategory: 5,
+  officialCategoryName: "Έμπειρος Δ'",
   officialPoints: {
-    black: 14,
-    gold: 0,
-    platinum: 0,
+    black: 936,
+    gold: 37,
+    platinum: 2,
+  },
+  unofficialPoints: {
+    black: 67,
+    gold: 5,
+    platinum: 0.3,
   },
   pendingPoints: {
-    black: 988,
+    black: 1003,
     gold: 42,
     platinum: 2.3,
   },
   officialStatus: {
-    lastUpdated: "2026-05-03",
-    nextFinalizationDate: "2026-09-03",
+    finalizedThrough: "2026-08-31",
+    nextFinalizationDate: null,
     updateCycle: "κάθε 4 μήνες",
+    source: "ΕΟΜ – καρτέλα αθλητή 19350",
   },
 };

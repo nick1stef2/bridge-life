@@ -58,6 +58,7 @@ function formatPoints(points) {
 
 function Categories() {
   const officialPoints = formatPoints(playerData.officialPoints);
+  const unofficialPoints = formatPoints(playerData.unofficialPoints);
   const { estimatedCategory, nextCategory, remainingPoints } = getPendingEstimate(
     playerData.pendingPoints,
     categoriesData,
@@ -89,14 +90,10 @@ function Categories() {
           </div>
 
           <p className="categories-status">
-            Ισχύει μέχρι την επόμενη οριστικοποίηση
+            Οριστικοποιημένη κατηγορία από την ΕΟΜ
           </p>
           <p className="categories-status muted">
-            Τελευταία ενημέρωση: {formatDate(playerData.officialStatus.lastUpdated)}
-          </p>
-          <p className="categories-status muted">
-            Επόμενη οριστικοποίηση:{" "}
-            {formatDate(playerData.officialStatus.nextFinalizationDate)}
+            Περιλαμβάνει αποτελέσματα έως: {formatDate(playerData.officialStatus.finalizedThrough)}
           </p>
 
           <div className="points-grid">
@@ -120,9 +117,21 @@ function Categories() {
           </div>
 
           <p className="warning-text">
-            Δεν αποτελεί επίσημη κατηγορία μέχρι την οριστικοποίηση της ΕΟΜ στις{" "}
-            {formatDate(playerData.officialStatus.nextFinalizationDate)}.
+            Οι παρακάτω νέοι βαθμοί είναι ανεπίσημοι μέχρι την επόμενη
+            οριστικοποίηση της ΕΟΜ και δεν αλλάζουν ακόμη την επίσημη κατηγορία.
           </p>
+
+          <p className="provisional-points-label">Νέοι ανεπίσημοι βαθμοί</p>
+          <div className="points-grid provisional-points-grid">
+            {unofficialPoints.map((point) => (
+              <div key={point.label}>
+                <span>{point.label}</span>
+                <strong>{toDisplay(point.value)}</strong>
+              </div>
+            ))}
+          </div>
+
+          <p className="provisional-points-label">Σύνολο με τους ανεπίσημους βαθμούς</p>
 
           <div className="pending-targets">
             <div>
@@ -132,12 +141,17 @@ function Categories() {
             <div>
               <span>Χρυσοί</span>
               <strong>{playerData.pendingPoints.gold} / {toNumber(nextCategory.requiredPoints.gold)}</strong>
-              <small>Το όριο έχει καλυφθεί</small>
+              <small>
+                {remainingPoints.gold === 0
+                  ? "Το όριο έχει καλυφθεί"
+                  : `Απομένουν ${remainingPoints.gold}`}
+              </small>
             </div>
           </div>
 
           <p className="remaining-points">
-            Απομένουν {remainingPoints.black} μαύροι βαθμοί για την Κατηγορία{" "}
+            Απομένουν {remainingPoints.black} μαύροι και {remainingPoints.gold} χρυσοί
+            βαθμοί για την Κατηγορία{" "}
             {nextCategory.category} — {nextCategory.name}
           </p>
         </article>
