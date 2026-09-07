@@ -67,7 +67,7 @@ function parseDeal(dealText) {
 export function parsePbn(source) {
   const records = source
     .replace(/\r\n/g, "\n")
-    .split(/\n\s*\n(?=\[Board\s)/)
+    .split(/\n\s*\n/)
     .map((record) => record.trim())
     .filter((record) => record.includes("[Board "));
 
@@ -101,4 +101,3 @@ export function parsePbn(source) {
     boards: boards.sort((a, b) => a.boardNumber - b.boardNumber),
   };
 }
-

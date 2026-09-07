@@ -22,6 +22,13 @@ function formatDate(date) {
   return year && month && day ? `${day}/${month}/${year}` : date;
 }
 
+function formatTournamentDate(tournament) {
+  if (tournament.startDate && tournament.endDate && tournament.startDate !== tournament.endDate) {
+    return `${formatDate(tournament.startDate)}–${formatDate(tournament.endDate)}`;
+  }
+  return formatDate(tournament.date);
+}
+
 function formatScore(tournament) {
   if (!tournament.score) {
     return missingValue;
@@ -56,6 +63,11 @@ function buildDetailItems(tournament) {
         { label: "Προσωρινοί βαθμοί Χ", value: toDisplay(tournament.extraPoints?.x) },
         { label: "Προσωρινοί βαθμοί Π", value: toDisplay(tournament.extraPoints?.p) },
         { label: "Πηγή τελικού αποτελέσματος", value: "Screenshot", image: tournament.resultImage },
+        ...(tournament.relatedResultImages || []).map((image, index) => ({
+          label: `Αναλυτικό αποτέλεσμα ${index + 1}`,
+          value: "Screenshot",
+          image,
+        })),
       ]
     : [
         { label: "Θέση", value: toDisplay(tournament.position) },
@@ -90,7 +102,53 @@ function formatRoomResult(result) {
     result.declarer ? `από ${result.declarer}` : null,
     result.openingLead ? `αντάμ ${result.openingLead}` : null,
     result.score !== null && result.score !== undefined ? `σκορ ${result.score}` : null,
+    result.nsRawScore !== null && result.nsRawScore !== undefined ? `NS ${result.nsRawScore}` : null,
   ].filter(Boolean).join(" · ");
+}
+
+function TeamSummarySection({ tournament }) {
+  if (tournament.eventFormat !== "teams" || !tournament.totalRounds) return null;
+
+  return (
+    <section className="tournament-section team-summary-section">
+      <div className="tournament-section-heading">
+        <h2>Συνολικό αποτέλεσμα τριημέρου</h2>
+        <span>{tournament.totalBoards} boards</span>
+      </div>
+      <div className="team-summary-grid">
+        <article><span>Γύροι</span><strong>{tournament.totalRounds}</strong></article>
+        <article><span>IMP</span><strong>{tournament.impFor}–{tournament.impAgainst}</strong></article>
+        <article><span>Διαφορά</span><strong>{tournament.impBalance > 0 ? "+" : ""}{tournament.impBalance} IMP</strong></article>
+        <article><span>VP</span><strong>{formatScore(tournament)}</strong></article>
+        <article><span>Τελική θέση</span><strong>{tournament.position}/{tournament.participants}</strong></article>
+      </div>
+    </section>
+  );
+}
+
+function ReplaySection({ tournament }) {
+  if (!tournament.replayDays?.length) return null;
+
+  return (
+    <section className="tournament-section replay-section">
+      <div className="tournament-section-heading">
+        <h2>BBO Replay / Training</h2>
+        <span>Blind LIN</span>
+      </div>
+      <p className="replay-note">Αρχεία χωρίς λύσεις ή ανάλυση, έτοιμα για εισαγωγή στο BBO.</p>
+      <div className="replay-days-grid">
+        {tournament.replayDays.map((day) => (
+          <article key={day.dayNumber}>
+            <h3>Ημερίδα {day.dayNumber} · {formatDate(day.date)}</h3>
+            <a href={day.url} download>Όλα τα boards της ημέρας</a>
+            <div>
+              {day.rounds.map((round) => <a href={round.url} download key={round.roundNumber}>Γύρος {round.roundNumber}</a>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 function TeamEventSection({ tournament }) {
@@ -111,7 +169,11 @@ function TeamEventSection({ tournament }) {
             <header className="team-day-header">
               <div>
                 <h3>Ημερίδα {day.dayNumber} · {formatDate(day.date)}</h3>
-                <p>Κατάταξη ημέρας: {day.position}/{day.participants} · Αθροιστικό σκορ: {day.cumulativeVps} VP</p>
+                {day.dailyVps ? (
+                  <p>Event ID {day.eventId} · {day.dailyImpFor}–{day.dailyImpAgainst} IMP ({day.dailyImpBalance > 0 ? "+" : ""}{day.dailyImpBalance}) · {day.dailyVps} VP · Θέσεις {day.seatingSummary}</p>
+                ) : (
+                  <p>Κατάταξη ημέρας: {day.position}/{day.participants} · Αθροιστικό σκορ: {day.cumulativeVps} VP</p>
+                )}
               </div>
               {day.resultImage && <img src={day.resultImage} alt={`Αποτέλεσμα ημερίδας ${day.dayNumber}`} />}
             </header>
@@ -151,8 +213,8 @@ function TeamEventSection({ tournament }) {
                     <thead>
                       <tr>
                         <th>Board</th>
-                        <th>Αποτέλεσμα {tournament.teamName}</th>
-                        <th>Αποτέλεσμα αντιπάλου</th>
+                        <th>{round.boards.some((board) => board.ourTable) ? "Τραπέζι Στεφανάκη–Βακάλη" : `Αποτέλεσμα ${tournament.teamName}`}</th>
+                        <th>{round.boards.some((board) => board.otherTable) ? "Άλλο τραπέζι" : "Αποτέλεσμα αντιπάλου"}</th>
                         <th>IMP {tournament.teamName}</th>
                         <th>IMP αντιπάλου</th>
                       </tr>
@@ -161,8 +223,8 @@ function TeamEventSection({ tournament }) {
                       {round.boards.map((board) => (
                         <tr key={`${round.roundNumber}-${board.boardNumber}`}>
                           <td>{board.boardNumber}</td>
-                          <td>{formatRoomResult(board.teamResult)}</td>
-                          <td>{formatRoomResult(board.opponentResult)}</td>
+                          <td>{formatRoomResult(board.ourTable || board.teamResult)}</td>
+                          <td>{formatRoomResult(board.otherTable || board.opponentResult)}</td>
                           <td>{board.teamImps || missingValue}</td>
                           <td>{board.opponentImps || missingValue}</td>
                         </tr>
@@ -227,7 +289,11 @@ function TournamentSection({ title, items }) {
         {items.length ? (
           items.map((item, index) => (
             <article className="tournament-info-card" key={`${title}-${index}`}>
-              {item.image && <img src={item.image} alt={item.title || item.label} />}
+              {item.image && (
+                <a href={item.image} target="_blank" rel="noreferrer" aria-label={`Άνοιγμα ${item.title || item.label}`}>
+                  <img src={item.image} alt={item.title || item.label} />
+                </a>
+              )}
               <div>
                 <h3>{item.title || item.label}</h3>
                 {item.value && <strong>{item.value}</strong>}
@@ -293,7 +359,7 @@ function TournamentDetail() {
       <section className="tournament-meta-grid">
         <article>
           <span>Ημερομηνία</span>
-          <strong>{formatDate(tournament.date)}</strong>
+          <strong>{formatTournamentDate(tournament)}</strong>
         </article>
         <article>
           <span>Διοργάνωση / ΑΟΤ</span>
@@ -326,9 +392,11 @@ function TournamentDetail() {
       </section>
 
       <main className="tournament-sections">
+        <TeamSummarySection tournament={tournament} />
         <TeamEventSection tournament={tournament} />
+        <ReplaySection tournament={tournament} />
         <BoardResultsSection boardResults={tournament.boardResults} />
-        {detailSections.map((section) => (
+        {detailSections.filter((section) => (detailItems[section.key] || []).length).map((section) => (
           <TournamentSection
             key={section.key}
             title={section.title}

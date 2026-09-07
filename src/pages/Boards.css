@@ -23,6 +23,15 @@
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
+.pbn-day-section {
+  margin-top: 32px;
+}
+
+.pbn-day-section > h2 {
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
 .pbn-collection-card,
 .pbn-hand {
   padding: 20px;

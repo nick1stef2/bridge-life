@@ -46,6 +46,8 @@ import result20260809 from "../assets/images/results/2026-08-09.png";
 import result20260811 from "../assets/images/results/2026-08-11.png";
 import result20260830 from "../assets/images/results/2026-08-30.png";
 import result20260901 from "../assets/images/results/2026-09-01.png";
+import result202609040506 from "../assets/images/results/2026-09-04.05.06.png";
+import result202609040506Details from "../assets/images/results/2026-09-04.05.06.ΑΝΑΛΥΤΙΚΑ.png";
 import result20260813Teams from "../assets/images/results/2026-08-13 ΟΜΑΔΙΚΟ.png";
 import result20260814Teams from "../assets/images/results/2026-08-14 ΟΜΑΔΙΚΟ.png";
 import result20260815Teams from "../assets/images/results/2026-08-15 ΟΜΑΔΙΚΟ.png";
@@ -63,6 +65,7 @@ import board20260814Teams1 from "../assets/images/boards/2026-08-14 ΔΙΑΝΟΜ
 import board20260814Teams2 from "../assets/images/boards/2026-08-14 ΔΙΑΝΟΜΕ2.png";
 import board20260815Teams1 from "../assets/images/boards/2026-08-15 ΔΙΑΝΟΜΕΣ1.png";
 import board20260815Teams2 from "../assets/images/boards/2026-08-15 ΔΙΑΝΟΜΕΣ2.png";
+import lazopoulosTeams from "./generated/lazopoulosTeamsTournament.json";
 
 function teamBoard(boardNumber, teamResult, opponentResult, teamImps = 0, opponentImps = 0) {
   const toRoomResult = (result) => result && ({
@@ -82,6 +85,57 @@ function teamBoard(boardNumber, teamResult, opponentResult, teamImps = 0, oppone
 }
 
 export const tournamentsData = [
+  {
+    id: "eom-206013-206035-206062-2026-09-04-06",
+    date: "2026-09-06",
+    startDate: "2026-09-04",
+    endDate: "2026-09-06",
+    title: "Κύπελλο Λαζόπουλου / Ομάδες 1-6",
+    eventName: "Κύπελλο Λαζόπουλου / Ομάδες 1-6",
+    organization: "ΑΟΜΒ / ΕΟΜ",
+    organizer: "ΑΟΜΒ / ΕΟΜ",
+    sourceResultIds: ["206013", "206035", "206062"],
+    type: "Ομάδες 1-6",
+    eventType: "teams",
+    eventFormat: "teams",
+    scoreType: "teamVp",
+    scoreUnit: "VP",
+    grade: null,
+    level: null,
+    partner: "Νικόλαος Βακάλης",
+    trackedPair: lazopoulosTeams.trackedPair,
+    teamName: lazopoulosTeams.teamName,
+    teamMembers: lazopoulosTeams.teamMembers,
+    position: "10",
+    participants: 22,
+    score: "92,00",
+    totalRounds: 9,
+    totalBoards: 63,
+    impFor: 147,
+    impAgainst: 136,
+    impBalance: 11,
+    playerCategory: 1,
+    partnerCategory: 2,
+    masterPoints: "62",
+    extraPoints: { x: "5", p: "0,3" },
+    location: null,
+    includeInPersonalStats: true,
+    verificationStatus: "verified",
+    verificationNotes:
+      "Επιβεβαιωμένο από τα validated packages των Event IDs 206013, 206035 και 206062 και από τα δύο επίσημα screenshots αποτελεσμάτων.",
+    notes: "Τριήμερο ομάδων: 9 γύροι, 63 boards, 147–136 IMP, +11 IMP, 92,00 VP και τελική 10η θέση.",
+    resultImage: result202609040506,
+    relatedResultImages: [result202609040506Details],
+    boardImages: [],
+    teamDays: lazopoulosTeams.days,
+    replayDays: lazopoulosTeams.days.map((day) => ({
+      dayNumber: day.dayNumber,
+      date: day.date,
+      url: day.replayUrl,
+      rounds: day.rounds.map((round) => ({ roundNumber: round.roundNumber, url: round.replayUrl })),
+    })),
+    videoIds: ["video11"],
+  },
   {
     id: "aot-26199-2026-04-25-result-01",
     date: "2026-04-25",

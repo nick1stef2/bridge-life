@@ -89,4 +89,14 @@ export const videosData = [
     poster: null,
     featured: false,
   },
+  {
+    id: "video11",
+    src: "/videos/video11.mp4",
+    title: "Κύπελλο Λαζόπουλου / Ομάδες 1-6",
+    description: "Βίντεο από το τριήμερο ομάδων 04–06/09/2026 με την ομάδα ΝΤΑΙΚΟΥ.",
+    category: "Ομαδικά",
+    poster: null,
+    featured: false,
+    tournamentId: "eom-206013-206035-206062-2026-09-04-06",
+  },
 ];

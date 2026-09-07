@@ -7,9 +7,9 @@ export const playerData = {
     platinum: 0,
   },
   pendingPoints: {
-    black: 926,
-    gold: 37,
-    platinum: 2,
+    black: 988,
+    gold: 42,
+    platinum: 2.3,
   },
   officialStatus: {
     lastUpdated: "2026-05-03",

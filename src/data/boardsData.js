@@ -15,6 +15,9 @@ const tournamentIdByContentId = {
   "pbn-439b81f8": "aot-26411-2026-08-11",
   "pbn-d6d99a88": "aot-26425-2026-08-30",
   "pbn-1d0bb8f4": "aot-26432-2026-09-01",
+  "pbn-a478c0ed": "eom-206013-206035-206062-2026-09-04-06",
+  "pbn-7b68ac39": "eom-206013-206035-206062-2026-09-04-06",
+  "pbn-506fd3e8": "eom-206013-206035-206062-2026-09-04-06",
 };
 
 export const boardCollections = Object.entries(pbnSources)
@@ -22,21 +25,33 @@ export const boardCollections = Object.entries(pbnSources)
     const parsed = parsePbn(source);
     const tournamentId = tournamentIdByContentId[parsed.contentId] ?? null;
     const tournament = tournamentsData.find((item) => item.id === tournamentId) ?? null;
+    const teamDay = tournament?.teamDays?.find((day) => day.pbnContentId === parsed.contentId) ?? null;
 
     return {
       id: parsed.contentId,
       sourcePath,
       tournamentId,
       tournament,
-      date: tournament?.date ?? parsed.tags.Date ?? null,
-      title: tournament?.title ?? parsed.tags.Event ?? "Μη αντιστοιχισμένο PBN",
+      date: teamDay?.date ?? tournament?.date ?? parsed.tags.Date ?? null,
+      title: teamDay ? `${tournament.title} · Ημερίδα ${teamDay.dayNumber}` : (tournament?.title ?? parsed.tags.Event ?? "Μη αντιστοιχισμένο PBN"),
       boardCount: parsed.boards.length,
       boards: parsed.boards,
-      extensions: {},
+      extensions: teamDay ? {
+        dayNumber: teamDay.dayNumber,
+        eventId: teamDay.eventId,
+        seating: teamDay.seating,
+        rounds: teamDay.rounds,
+      } : {},
     };
   })
   .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
 
 export function getBoardCollectionByTournamentId(tournamentId) {
   return boardCollections.find((collection) => collection.tournamentId === tournamentId) ?? null;
+}
+
+export function getBoardCollectionsByTournamentId(tournamentId) {
+  return boardCollections
+    .filter((collection) => collection.tournamentId === tournamentId)
+    .sort((a, b) => (a.date ?? "").localeCompare(b.date ?? ""));
 }

@@ -65,6 +65,13 @@ function formatDate(date) {
   return year && month && day ? `${day}/${month}/${year}` : date;
 }
 
+function formatTournamentDate(result) {
+  if (result.startDate && result.endDate && result.startDate !== result.endDate) {
+    return `${formatDate(result.startDate)}–${formatDate(result.endDate)}`;
+  }
+  return formatDate(result.date);
+}
+
 function formatPlayerCategories(result) {
   if (result.playerCategory === null || result.playerCategory === undefined) {
     return missingValue;
@@ -287,7 +294,7 @@ function Results() {
             <tbody>
               {filteredResults.map((result) => (
                 <tr key={result.id}>
-                  <td>{formatDate(result.date)}</td>
+                  <td>{formatTournamentDate(result)}</td>
                   <td>
                     <Link
                       className="results-tournament-link"

@@ -1,0 +1,1656 @@
+{
+  "teamName": "ΝΤΑΙΚΟΥ",
+  "teamMembers": [
+    "Μαριέλα Ντάικου",
+    "Παναγιώτης Εξαρχόπουλος",
+    "Νικόλαος Βακάλης",
+    "Νίκος Στεφανάκης"
+  ],
+  "trackedPair": [
+    "Νίκος Στεφανάκης",
+    "Νικόλαος Βακάλης"
+  ],
+  "summary": {
+    "day1": {
+      "vp": 25.3,
+      "impFor": 35,
+      "impAgainst": 46,
+      "balance": -11
+    },
+    "day2": {
+      "vp": 25.7,
+      "impFor": 44,
+      "impAgainst": 59,
+      "balance": -15
+    },
+    "day3": {
+      "vp": 41,
+      "impFor": 68,
+      "impAgainst": 31,
+      "balance": 37
+    },
+    "total": {
+      "vp": 92,
+      "impFor": 147,
+      "impAgainst": 136,
+      "balance": 11,
+      "finalStanding": 10
+    }
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "date": "2026-09-04",
+      "eventId": "206013",
+      "position": 14,
+      "participants": null,
+      "dailyVps": "25,30",
+      "dailyImpFor": 35,
+      "dailyImpAgainst": 46,
+      "dailyImpBalance": -11,
+      "pbnContentId": "pbn-a478c0ed",
+      "seating": "EW",
+      "seatingSummary": "W/E",
+      "nikosSeat": "W",
+      "vakalisSeat": "E",
+      "replayUrl": "/replays/lazopoulos-2026-09/day-1.lin",
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "opponent": "ΠΝΕΥΜΑΤΙΚΑΚΗ",
+          "teamImps": 1,
+          "opponentImps": 3,
+          "teamVps": "9,08",
+          "opponentVps": "10,92",
+          "seating": "EW",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-1.lin",
+          "boards": [
+            {
+              "boardNumber": 1,
+              "boardId": "2026-09-04-board-1",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "2NT+1",
+                "declarer": "S",
+                "nsRawScore": 150
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "1H+1",
+                "declarer": "N",
+                "nsRawScore": 110
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΠΝΕΥΜΑΤΙΚΑΚΗ"
+            },
+            {
+              "boardNumber": 2,
+              "boardId": "2026-09-04-board-2",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4H-1",
+                "declarer": "W",
+                "nsRawScore": 50
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4H-1",
+                "declarer": "W",
+                "nsRawScore": 50
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 3,
+              "boardId": "2026-09-04-board-3",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4H+1",
+                "declarer": "W",
+                "nsRawScore": -650
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4H+1",
+                "declarer": "W",
+                "nsRawScore": -650
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 4,
+              "boardId": "2026-09-04-board-4",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3H",
+                "declarer": "S",
+                "nsRawScore": 140
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "3S-1",
+                "declarer": "E",
+                "nsRawScore": 100
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΠΝΕΥΜΑΤΙΚΑΚΗ"
+            },
+            {
+              "boardNumber": 5,
+              "boardId": "2026-09-04-board-5",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4H+1",
+                "declarer": "N",
+                "nsRawScore": 650
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4H+1",
+                "declarer": "N",
+                "nsRawScore": 650
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 6,
+              "boardId": "2026-09-04-board-6",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "2S",
+                "declarer": "S",
+                "nsRawScore": 110
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "1S+2",
+                "declarer": "S",
+                "nsRawScore": 140
+              },
+              "teamImps": 1,
+              "opponentImps": 0,
+              "netImps": 1,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 7,
+              "boardId": "2026-09-04-board-7",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "5D*-1",
+                "declarer": "W",
+                "nsRawScore": 200
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "3H+1",
+                "declarer": "N",
+                "nsRawScore": 170
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΠΝΕΥΜΑΤΙΚΑΚΗ"
+            }
+          ]
+        },
+        {
+          "roundNumber": 2,
+          "opponent": "ΜΠΕΛΜΠΑΣ",
+          "teamImps": 12,
+          "opponentImps": 13,
+          "teamVps": "9,53",
+          "opponentVps": "10,47",
+          "seating": "EW",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-2.lin",
+          "boards": [
+            {
+              "boardNumber": 8,
+              "boardId": "2026-09-04-board-8",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3NT-5",
+                "declarer": "E",
+                "nsRawScore": 250
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "2S",
+                "declarer": "S",
+                "nsRawScore": 110
+              },
+              "teamImps": 0,
+              "opponentImps": 4,
+              "netImps": -4,
+              "winner": "ΜΠΕΛΜΠΑΣ"
+            },
+            {
+              "boardNumber": 9,
+              "boardId": "2026-09-04-board-9",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3NT-1",
+                "declarer": "N",
+                "nsRawScore": -50
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "3NT",
+                "declarer": "N",
+                "nsRawScore": 400
+              },
+              "teamImps": 10,
+              "opponentImps": 0,
+              "netImps": 10,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 10,
+              "boardId": "2026-09-04-board-10",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3C",
+                "declarer": "E",
+                "nsRawScore": -110
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4C",
+                "declarer": "E",
+                "nsRawScore": -130
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΜΠΕΛΜΠΑΣ"
+            },
+            {
+              "boardNumber": 11,
+              "boardId": "2026-09-04-board-11",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "5D",
+                "declarer": "W",
+                "nsRawScore": -400
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4S",
+                "declarer": "E",
+                "nsRawScore": -420
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΜΠΕΛΜΠΑΣ"
+            },
+            {
+              "boardNumber": 12,
+              "boardId": "2026-09-04-board-12",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3S-1",
+                "declarer": "W",
+                "nsRawScore": 50
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "2H-1",
+                "declarer": "S",
+                "nsRawScore": -100
+              },
+              "teamImps": 0,
+              "opponentImps": 4,
+              "netImps": -4,
+              "winner": "ΜΠΕΛΜΠΑΣ"
+            },
+            {
+              "boardNumber": 13,
+              "boardId": "2026-09-04-board-13",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3S",
+                "declarer": "S",
+                "nsRawScore": 140
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4H-2",
+                "declarer": "W",
+                "nsRawScore": 200
+              },
+              "teamImps": 2,
+              "opponentImps": 0,
+              "netImps": 2,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 14,
+              "boardId": "2026-09-04-board-14",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4C+2",
+                "declarer": "N",
+                "nsRawScore": 170
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "3S-1",
+                "declarer": "E",
+                "nsRawScore": 50
+              },
+              "teamImps": 0,
+              "opponentImps": 3,
+              "netImps": -3,
+              "winner": "ΜΠΕΛΜΠΑΣ"
+            }
+          ]
+        },
+        {
+          "roundNumber": 3,
+          "opponent": "ΜΠΑΡΚΑ",
+          "teamImps": 22,
+          "opponentImps": 30,
+          "teamVps": "6,69",
+          "opponentVps": "13,31",
+          "seating": "EW",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-3.lin",
+          "boards": [
+            {
+              "boardNumber": 15,
+              "boardId": "2026-09-04-board-15",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4C-2",
+                "declarer": "W",
+                "nsRawScore": 100
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "5D-2",
+                "declarer": "E",
+                "nsRawScore": 100
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 16,
+              "boardId": "2026-09-04-board-16",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4NT*-3",
+                "declarer": "S",
+                "nsRawScore": -500
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "1H-1",
+                "declarer": "S",
+                "nsRawScore": -50
+              },
+              "teamImps": 10,
+              "opponentImps": 0,
+              "netImps": 10,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 17,
+              "boardId": "2026-09-04-board-17",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4S",
+                "declarer": "N",
+                "nsRawScore": 420
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4C",
+                "declarer": "E",
+                "nsRawScore": -130
+              },
+              "teamImps": 0,
+              "opponentImps": 11,
+              "netImps": -11,
+              "winner": "ΜΠΑΡΚΑ"
+            },
+            {
+              "boardNumber": 18,
+              "boardId": "2026-09-04-board-18",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4S+1",
+                "declarer": "S",
+                "nsRawScore": 650
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4S",
+                "declarer": "N",
+                "nsRawScore": 620
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΜΠΑΡΚΑ"
+            },
+            {
+              "boardNumber": 19,
+              "boardId": "2026-09-04-board-19",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4H-1",
+                "declarer": "W",
+                "nsRawScore": 100
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "3NT+1",
+                "declarer": "E",
+                "nsRawScore": -630
+              },
+              "teamImps": 0,
+              "opponentImps": 12,
+              "netImps": -12,
+              "winner": "ΜΠΑΡΚΑ"
+            },
+            {
+              "boardNumber": 20,
+              "boardId": "2026-09-04-board-20",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "4H-1",
+                "declarer": "S",
+                "nsRawScore": -100
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4H",
+                "declarer": "S",
+                "nsRawScore": 620
+              },
+              "teamImps": 12,
+              "opponentImps": 0,
+              "netImps": 12,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 21,
+              "boardId": "2026-09-04-board-21",
+              "ourTable": {
+                "orientation": "opponents NS / NTAIKOU EW",
+                "nikos": "W",
+                "vakalis": "E",
+                "contract": "3S+1",
+                "declarer": "E",
+                "nsRawScore": -170
+              },
+              "otherTable": {
+                "orientation": "NTAIKOU NS / opponents EW",
+                "contract": "4S",
+                "declarer": "E",
+                "nsRawScore": -420
+              },
+              "teamImps": 0,
+              "opponentImps": 6,
+              "netImps": -6,
+              "winner": "ΜΠΑΡΚΑ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "date": "2026-09-05",
+      "eventId": "206035",
+      "position": null,
+      "participants": null,
+      "dailyVps": "25,70",
+      "dailyImpFor": 44,
+      "dailyImpAgainst": 59,
+      "dailyImpBalance": -15,
+      "pbnContentId": "pbn-7b68ac39",
+      "seating": "mixed",
+      "seatingSummary": "R4–R5 W/E · R6 N/S",
+      "nikosSeat": null,
+      "vakalisSeat": null,
+      "replayUrl": "/replays/lazopoulos-2026-09/day-2.lin",
+      "rounds": [
+        {
+          "roundNumber": 4,
+          "opponent": "ΔΟΥΒΟΓΙΑΝΝΗ",
+          "teamImps": 23,
+          "opponentImps": 21,
+          "teamVps": "10,92",
+          "opponentVps": "9,08",
+          "seating": "EW",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-4.lin",
+          "boards": [
+            {
+              "boardNumber": 1,
+              "boardId": "2026-09-05-board-1",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3NT-2",
+                "declarer": "N",
+                "nsRawScore": -100,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3NT-1",
+                "declarer": "N",
+                "nsRawScore": -50
+              },
+              "teamImps": 2,
+              "opponentImps": 0,
+              "netImps": 2,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 2,
+              "boardId": "2026-09-05-board-2",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4C*",
+                "declarer": "W",
+                "nsRawScore": -510,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "2C+3",
+                "declarer": "W",
+                "nsRawScore": -150
+              },
+              "teamImps": 8,
+              "opponentImps": 0,
+              "netImps": 8,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 3,
+              "boardId": "2026-09-05-board-3",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2S+2",
+                "declarer": "S",
+                "nsRawScore": 170,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3S+2",
+                "declarer": "S",
+                "nsRawScore": 200
+              },
+              "teamImps": 1,
+              "opponentImps": 0,
+              "netImps": 1,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 4,
+              "boardId": "2026-09-05-board-4",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4C-1",
+                "declarer": "E",
+                "nsRawScore": 100,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3NT-3",
+                "declarer": "S",
+                "nsRawScore": -300
+              },
+              "teamImps": 0,
+              "opponentImps": 9,
+              "netImps": -9,
+              "winner": "ΔΟΥΒΟΓΙΑΝΝΗ"
+            },
+            {
+              "boardNumber": 5,
+              "boardId": "2026-09-05-board-5",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3H-1",
+                "declarer": "S",
+                "nsRawScore": -100,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3D-3",
+                "declarer": "W",
+                "nsRawScore": 150
+              },
+              "teamImps": 6,
+              "opponentImps": 0,
+              "netImps": 6,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 6,
+              "boardId": "2026-09-05-board-6",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S",
+                "declarer": "W",
+                "nsRawScore": -140,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "4S-1",
+                "declarer": "W",
+                "nsRawScore": 100
+              },
+              "teamImps": 6,
+              "opponentImps": 0,
+              "netImps": 6,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 7,
+              "boardId": "2026-09-05-board-7",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "5D",
+                "declarer": "S",
+                "nsRawScore": 600,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3D-1",
+                "declarer": "S",
+                "nsRawScore": -100
+              },
+              "teamImps": 0,
+              "opponentImps": 12,
+              "netImps": -12,
+              "winner": "ΔΟΥΒΟΓΙΑΝΝΗ"
+            }
+          ]
+        },
+        {
+          "roundNumber": 5,
+          "opponent": "ΘΕΟΔΟΣΗΣ",
+          "teamImps": 2,
+          "opponentImps": 23,
+          "teamVps": "3,01",
+          "opponentVps": "16,99",
+          "seating": "EW",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-5.lin",
+          "boards": [
+            {
+              "boardNumber": 8,
+              "boardId": "2026-09-05-board-8",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "1NT+2",
+                "declarer": "N",
+                "nsRawScore": 150,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3NT-2",
+                "declarer": "N",
+                "nsRawScore": -100
+              },
+              "teamImps": 0,
+              "opponentImps": 6,
+              "netImps": -6,
+              "winner": "ΘΕΟΔΟΣΗΣ"
+            },
+            {
+              "boardNumber": 9,
+              "boardId": "2026-09-05-board-9",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S-2",
+                "declarer": "E",
+                "nsRawScore": 200,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "2S",
+                "declarer": "E",
+                "nsRawScore": -110
+              },
+              "teamImps": 0,
+              "opponentImps": 7,
+              "netImps": -7,
+              "winner": "ΘΕΟΔΟΣΗΣ"
+            },
+            {
+              "boardNumber": 10,
+              "boardId": "2026-09-05-board-10",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3NT+1",
+                "declarer": "S",
+                "nsRawScore": 630,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "2NT+1",
+                "declarer": "S",
+                "nsRawScore": 150
+              },
+              "teamImps": 0,
+              "opponentImps": 10,
+              "netImps": -10,
+              "winner": "ΘΕΟΔΟΣΗΣ"
+            },
+            {
+              "boardNumber": 11,
+              "boardId": "2026-09-05-board-11",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2NT+1",
+                "declarer": "W",
+                "nsRawScore": -150,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "5C-3",
+                "declarer": "N",
+                "nsRawScore": -150
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 12,
+              "boardId": "2026-09-05-board-12",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S",
+                "declarer": "W",
+                "nsRawScore": -140,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "4H-1",
+                "declarer": "N",
+                "nsRawScore": -100
+              },
+              "teamImps": 1,
+              "opponentImps": 0,
+              "netImps": 1,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 13,
+              "boardId": "2026-09-05-board-13",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2H-1",
+                "declarer": "E",
+                "nsRawScore": 100,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "2C",
+                "declarer": "S",
+                "nsRawScore": 90
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 14,
+              "boardId": "2026-09-05-board-14",
+              "ourTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4H+2",
+                "declarer": "E",
+                "nsRawScore": -480,
+                "pairAxis": "EW",
+                "nikos": "W",
+                "vakalis": "E"
+              },
+              "otherTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "4H+1",
+                "declarer": "E",
+                "nsRawScore": -450
+              },
+              "teamImps": 1,
+              "opponentImps": 0,
+              "netImps": 1,
+              "winner": "ΝΤΑΙΚΟΥ"
+            }
+          ]
+        },
+        {
+          "roundNumber": 6,
+          "opponent": "ΧΡΙΣΤΟΦ/ΛΟΣ",
+          "teamImps": 19,
+          "opponentImps": 15,
+          "teamVps": "11,77",
+          "opponentVps": "8,23",
+          "seating": "NS",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-6.lin",
+          "boards": [
+            {
+              "boardNumber": 15,
+              "boardId": "2026-09-05-board-15",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "1NT+1",
+                "declarer": "N",
+                "nsRawScore": 120,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2H",
+                "declarer": "S",
+                "nsRawScore": 110
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 16,
+              "boardId": "2026-09-05-board-16",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "4S",
+                "declarer": "E",
+                "nsRawScore": -620,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S",
+                "declarer": "W",
+                "nsRawScore": -140
+              },
+              "teamImps": 0,
+              "opponentImps": 10,
+              "netImps": -10,
+              "winner": "ΧΡΙΣΤΟΦ/ΛΟΣ"
+            },
+            {
+              "boardNumber": 17,
+              "boardId": "2026-09-05-board-17",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3NT",
+                "declarer": "N",
+                "nsRawScore": 400,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3D-6",
+                "declarer": "S",
+                "nsRawScore": -300
+              },
+              "teamImps": 12,
+              "opponentImps": 0,
+              "netImps": 12,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 18,
+              "boardId": "2026-09-05-board-18",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "3NT+1",
+                "declarer": "S",
+                "nsRawScore": 630,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3NT+1",
+                "declarer": "N",
+                "nsRawScore": 630
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 19,
+              "boardId": "2026-09-05-board-19",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "4S+1",
+                "declarer": "N",
+                "nsRawScore": 450,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S",
+                "declarer": "N",
+                "nsRawScore": 140
+              },
+              "teamImps": 7,
+              "opponentImps": 0,
+              "netImps": 7,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 20,
+              "boardId": "2026-09-05-board-20",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "1D",
+                "declarer": "E",
+                "nsRawScore": -70,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "5C-1",
+                "declarer": "E",
+                "nsRawScore": 100
+              },
+              "teamImps": 0,
+              "opponentImps": 5,
+              "netImps": -5,
+              "winner": "ΧΡΙΣΤΟΦ/ΛΟΣ"
+            },
+            {
+              "boardNumber": 21,
+              "boardId": "2026-09-05-board-21",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "contract": "2S",
+                "declarer": "N",
+                "nsRawScore": 110,
+                "pairAxis": "NS",
+                "nikos": "N",
+                "vakalis": "S"
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2S",
+                "declarer": "N",
+                "nsRawScore": 110
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "date": "2026-09-06",
+      "eventId": "206062",
+      "position": null,
+      "participants": null,
+      "dailyVps": "41,00",
+      "dailyImpFor": 68,
+      "dailyImpAgainst": 31,
+      "dailyImpBalance": 37,
+      "pbnContentId": "pbn-506fd3e8",
+      "seating": "NS",
+      "seatingSummary": "N/S",
+      "nikosSeat": "N",
+      "vakalisSeat": "S",
+      "replayUrl": "/replays/lazopoulos-2026-09/day-3.lin",
+      "rounds": [
+        {
+          "roundNumber": 7,
+          "opponent": "ΒΑΡΥΤΗ",
+          "teamImps": 31,
+          "opponentImps": 2,
+          "teamVps": "18,53",
+          "opponentVps": "1,47",
+          "seating": "NS",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-7.lin",
+          "boards": [
+            {
+              "boardNumber": 1,
+              "boardId": "2026-09-06-board-1",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3H-1",
+                "declarer": "W",
+                "openingLeadPublished": "DK",
+                "nsRawScore": 50
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4H-2",
+                "declarer": "W",
+                "openingLeadPublished": "CK",
+                "nsRawScore": 100
+              },
+              "teamImps": 0,
+              "opponentImps": 2,
+              "netImps": -2,
+              "winner": "ΒΑΡΥΤΗ"
+            },
+            {
+              "boardNumber": 2,
+              "boardId": "2026-09-06-board-2",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "2S+1",
+                "declarer": "W",
+                "openingLeadPublished": "D3",
+                "nsRawScore": -140
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2NT-3",
+                "declarer": "N",
+                "openingLeadPublished": "D5",
+                "nsRawScore": -300
+              },
+              "teamImps": 4,
+              "opponentImps": 0,
+              "netImps": 4,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 3,
+              "boardId": "2026-09-06-board-3",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3D",
+                "declarer": "S",
+                "openingLeadPublished": "HQ",
+                "nsRawScore": 110
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4D-1",
+                "declarer": "S",
+                "openingLeadPublished": "HQ",
+                "nsRawScore": -50
+              },
+              "teamImps": 4,
+              "opponentImps": 0,
+              "netImps": 4,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 4,
+              "boardId": "2026-09-06-board-4",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3D-3",
+                "declarer": "W",
+                "openingLeadPublished": "H3",
+                "nsRawScore": 300
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2D",
+                "declarer": "W",
+                "openingLeadPublished": "H3",
+                "nsRawScore": -90
+              },
+              "teamImps": 9,
+              "opponentImps": 0,
+              "netImps": 9,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 5,
+              "boardId": "2026-09-06-board-5",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "2S+1",
+                "declarer": "E",
+                "openingLeadPublished": "HK",
+                "nsRawScore": -140
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S",
+                "declarer": "E",
+                "openingLeadPublished": "H7",
+                "nsRawScore": -140
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 6,
+              "boardId": "2026-09-06-board-6",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3D",
+                "declarer": "N",
+                "openingLeadPublished": "H6",
+                "nsRawScore": 110
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2D",
+                "declarer": "N",
+                "openingLeadPublished": "C3",
+                "nsRawScore": 90
+              },
+              "teamImps": 1,
+              "opponentImps": 0,
+              "netImps": 1,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 7,
+              "boardId": "2026-09-06-board-7",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "4H+1",
+                "declarer": "N",
+                "openingLeadPublished": "SA",
+                "nsRawScore": 650
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2S+2",
+                "declarer": "E",
+                "openingLeadPublished": "HT",
+                "nsRawScore": -170
+              },
+              "teamImps": 13,
+              "opponentImps": 0,
+              "netImps": 13,
+              "winner": "ΝΤΑΙΚΟΥ"
+            }
+          ]
+        },
+        {
+          "roundNumber": 8,
+          "opponent": "ΦΑΦΟΥΤΗ",
+          "teamImps": 7,
+          "opponentImps": 15,
+          "teamVps": "6,69",
+          "opponentVps": "13,31",
+          "seating": "NS",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-8.lin",
+          "boards": [
+            {
+              "boardNumber": 8,
+              "boardId": "2026-09-06-board-8",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "1NT",
+                "declarer": "W",
+                "openingLeadPublished": "S6",
+                "nsRawScore": -90
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3S",
+                "declarer": "N",
+                "openingLeadPublished": "C4",
+                "nsRawScore": 140
+              },
+              "teamImps": 0,
+              "opponentImps": 6,
+              "netImps": -6,
+              "winner": "ΦΑΦΟΥΤΗ"
+            },
+            {
+              "boardNumber": 9,
+              "boardId": "2026-09-06-board-9",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3H-2",
+                "declarer": "N",
+                "openingLeadPublished": "D5",
+                "nsRawScore": -100
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2NT-2",
+                "declarer": "S",
+                "openingLeadPublished": "S5",
+                "nsRawScore": -100
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 10,
+              "boardId": "2026-09-06-board-10",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "4S-1",
+                "declarer": "E",
+                "openingLeadPublished": "D8",
+                "nsRawScore": 100
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2S+2",
+                "declarer": "E",
+                "openingLeadPublished": "C3",
+                "nsRawScore": -170
+              },
+              "teamImps": 7,
+              "opponentImps": 0,
+              "netImps": 7,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 11,
+              "boardId": "2026-09-06-board-11",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "4H*-1",
+                "declarer": "W",
+                "openingLeadPublished": "ST",
+                "nsRawScore": 100
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3D",
+                "declarer": "S",
+                "openingLeadPublished": "S9",
+                "nsRawScore": 110
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 12,
+              "boardId": "2026-09-06-board-12",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "4H+2",
+                "declarer": "E",
+                "openingLeadPublished": "SK",
+                "nsRawScore": -480
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4H",
+                "declarer": "E",
+                "openingLeadPublished": "SQ",
+                "nsRawScore": -420
+              },
+              "teamImps": 0,
+              "opponentImps": 2,
+              "netImps": -2,
+              "winner": "ΦΑΦΟΥΤΗ"
+            },
+            {
+              "boardNumber": 13,
+              "boardId": "2026-09-06-board-13",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "2D+2",
+                "declarer": "E",
+                "openingLeadPublished": "HQ",
+                "nsRawScore": -130
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2D+1",
+                "declarer": "E",
+                "openingLeadPublished": "C4",
+                "nsRawScore": -110
+              },
+              "teamImps": 0,
+              "opponentImps": 1,
+              "netImps": -1,
+              "winner": "ΦΑΦΟΥΤΗ"
+            },
+            {
+              "boardNumber": 14,
+              "boardId": "2026-09-06-board-14",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3NT-3",
+                "declarer": "N",
+                "openingLeadPublished": "H8",
+                "nsRawScore": -150
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2C",
+                "declarer": "S",
+                "openingLeadPublished": "S4",
+                "nsRawScore": 90
+              },
+              "teamImps": 0,
+              "opponentImps": 6,
+              "netImps": -6,
+              "winner": "ΦΑΦΟΥΤΗ"
+            }
+          ]
+        },
+        {
+          "roundNumber": 9,
+          "opponent": "ΚΙΟΥΣΗΣ",
+          "teamImps": 30,
+          "opponentImps": 14,
+          "teamVps": "15,78",
+          "opponentVps": "4,22",
+          "seating": "NS",
+          "replayUrl": "/replays/lazopoulos-2026-09/round-9.lin",
+          "boards": [
+            {
+              "boardNumber": 15,
+              "boardId": "2026-09-06-board-15",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "1NT+2",
+                "declarer": "E",
+                "openingLeadPublished": "S6",
+                "nsRawScore": -150
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "1S+2",
+                "declarer": "E",
+                "openingLeadPublished": "D2",
+                "nsRawScore": -140
+              },
+              "teamImps": 0,
+              "opponentImps": 0,
+              "netImps": 0,
+              "winner": "push"
+            },
+            {
+              "boardNumber": 16,
+              "boardId": "2026-09-06-board-16",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "2NT-1",
+                "declarer": "N",
+                "openingLeadPublished": "H3",
+                "nsRawScore": -50
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "2NT+1",
+                "declarer": "S",
+                "openingLeadPublished": "H4",
+                "nsRawScore": 150
+              },
+              "teamImps": 0,
+              "opponentImps": 5,
+              "netImps": -5,
+              "winner": "ΚΙΟΥΣΗΣ"
+            },
+            {
+              "boardNumber": 17,
+              "boardId": "2026-09-06-board-17",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3H*-4",
+                "declarer": "W",
+                "openingLeadPublished": "D3",
+                "nsRawScore": 800
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "3D-1",
+                "declarer": "S",
+                "openingLeadPublished": "C3",
+                "nsRawScore": -50
+              },
+              "teamImps": 13,
+              "opponentImps": 0,
+              "netImps": 13,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 18,
+              "boardId": "2026-09-06-board-18",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "5S-1",
+                "declarer": "S",
+                "openingLeadPublished": "DQ",
+                "nsRawScore": -100
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "6S-2",
+                "declarer": "S",
+                "openingLeadPublished": "DQ",
+                "nsRawScore": -200
+              },
+              "teamImps": 3,
+              "opponentImps": 0,
+              "netImps": 3,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 19,
+              "boardId": "2026-09-06-board-19",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "4H-1",
+                "declarer": "S",
+                "openingLeadPublished": "DA",
+                "nsRawScore": -50
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "4H-2",
+                "declarer": "S",
+                "openingLeadPublished": "DA",
+                "nsRawScore": -100
+              },
+              "teamImps": 2,
+              "opponentImps": 0,
+              "netImps": 2,
+              "winner": "ΝΤΑΙΚΟΥ"
+            },
+            {
+              "boardNumber": 20,
+              "boardId": "2026-09-06-board-20",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "4D*-2",
+                "declarer": "N",
+                "openingLeadPublished": "H2",
+                "nsRawScore": -500
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "1S",
+                "declarer": "E",
+                "openingLeadPublished": "CA",
+                "nsRawScore": -80
+              },
+              "teamImps": 0,
+              "opponentImps": 9,
+              "netImps": -9,
+              "winner": "ΚΙΟΥΣΗΣ"
+            },
+            {
+              "boardNumber": 21,
+              "boardId": "2026-09-06-board-21",
+              "ourTable": {
+                "orientation": "ΝΤΑΙΚΟΥ NS / opponents EW",
+                "nikos": "N",
+                "vakalis": "S",
+                "contract": "3NT+1",
+                "declarer": "N",
+                "openingLeadPublished": "C4",
+                "nsRawScore": 630
+              },
+              "otherTable": {
+                "orientation": "opponents NS / ΝΤΑΙΚΟΥ EW",
+                "contract": "5NT-1",
+                "declarer": "N",
+                "openingLeadPublished": "C5",
+                "nsRawScore": -100
+              },
+              "teamImps": 12,
+              "opponentImps": 0,
+              "netImps": 12,
+              "winner": "ΝΤΑΙΚΟΥ"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

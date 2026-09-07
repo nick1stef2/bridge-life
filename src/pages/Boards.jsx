@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { boardCollections, getBoardCollectionByTournamentId } from "../data/boardsData";
+import { boardCollections, getBoardCollectionsByTournamentId } from "../data/boardsData";
 import doubleDummyData from "../data/generated/doubleDummyData.json";
+import teamsDoubleDummyData from "../data/generated/lazopoulosTeamsDoubleDummy.json";
 import "./Boards.css";
 
 const seatNames = { N: "North", E: "East", S: "South", W: "West" };
@@ -34,12 +35,15 @@ function Hand({ seat, hand }) {
   );
 }
 
-function BoardCard({ board, percentage, onOpen }) {
+function BoardCard({ board, percentage, context, onOpen }) {
   return (
     <button type="button" className="pbn-board-card" onClick={onOpen}>
       <h2>Board {board.boardNumber}</h2>
       <p><span>Dealer</span>{seatNames[board.dealer]}</p>
       <p><span>Vulnerability</span>{board.vulnerability}</p>
+      {context?.roundNumber && <p><span>Γύρος</span>{context.roundNumber}</p>}
+      {context?.seating && <p><span>Θέσεις</span>{context.seating}</p>}
+      {context?.netImps !== undefined && <p><span>IMP swing</span>{context.netImps > 0 ? "+" : ""}{context.netImps}</p>}
       {percentage !== undefined && <strong>{percentage}%</strong>}
     </button>
   );
@@ -79,7 +83,7 @@ function DoubleDummyPanel({ data }) {
   );
 }
 
-function BoardModal({ board, percentage, doubleDummy, hasPrevious, hasNext, onPrevious, onNext, onClose }) {
+function BoardModal({ board, percentage, doubleDummy, context, hasPrevious, hasNext, onPrevious, onNext, onClose }) {
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === "Escape") onClose();
@@ -98,6 +102,7 @@ function BoardModal({ board, percentage, doubleDummy, hasPrevious, hasNext, onPr
           <div>
             <h2 id="board-modal-title">Board {board.boardNumber}</h2>
             <p>Dealer: {seatNames[board.dealer]} · Vulnerability: {board.vulnerability}</p>
+            {context?.dayDate && <p>{formatDate(context.dayDate)} · Γύρος {context.roundNumber} · Θέσεις {context.seating}</p>}
           </div>
           {percentage !== undefined && <strong>{percentage}%</strong>}
         </header>
@@ -123,8 +128,8 @@ function Boards() {
   const [selectedBoardIndex, setSelectedBoardIndex] = useState(null);
 
   if (tournamentId) {
-    const collection = getBoardCollectionByTournamentId(tournamentId);
-    if (!collection) {
+    const collections = getBoardCollectionsByTournamentId(tournamentId);
+    if (!collections.length) {
       return (
         <main className="boards-page">
           <Link to="/boards">Επιστροφή στα Boards</Link>
@@ -133,13 +138,34 @@ function Boards() {
       );
     }
 
-    const percentageByBoardNumber = Object.fromEntries(
-      (collection.tournament?.boardResults ?? []).map((result) => [result.boardNumber, result.percentage]),
-    );
-    const selectedBoard = selectedBoardIndex === null ? null : collection.boards[selectedBoardIndex];
-    const selectedDoubleDummy = selectedBoard
-      ? doubleDummyData.entries.find((entry) => (
-        entry.tournamentId === collection.tournamentId && entry.boardNumber === selectedBoard.boardNumber
+    const tournament = collections[0].tournament;
+    const allDoubleDummyEntries = [...doubleDummyData.entries, ...teamsDoubleDummyData.entries];
+    const boardItems = collections.flatMap((collection) => {
+      const percentageByBoardNumber = Object.fromEntries(
+        (collection.tournament?.boardResults ?? []).map((result) => [result.boardNumber, result.percentage]),
+      );
+      const rounds = collection.extensions.rounds ?? [];
+      return collection.boards.map((board) => {
+        const round = rounds.find((item) => item.boards.some((entry) => entry.boardNumber === board.boardNumber));
+        const result = round?.boards.find((entry) => entry.boardNumber === board.boardNumber);
+        return {
+          collection,
+          board,
+          percentage: percentageByBoardNumber[board.boardNumber],
+          context: collection.extensions.dayNumber ? {
+            dayNumber: collection.extensions.dayNumber,
+            dayDate: collection.date,
+            roundNumber: round?.roundNumber,
+            seating: round?.seating ?? collection.extensions.seating,
+            netImps: result?.netImps,
+          } : null,
+        };
+      });
+    });
+    const selectedItem = selectedBoardIndex === null ? null : boardItems[selectedBoardIndex];
+    const selectedDoubleDummy = selectedItem
+      ? allDoubleDummyEntries.find((entry) => (
+        entry.pbnFingerprint === selectedItem.collection.id && entry.boardNumber === selectedItem.board.boardNumber
       ))
       : null;
 
@@ -147,30 +173,37 @@ function Boards() {
       <main className="boards-page">
         <nav className="boards-actions">
           <Link to="/boards">Επιστροφή στα Boards</Link>
-          <Link to={`/tournament/${collection.tournamentId}`}>Tournament Detail</Link>
+          <Link to={`/tournament/${tournamentId}`}>Tournament Detail</Link>
         </nav>
-        <h1>{collection.title}</h1>
-        <p>{formatDate(collection.date)} · {collection.boardCount} boards</p>
-        <div className="pbn-board-list">
-          {collection.boards.map((board, index) => (
-            <BoardCard
-              key={board.boardNumber}
-              board={board}
-              percentage={percentageByBoardNumber[board.boardNumber]}
-              onOpen={() => setSelectedBoardIndex(index)}
-            />
-          ))}
-        </div>
-        {selectedBoard && (
+        <h1>{tournament?.title ?? collections[0].title}</h1>
+        <p>{collections.length > 1 ? `${collections.length} ημερίδες · ${boardItems.length} boards` : `${formatDate(collections[0].date)} · ${boardItems.length} boards`}</p>
+        {collections.map((collection) => (
+          <section className="pbn-day-section" key={collection.id}>
+            {collections.length > 1 && <h2>Ημερίδα {collection.extensions.dayNumber} · {formatDate(collection.date)} · {collection.boardCount} boards</h2>}
+            <div className="pbn-board-list">
+              {boardItems.map((item, index) => item.collection.id === collection.id && (
+                <BoardCard
+                  key={`${collection.id}-${item.board.boardNumber}`}
+                  board={item.board}
+                  percentage={item.percentage}
+                  context={item.context}
+                  onOpen={() => setSelectedBoardIndex(index)}
+                />
+              ))}
+            </div>
+          </section>
+        ))}
+        {selectedItem && (
           <BoardModal
-            key={`${collection.tournamentId}-${selectedBoard.boardNumber}`}
-            board={selectedBoard}
-            percentage={percentageByBoardNumber[selectedBoard.boardNumber]}
+            key={`${selectedItem.collection.id}-${selectedItem.board.boardNumber}`}
+            board={selectedItem.board}
+            percentage={selectedItem.percentage}
             doubleDummy={selectedDoubleDummy}
+            context={selectedItem.context}
             hasPrevious={selectedBoardIndex > 0}
-            hasNext={selectedBoardIndex < collection.boards.length - 1}
+            hasNext={selectedBoardIndex < boardItems.length - 1}
             onPrevious={() => setSelectedBoardIndex((index) => Math.max(0, index - 1))}
-            onNext={() => setSelectedBoardIndex((index) => Math.min(collection.boards.length - 1, index + 1))}
+            onNext={() => setSelectedBoardIndex((index) => Math.min(boardItems.length - 1, index + 1))}
             onClose={() => setSelectedBoardIndex(null)}
           />
         )}
