@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { tournamentsData } from "../data/tournamentsData";
+import { videosData } from "../data/videosData";
 import "./TournamentDetail.css";
 
 const missingValue = "—";
@@ -70,6 +71,9 @@ function buildDetailItems(tournament) {
         })),
       ]
     : [
+        ...(tournament.sourceResultId
+          ? [{ label: "Event ID ΕΟΜ", value: tournament.sourceResultId }]
+          : []),
         { label: "Θέση", value: toDisplay(tournament.position) },
         { label: tournament.scoreType === "percentage" ? "Ποσοστό" : "Σκορ", value: formatScore(tournament) },
         { label: "Σύνολο συμμετοχών", value: toDisplay(tournament.participants) },
@@ -246,7 +250,14 @@ function BoardResultsSection({ boardResults }) {
     return null;
   }
 
-  const sortedBoardResults = [...boardResults].sort((a, b) => a.boardNumber - b.boardNumber);
+  const sortedBoardResults = [...boardResults].sort((a, b) =>
+    a.playOrder !== undefined && b.playOrder !== undefined
+      ? a.playOrder - b.playOrder
+      : a.boardNumber - b.boardNumber,
+  );
+  const hasDetailedResults = sortedBoardResults.some(
+    (board) => board.contract || board.declarer || board.score !== undefined || board.seating,
+  );
 
   return (
     <section className="tournament-section tournament-boards-section">
@@ -261,6 +272,10 @@ function BoardResultsSection({ boardResults }) {
             <tr>
               <th>Board</th>
               <th>Ποσοστό</th>
+              {hasDetailedResults && <th>Συμβόλαιο</th>}
+              {hasDetailedResults && <th>Εκτελεστής</th>}
+              {hasDetailedResults && <th>Σκορ</th>}
+              {hasDetailedResults && <th>Θέση ζεύγους</th>}
             </tr>
           </thead>
           <tbody>
@@ -268,10 +283,44 @@ function BoardResultsSection({ boardResults }) {
               <tr key={`${board.tournamentId}-${board.boardNumber}`}>
                 <td>{board.boardNumber}</td>
                 <td>{board.percentage === null || board.percentage === undefined ? missingValue : `${board.percentage}%`}</td>
+                {hasDetailedResults && <td>{toDisplay(board.contract)}</td>}
+                {hasDetailedResults && <td>{toDisplay(board.declarer)}</td>}
+                {hasDetailedResults && <td>{toDisplay(board.score)}</td>}
+                {hasDetailedResults && <td>{toDisplay(board.seating)}</td>}
               </tr>
             ))}
           </tbody>
         </table>
+      </div>
+    </section>
+  );
+}
+
+function RelatedVideosSection({ tournament }) {
+  if (!tournament.showRelatedVideos || !tournament.videoIds?.length) return null;
+
+  const relatedVideos = tournament.videoIds
+    .map((videoId) => videosData.find((video) => video.id === videoId))
+    .filter(Boolean);
+
+  if (!relatedVideos.length) return null;
+
+  return (
+    <section className="tournament-section tournament-videos-section">
+      <div className="tournament-section-heading">
+        <h2>Σχετικό βίντεο</h2>
+        <span>{relatedVideos.length}</span>
+      </div>
+      <div className="tournament-videos-grid">
+        {relatedVideos.map((video) => (
+          <article key={video.id}>
+            <video controls playsInline preload="metadata" src={video.src} />
+            <div>
+              <h3>{video.title}</h3>
+              <p>{video.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -389,6 +438,18 @@ function TournamentDetail() {
           <span>Κατηγορίες παικτών</span>
           <strong>{formatPlayerCategories(tournament)}</strong>
         </article>
+        {tournament.totalBoards && (
+          <article>
+            <span>Παιγμένες διανομές</span>
+            <strong>{tournament.totalBoards}</strong>
+          </article>
+        )}
+        {tournament.playedBoardOrder && (
+          <article>
+            <span>Σειρά boards</span>
+            <strong>{toDisplay(tournament.playedBoardSequence)}</strong>
+          </article>
+        )}
       </section>
 
       <main className="tournament-sections">
@@ -396,6 +457,7 @@ function TournamentDetail() {
         <TeamEventSection tournament={tournament} />
         <ReplaySection tournament={tournament} />
         <BoardResultsSection boardResults={tournament.boardResults} />
+        <RelatedVideosSection tournament={tournament} />
         {detailSections.filter((section) => (detailItems[section.key] || []).length).map((section) => (
           <TournamentSection
             key={section.key}

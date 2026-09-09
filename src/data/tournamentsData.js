@@ -48,6 +48,7 @@ import result20260830 from "../assets/images/results/2026-08-30.png";
 import result20260901 from "../assets/images/results/2026-09-01.png";
 import result202609040506 from "../assets/images/results/2026-09-04.05.06.png";
 import result202609040506Details from "../assets/images/results/2026-09-04.05.06.ΑΝΑΛΥΤΙΚΑ.png";
+import result20260908 from "../assets/images/results/2026-09-08.png";
 import result20260813Teams from "../assets/images/results/2026-08-13 ΟΜΑΔΙΚΟ.png";
 import result20260814Teams from "../assets/images/results/2026-08-14 ΟΜΑΔΙΚΟ.png";
 import result20260815Teams from "../assets/images/results/2026-08-15 ΟΜΑΔΙΚΟ.png";
@@ -59,6 +60,7 @@ import board20260809 from "../assets/images/boards/2026-08-09.png";
 import board20260811 from "../assets/images/boards/2026-08-11.png";
 import board20260830 from "../assets/images/boards/2026-08-30.png";
 import board20260901 from "../assets/images/boards/2026-09-01.png";
+import board20260908 from "../assets/images/boards/2026-09-08-boards.png";
 import board20260813Teams1 from "../assets/images/boards/2026-08-13 ΔΙΑΝΟΜΕΣ1.png";
 import board20260813Teams2 from "../assets/images/boards/2026-08-13 ΔΙΑΝΟΜΕ2.png";
 import board20260814Teams1 from "../assets/images/boards/2026-08-14 ΔΙΑΝΟΜΕ1.png";
@@ -85,6 +87,65 @@ function teamBoard(boardNumber, teamResult, opponentResult, teamImps = 0, oppone
 }
 
 export const tournamentsData = [
+  {
+    id: "aot-26438-2026-09-08",
+    date: "2026-09-08",
+    title: "Ζεύγη 1–6 Τριτης 5η",
+    eventName: "Ζεύγη 1–6 Τριτης 5η",
+    organization: "ΑΟΤ 26438",
+    organizer: "ΑΟΤ 26438",
+    sourceResultId: "206156",
+    type: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventType: "Ζεύγη - matchpoints | Περιορισμένος",
+    eventFormat: "pairs",
+    scoreType: "percentage",
+    grade: "5ης βαθμίδας",
+    level: "5ης βαθμίδας",
+    partner: "Ελένη Λεονταρίτου",
+    position: "2",
+    participants: 13,
+    score: "62,78",
+    playerCategory: 5,
+    partnerCategory: 6,
+    masterPoints: "14",
+    location: null,
+    includeInPersonalStats: true,
+    totalBoards: 18,
+    playedBoardOrder: [19, 20, 21, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    playedBoardSequence: "19–21 → 4–18",
+    seating: [
+      { boards: "19–21, 4–15", direction: "N/S", players: ["Νίκος Στεφανάκης", "Ελένη Λεονταρίτου"] },
+      { boards: "16–18", direction: "E/W", players: ["Νίκος Στεφανάκης", "Ελένη Λεονταρίτου"] },
+    ],
+    verificationStatus: "verified",
+    verificationNotes:
+      "Επιβεβαιωμένο από τα επίσημα screenshots αποτελέσματος και κάρτας boards της 08/09/2026. Δεν υπάρχει ακόμη PBN στο repository.",
+    notes: "2η θέση σε 13 ζεύγη με 62,78% και 14 μαύρους βαθμούς. Παίχτηκαν 18 boards με σειρά 19–21 και 4–18.",
+    resultImage: result20260908,
+    boardImages: [board20260908],
+    videoIds: ["video12"],
+    showRelatedVideos: true,
+    boardResults: [
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 19, playOrder: 1, percentage: 40, contract: "2NT+3", declarer: "S", score: 210, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 20, playOrder: 2, percentage: 80, contract: "4♠-1", declarer: "W", score: 100, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 21, playOrder: 3, percentage: 20, contract: "4♠-1", declarer: "S", score: -100, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 4, playOrder: 4, percentage: 90, contract: "5♦+1", declarer: "N", score: 620, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 5, playOrder: 5, percentage: 40, contract: "3♥-1", declarer: "E", score: 50, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 6, playOrder: 6, percentage: 100, contract: "4♥+3", declarer: "N", score: 510, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 7, playOrder: 7, percentage: 0, contract: "5♠+1", declarer: "W", score: -680, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 8, playOrder: 8, percentage: 60, contract: "4♣", declarer: "W", score: -130, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 9, playOrder: 9, percentage: 40, contract: "2NT-1", declarer: "E", score: 100, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 10, playOrder: 10, percentage: 90, contract: "3NT-3", declarer: "E", score: 300, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 11, playOrder: 11, percentage: 100, contract: "1NT+1", declarer: "S", score: 120, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 12, playOrder: 12, percentage: 80, contract: "2♠+1", declarer: "N", score: 140, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 13, playOrder: 13, percentage: 60, contract: "4♥", declarer: "W", score: -620, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 14, playOrder: 14, percentage: 100, contract: "3♠", declarer: "N", score: 140, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 15, playOrder: 15, percentage: 60, contract: "4♠+2", declarer: "N", score: 680, seating: "N/S" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 16, playOrder: 16, percentage: 0, contract: "3NT", declarer: "S", score: -400, seating: "E/W" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 17, playOrder: 17, percentage: 100, contract: "2♥+2", declarer: "W", score: 170, seating: "E/W" },
+      { tournamentId: "aot-26438-2026-09-08", boardNumber: 18, playOrder: 18, percentage: 70, contract: "3♥-1", declarer: "S", score: 100, seating: "E/W" },
+    ],
+  },
   {
     id: "eom-206013-206035-206062-2026-09-04-06",
     date: "2026-09-06",

@@ -7,12 +7,12 @@ export const playerData = {
     platinum: 2,
   },
   unofficialPoints: {
-    black: 67,
+    black: 81,
     gold: 5,
     platinum: 0.3,
   },
   pendingPoints: {
-    black: 1003,
+    black: 1017,
     gold: 42,
     platinum: 2.3,
   },

@@ -99,4 +99,14 @@ export const videosData = [
     featured: false,
     tournamentId: "eom-206013-206035-206062-2026-09-04-06",
   },
+  {
+    id: "video12",
+    src: "/videos/video12.mp4",
+    title: "Ζεύγη 1–6 Τριτης 5η",
+    description: "Βίντεο από τον αγώνα της 08/09/2026 με την Ελένη Λεονταρίτου.",
+    category: "Ζεύγη",
+    poster: null,
+    featured: false,
+    tournamentId: "aot-26438-2026-09-08",
+  },
 ];
