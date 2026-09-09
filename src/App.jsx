@@ -1,5 +1,5 @@
 import "./index.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 import Lessons from "./pages/Lessons";
 import LessonDetail from "./pages/LessonDetail";
@@ -29,7 +29,7 @@ function HomePage() {
         <Link to="/boards" className="card-link">
           <div className="card">
             <h2>🃏 Boards</h2>
-            <p>Διανομές από πραγματικά PBN</p>
+            <p>Συγκεντρωτικά στοιχεία διανομών ανά αγώνα</p>
           </div>
         </Link>
 
@@ -72,7 +72,7 @@ function App() {
         <Route path="/videos" element={<Videos />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/boards" element={<Boards />} />
-        <Route path="/boards/:tournamentId" element={<Boards />} />
+        <Route path="/boards/:tournamentId" element={<Navigate to="/boards" replace />} />
         <Route path="/tournament/:tournamentId" element={<TournamentDetail />} />
       </Routes>
     </div>
