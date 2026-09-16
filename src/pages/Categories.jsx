@@ -95,6 +95,9 @@ function Categories() {
           <p className="categories-status muted">
             Περιλαμβάνει αποτελέσματα έως: {formatDate(playerData.officialStatus.finalizedThrough)}
           </p>
+          <a className="categories-source-link" href={playerData.officialStatus.sourceUrl} target="_blank" rel="noreferrer">
+            Επίσημη καρτέλα αθλητή ΕΟΜ ↗
+          </a>
 
           <div className="points-grid">
             {officialPoints.map((point) => (
@@ -117,8 +120,8 @@ function Categories() {
           </div>
 
           <p className="warning-text">
-            Οι παρακάτω νέοι βαθμοί είναι ανεπίσημοι μέχρι την επόμενη
-            οριστικοποίηση της ΕΟΜ και δεν αλλάζουν ακόμη την επίσημη κατηγορία.
+            {playerData.officialStatus.pendingNotice} Οι παρακάτω νέοι βαθμοί είναι
+            ανεπίσημοι και δεν αλλάζουν ακόμη την επίσημη κατηγορία.
           </p>
 
           <p className="provisional-points-label">Νέοι ανεπίσημοι βαθμοί</p>

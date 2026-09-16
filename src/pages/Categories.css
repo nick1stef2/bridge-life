@@ -80,6 +80,14 @@
   color: #bbbbbb;
 }
 
+.categories-source-link {
+  display: inline-flex;
+  margin-top: 8px;
+  color: #c7e0c3;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .points-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

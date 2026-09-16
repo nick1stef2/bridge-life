@@ -21,5 +21,8 @@ export const playerData = {
     nextFinalizationDate: null,
     updateCycle: "κάθε 4 μήνες",
     source: "ΕΟΜ – καρτέλα αθλητή 19350",
+    sourceUrl: "https://hellasbridge.org/bridge/players/code/19350",
+    checkedAt: "2026-09-16",
+    pendingNotice: "Εκκρεμεί ενημέρωση ΕΟΜ για τα πιο πρόσφατα αποτελέσματα.",
   },
 };

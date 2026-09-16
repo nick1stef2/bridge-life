@@ -79,7 +79,9 @@ function buildDetailItems(tournament) {
         { label: "Σύνολο συμμετοχών", value: toDisplay(tournament.participants) },
         { label: "Master points / M", value: toDisplay(tournament.masterPoints) },
         { label: "Κατηγορίες παικτών", value: formatPlayerCategories(tournament) },
-        { label: "Πηγή αποτελέσματος", value: "Screenshot", image: tournament.resultImage },
+        ...(tournament.resultImage
+          ? [{ label: "Πηγή αποτελέσματος", value: "Screenshot", image: tournament.resultImage }]
+          : []),
       ];
 
   return {
@@ -385,6 +387,7 @@ function TournamentDetail() {
   }
 
   const detailItems = buildDetailItems(tournament);
+  const officialUrls = tournament.officialUrls || (tournament.officialUrl ? [tournament.officialUrl] : []);
 
   return (
     <div className="tournament-detail-page">
@@ -402,6 +405,15 @@ function TournamentDetail() {
           <span>{toDisplay(tournament.type)}</span>
           <h1>{toDisplay(tournament.title)}</h1>
           <p>{toDisplay(tournament.notes)}</p>
+          {!!officialUrls.length && (
+            <div className="tournament-official-links">
+              {officialUrls.map((url, index) => (
+                <a href={url} target="_blank" rel="noreferrer" key={url}>
+                  Επίσημα αποτελέσματα ΕΟΜ{officialUrls.length > 1 ? ` ${index + 1}` : ""} ↗
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
@@ -454,9 +466,6 @@ function TournamentDetail() {
 
       <main className="tournament-sections">
         <TeamSummarySection tournament={tournament} />
-        <TeamEventSection tournament={tournament} />
-        <ReplaySection tournament={tournament} />
-        <BoardResultsSection boardResults={tournament.boardResults} />
         <RelatedVideosSection tournament={tournament} />
         {detailSections.filter((section) => (detailItems[section.key] || []).length).map((section) => (
           <TournamentSection

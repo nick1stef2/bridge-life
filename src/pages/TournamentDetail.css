@@ -68,6 +68,24 @@
   line-height: 1.5;
 }
 
+.tournament-official-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.tournament-official-links a {
+  display: inline-flex;
+  padding: 12px 16px;
+  border: 1px solid #71866d;
+  border-radius: 12px;
+  background: #263225;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .tournament-meta-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
