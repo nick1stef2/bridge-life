@@ -209,60 +209,13 @@
   border-style: dashed;
 }
 
-.tournament-boards-table-wrap {
-  max-width: 100%;
-  overflow-x: auto;
-  border: 1px solid #303842;
-  border-radius: 16px;
-}
-
-.tournament-boards-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 18px;
-}
-
-.tournament-boards-table th,
-.tournament-boards-table td {
-  padding: 16px 20px;
-  text-align: left;
-}
-
-.tournament-boards-table th {
-  background: #101418;
-  color: #bbbbbb;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.tournament-boards-table tbody tr + tr {
-  border-top: 1px solid #303842;
-}
-
-.tournament-boards-table tbody tr:hover {
-  background: #252d36;
-}
-
-.tournament-boards-table td:last-child {
-  font-weight: 700;
-}
-
-.team-days-list {
-  display: grid;
-  min-width: 0;
-  gap: 20px;
-}
-
-.team-summary-grid,
-.replay-days-grid {
+.team-summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 14px;
 }
 
-.team-summary-grid article,
-.replay-days-grid article {
+.team-summary-grid article {
   min-width: 0;
   padding: 16px;
   border: 1px solid #303842;
@@ -275,116 +228,13 @@
   display: block;
 }
 
-.team-summary-grid span,
-.replay-note {
+.team-summary-grid span {
   color: #bbbbbb;
 }
 
 .team-summary-grid strong {
   margin-top: 8px;
   font-size: 24px;
-}
-
-.replay-days-grid h3 {
-  margin: 0 0 12px;
-}
-
-.replay-days-grid a {
-  display: block;
-  margin-top: 8px;
-  color: #8ec5ff;
-  overflow-wrap: anywhere;
-}
-
-.team-day {
-  min-width: 0;
-  padding: 20px;
-  border: 1px solid #303842;
-  border-radius: 16px;
-  background: #151a20;
-}
-
-.team-day-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 16px;
-}
-
-.team-day-header h3,
-.team-day-header p {
-  margin: 0;
-}
-
-.team-day-header p {
-  margin-top: 8px;
-  color: #bbbbbb;
-}
-
-.team-day-header img {
-  width: 150px;
-  height: 88px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.team-rounds-summary-wrap {
-  overflow-x: auto;
-  margin-bottom: 14px;
-  border: 1px solid #303842;
-  border-radius: 12px;
-}
-
-.team-rounds-summary {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.team-rounds-summary th,
-.team-rounds-summary td {
-  padding: 12px 14px;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.team-rounds-summary th {
-  background: #101418;
-  color: #bbbbbb;
-  font-size: 13px;
-}
-
-.team-rounds-summary tbody tr + tr {
-  border-top: 1px solid #303842;
-}
-
-.team-round-details {
-  min-width: 0;
-  max-width: 100%;
-  margin-top: 12px;
-  border: 1px solid #303842;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.team-round-details summary {
-  padding: 14px 16px;
-  cursor: pointer;
-  font-weight: 700;
-  background: #1c2229;
-}
-
-.team-round-details .tournament-boards-table-wrap {
-  max-width: 100%;
-  border: 0;
-  border-top: 1px solid #303842;
-  border-radius: 0;
-}
-
-.team-board-results-table td:nth-child(2),
-.team-board-results-table td:nth-child(3) {
-  min-width: 250px;
-  font-size: 15px;
 }
 
 .tournament-videos-grid article {
@@ -441,23 +291,7 @@
     padding: 20px;
   }
 
-  .team-day {
-    padding: 14px;
-    overflow: hidden;
-  }
-
-  .team-day-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .team-day-header img {
-    width: 100%;
-    height: 140px;
-  }
-
-  .team-summary-grid,
-  .replay-days-grid {
+  .team-summary-grid {
     grid-template-columns: 1fr;
   }
 }

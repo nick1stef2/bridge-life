@@ -8,7 +8,6 @@ import Gallery from "./pages/Gallery";
 import TournamentDetail from "./pages/TournamentDetail";
 import Videos from "./pages/Videos";
 import Categories from "./pages/Categories";
-import Boards from "./pages/Boards";
 import Achievements from "./pages/Achievements";
 
 function HomePage() {
@@ -24,13 +23,6 @@ function HomePage() {
           <div className="card">
             <h2>📚 Lessons</h2>
             <p>Μαθήματα και συστήματα bridge</p>
-          </div>
-        </Link>
-
-        <Link to="/boards" className="card-link">
-          <div className="card">
-            <h2>🃏 Boards</h2>
-            <p>Συγκεντρωτικά στοιχεία διανομών ανά αγώνα</p>
           </div>
         </Link>
 
@@ -80,9 +72,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/categories" element={<Categories />} />
-        <Route path="/boards" element={<Boards />} />
-        <Route path="/boards/:tournamentId" element={<Navigate to="/boards" replace />} />
         <Route path="/tournament/:tournamentId" element={<TournamentDetail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );

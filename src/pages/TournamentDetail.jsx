@@ -5,10 +5,7 @@ import "./TournamentDetail.css";
 
 const missingValue = "—";
 
-const detailSections = [
-  { key: "results", title: "Αποτελέσματα" },
-  { key: "boardImages", title: "Board screenshots" },
-];
+const detailSections = [{ key: "results", title: "Αποτελέσματα" }];
 
 function toDisplay(value) {
   return value === null || value === undefined || value === "" ? missingValue : value;
@@ -86,30 +83,7 @@ function buildDetailItems(tournament) {
 
   return {
     results: resultItems,
-    boardImages: (tournament.boardImages || []).map((image, index) => ({
-      title: `Board screenshot ${index + 1}`,
-      image,
-      text: "Πραγματικό screenshot από τον φάκελο boards.",
-    })),
   };
-}
-
-function formatRoomResult(result) {
-  if (!result) {
-    return missingValue;
-  }
-
-  if (result.contract === "Pass") {
-    return "Pass";
-  }
-
-  return [
-    result.contract,
-    result.declarer ? `από ${result.declarer}` : null,
-    result.openingLead ? `αντάμ ${result.openingLead}` : null,
-    result.score !== null && result.score !== undefined ? `σκορ ${result.score}` : null,
-    result.nsRawScore !== null && result.nsRawScore !== undefined ? `NS ${result.nsRawScore}` : null,
-  ].filter(Boolean).join(" · ");
 }
 
 function TeamSummarySection({ tournament }) {
@@ -119,7 +93,6 @@ function TeamSummarySection({ tournament }) {
     <section className="tournament-section team-summary-section">
       <div className="tournament-section-heading">
         <h2>Συνολικό αποτέλεσμα τριημέρου</h2>
-        <span>{tournament.totalBoards} boards</span>
       </div>
       <div className="team-summary-grid">
         <article><span>Γύροι</span><strong>{tournament.totalRounds}</strong></article>
@@ -127,172 +100,6 @@ function TeamSummarySection({ tournament }) {
         <article><span>Διαφορά</span><strong>{tournament.impBalance > 0 ? "+" : ""}{tournament.impBalance} IMP</strong></article>
         <article><span>VP</span><strong>{formatScore(tournament)}</strong></article>
         <article><span>Τελική θέση</span><strong>{tournament.position}/{tournament.participants}</strong></article>
-      </div>
-    </section>
-  );
-}
-
-function ReplaySection({ tournament }) {
-  if (!tournament.replayDays?.length) return null;
-
-  return (
-    <section className="tournament-section replay-section">
-      <div className="tournament-section-heading">
-        <h2>BBO Replay / Training</h2>
-        <span>Blind LIN</span>
-      </div>
-      <p className="replay-note">Αρχεία χωρίς λύσεις ή ανάλυση, έτοιμα για εισαγωγή στο BBO.</p>
-      <div className="replay-days-grid">
-        {tournament.replayDays.map((day) => (
-          <article key={day.dayNumber}>
-            <h3>Ημερίδα {day.dayNumber} · {formatDate(day.date)}</h3>
-            <a href={day.url} download>Όλα τα boards της ημέρας</a>
-            <div>
-              {day.rounds.map((round) => <a href={round.url} download key={round.roundNumber}>Γύρος {round.roundNumber}</a>)}
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function TeamEventSection({ tournament }) {
-  if (tournament.eventFormat !== "teams" || !tournament.teamDays?.length) {
-    return null;
-  }
-
-  return (
-    <section className="tournament-section team-event-section">
-      <div className="tournament-section-heading">
-        <h2>Ημερίδες και γύροι</h2>
-        <span>{tournament.teamDays.length}</span>
-      </div>
-
-      <div className="team-days-list">
-        {tournament.teamDays.map((day) => (
-          <article className="team-day" key={day.dayNumber}>
-            <header className="team-day-header">
-              <div>
-                <h3>Ημερίδα {day.dayNumber} · {formatDate(day.date)}</h3>
-                {day.dailyVps ? (
-                  <p>Event ID {day.eventId} · {day.dailyImpFor}–{day.dailyImpAgainst} IMP ({day.dailyImpBalance > 0 ? "+" : ""}{day.dailyImpBalance}) · {day.dailyVps} VP · Θέσεις {day.seatingSummary}</p>
-                ) : (
-                  <p>Κατάταξη ημέρας: {day.position}/{day.participants} · Αθροιστικό σκορ: {day.cumulativeVps} VP</p>
-                )}
-              </div>
-              {day.resultImage && <img src={day.resultImage} alt={`Αποτέλεσμα ημερίδας ${day.dayNumber}`} />}
-            </header>
-
-            <div className="team-rounds-summary-wrap">
-              <table className="team-rounds-summary">
-                <thead>
-                  <tr>
-                    <th>Γύρος</th>
-                    <th>Αντίπαλος</th>
-                    <th>IMP {tournament.teamName}</th>
-                    <th>IMP αντιπάλου</th>
-                    <th>VP {tournament.teamName}</th>
-                    <th>VP αντιπάλου</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {day.rounds.map((round) => (
-                    <tr key={round.roundNumber}>
-                      <td>{round.roundNumber}</td>
-                      <td>{round.opponent}</td>
-                      <td>{round.teamImps}</td>
-                      <td>{round.opponentImps}</td>
-                      <td>{round.teamVps}</td>
-                      <td>{round.opponentVps}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            {day.rounds.map((round) => (
-              <details className="team-round-details" key={`boards-${round.roundNumber}`}>
-                <summary>Boards γύρου {round.roundNumber} με {round.opponent}</summary>
-                <div className="tournament-boards-table-wrap">
-                  <table className="tournament-boards-table team-board-results-table">
-                    <thead>
-                      <tr>
-                        <th>Board</th>
-                        <th>{round.boards.some((board) => board.ourTable) ? "Τραπέζι Στεφανάκη–Βακάλη" : `Αποτέλεσμα ${tournament.teamName}`}</th>
-                        <th>{round.boards.some((board) => board.otherTable) ? "Άλλο τραπέζι" : "Αποτέλεσμα αντιπάλου"}</th>
-                        <th>IMP {tournament.teamName}</th>
-                        <th>IMP αντιπάλου</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {round.boards.map((board) => (
-                        <tr key={`${round.roundNumber}-${board.boardNumber}`}>
-                          <td>{board.boardNumber}</td>
-                          <td>{formatRoomResult(board.ourTable || board.teamResult)}</td>
-                          <td>{formatRoomResult(board.otherTable || board.opponentResult)}</td>
-                          <td>{board.teamImps || missingValue}</td>
-                          <td>{board.opponentImps || missingValue}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </details>
-            ))}
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function BoardResultsSection({ boardResults }) {
-  if (!boardResults?.length) {
-    return null;
-  }
-
-  const sortedBoardResults = [...boardResults].sort((a, b) =>
-    a.playOrder !== undefined && b.playOrder !== undefined
-      ? a.playOrder - b.playOrder
-      : a.boardNumber - b.boardNumber,
-  );
-  const hasDetailedResults = sortedBoardResults.some(
-    (board) => board.contract || board.declarer || board.score !== undefined || board.seating,
-  );
-
-  return (
-    <section className="tournament-section tournament-boards-section">
-      <div className="tournament-section-heading">
-        <h2>Boards</h2>
-        <span>{sortedBoardResults.length}</span>
-      </div>
-
-      <div className="tournament-boards-table-wrap">
-        <table className="tournament-boards-table">
-          <thead>
-            <tr>
-              <th>Board</th>
-              <th>Ποσοστό</th>
-              {hasDetailedResults && <th>Συμβόλαιο</th>}
-              {hasDetailedResults && <th>Εκτελεστής</th>}
-              {hasDetailedResults && <th>Σκορ</th>}
-              {hasDetailedResults && <th>Θέση ζεύγους</th>}
-            </tr>
-          </thead>
-          <tbody>
-            {sortedBoardResults.map((board) => (
-              <tr key={`${board.tournamentId}-${board.boardNumber}`}>
-                <td>{board.boardNumber}</td>
-                <td>{board.percentage === null || board.percentage === undefined ? missingValue : `${board.percentage}%`}</td>
-                {hasDetailedResults && <td>{toDisplay(board.contract)}</td>}
-                {hasDetailedResults && <td>{toDisplay(board.declarer)}</td>}
-                {hasDetailedResults && <td>{toDisplay(board.score)}</td>}
-                {hasDetailedResults && <td>{toDisplay(board.seating)}</td>}
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     </section>
   );
@@ -450,18 +257,6 @@ function TournamentDetail() {
           <span>Κατηγορίες παικτών</span>
           <strong>{formatPlayerCategories(tournament)}</strong>
         </article>
-        {tournament.totalBoards && (
-          <article>
-            <span>Παιγμένες διανομές</span>
-            <strong>{tournament.totalBoards}</strong>
-          </article>
-        )}
-        {tournament.playedBoardOrder && (
-          <article>
-            <span>Σειρά boards</span>
-            <strong>{toDisplay(tournament.playedBoardSequence)}</strong>
-          </article>
-        )}
       </section>
 
       <main className="tournament-sections">
