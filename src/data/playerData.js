@@ -7,13 +7,13 @@ export const playerData = {
     platinum: 2,
   },
   unofficialPoints: {
-    black: 81,
-    gold: 5,
+    black: 148,
+    gold: 8,
     platinum: 0.3,
   },
   pendingPoints: {
-    black: 1017,
-    gold: 42,
+    black: 1084,
+    gold: 45,
     platinum: 2.3,
   },
   officialStatus: {
@@ -22,7 +22,7 @@ export const playerData = {
     updateCycle: "κάθε 4 μήνες",
     source: "ΕΟΜ – καρτέλα αθλητή 19350",
     sourceUrl: "https://hellasbridge.org/bridge/players/code/19350",
-    checkedAt: "2026-09-16",
+    checkedAt: "2026-09-18",
     pendingNotice: "Εκκρεμεί ενημέρωση ΕΟΜ για τα πιο πρόσφατα αποτελέσματα.",
   },
 };
