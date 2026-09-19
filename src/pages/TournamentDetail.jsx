@@ -54,18 +54,50 @@ function formatPlayerCategories(tournament) {
 function buildDetailItems(tournament) {
   const resultItems = tournament.eventFormat === "teams"
     ? [
-        { label: "Τελική θέση", value: toDisplay(tournament.position) },
-        { label: "Τελικό σκορ", value: formatScore(tournament) },
+        ...(tournament.sourceResultIds?.length
+          ? [{ label: "Event ID ΕΟΜ", value: tournament.sourceResultIds.join(", ") }]
+          : []),
+        {
+          label: tournament.completionStatus === "inProgress" ? "Τρέχουσα θέση" : "Τελική θέση",
+          value: toDisplay(tournament.position),
+        },
+        {
+          label: tournament.completionStatus === "inProgress" ? "Τρέχον σκορ" : "Τελικό σκορ",
+          value: formatScore(tournament),
+        },
         { label: "Σύνολο ομάδων", value: toDisplay(tournament.participants) },
-        { label: "Προσωρινοί βαθμοί Μ", value: toDisplay(tournament.masterPoints) },
-        { label: "Προσωρινοί βαθμοί Χ", value: toDisplay(tournament.extraPoints?.x) },
-        { label: "Προσωρινοί βαθμοί Π", value: toDisplay(tournament.extraPoints?.p) },
-        { label: "Πηγή τελικού αποτελέσματος", value: "Screenshot", image: tournament.resultImage },
+        ...(tournament.teamMembers?.length
+          ? [{ label: "Σύνθεση ομάδας", value: tournament.teamMembers.join(" · ") }]
+          : []),
+        ...(tournament.masterPoints !== null && tournament.masterPoints !== undefined
+          ? [{ label: "Προσωρινοί βαθμοί Μ", value: tournament.masterPoints }]
+          : []),
+        ...(tournament.extraPoints?.x
+          ? [{ label: "Προσωρινοί βαθμοί Χ", value: tournament.extraPoints.x }]
+          : []),
+        ...(tournament.extraPoints?.p
+          ? [{ label: "Προσωρινοί βαθμοί Π", value: tournament.extraPoints.p }]
+          : []),
+        ...(tournament.resultImage
+          ? [{ label: "Πηγή τελικού αποτελέσματος", value: "Screenshot", image: tournament.resultImage }]
+          : []),
         ...(tournament.relatedResultImages || []).map((image, index) => ({
           label: `Αναλυτικό αποτέλεσμα ${index + 1}`,
           value: "Screenshot",
           image,
         })),
+        ...(tournament.teamDays || []).flatMap((day) => [
+          {
+            label: `Ημέρα ${day.dayNumber} · ${formatDate(day.date)}`,
+            value: `${day.position}/${day.participants} · ${day.cumulativeVps} VP`,
+            text: day.seating || null,
+          },
+          ...(day.rounds || []).map((round) => ({
+            label: `Γύρος ${round.roundNumber} · ${round.opponent}`,
+            value: `${round.teamImps}–${round.opponentImps} IMP`,
+            text: `${round.teamVps}–${round.opponentVps} VP · ${round.deals} διανομές`,
+          })),
+        ]),
       ]
     : [
         ...(tournament.sourceResultId
@@ -92,14 +124,21 @@ function TeamSummarySection({ tournament }) {
   return (
     <section className="tournament-section team-summary-section">
       <div className="tournament-section-heading">
-        <h2>Συνολικό αποτέλεσμα τριημέρου</h2>
+        <h2>
+          {tournament.completionStatus === "inProgress"
+            ? `Κατάσταση μετά την Ημέρα ${tournament.currentDay}`
+            : "Συνολικό αποτέλεσμα τριημέρου"}
+        </h2>
       </div>
       <div className="team-summary-grid">
         <article><span>Γύροι</span><strong>{tournament.totalRounds}</strong></article>
         <article><span>IMP</span><strong>{tournament.impFor}–{tournament.impAgainst}</strong></article>
         <article><span>Διαφορά</span><strong>{tournament.impBalance > 0 ? "+" : ""}{tournament.impBalance} IMP</strong></article>
         <article><span>VP</span><strong>{formatScore(tournament)}</strong></article>
-        <article><span>Τελική θέση</span><strong>{tournament.position}/{tournament.participants}</strong></article>
+        <article>
+          <span>{tournament.completionStatus === "inProgress" ? "Τρέχουσα θέση" : "Τελική θέση"}</span>
+          <strong>{tournament.position}/{tournament.participants}</strong>
+        </article>
       </div>
     </section>
   );
