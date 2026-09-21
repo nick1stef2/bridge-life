@@ -89,7 +89,9 @@ function buildDetailItems(tournament) {
         ...(tournament.teamDays || []).flatMap((day) => [
           {
             label: `Ημέρα ${day.dayNumber} · ${formatDate(day.date)}`,
-            value: `${day.position}/${day.participants} · ${day.cumulativeVps} VP`,
+            value: day.position
+              ? `${day.position}/${day.participants} · ${day.cumulativeVps} VP`
+              : `${day.cumulativeVps} VP σωρευτικά`,
             text: day.seating || null,
           },
           ...(day.rounds || []).map((round) => ({
