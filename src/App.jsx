@@ -9,6 +9,7 @@ import TournamentDetail from "./pages/TournamentDetail";
 import Videos from "./pages/Videos";
 import Categories from "./pages/Categories";
 import Achievements from "./pages/Achievements";
+import Conventions from "./pages/Conventions";
 
 function HomePage() {
   return (
@@ -49,6 +50,13 @@ function HomePage() {
           <p>Player category and points progress</p>
         </Link>
 
+        <Link to="/conventions" className="card-link">
+          <div className="card">
+            <h2>📖 Εγχειρίδιο Συμβάσεων</h2>
+            <p>Συμβάσεις Bridge — υλικό αναφοράς από την ΕΟΜ</p>
+          </div>
+        </Link>
+
         <Link to="/achievements" className="card-link">
           <div className="card">
             <h2>🏆 Διακρίσεις</h2>
@@ -67,6 +75,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/lesson/:lessonId" element={<LessonDetail />} />
+        <Route path="/conventions" element={<Conventions />} />
         <Route path="/results" element={<Results />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/gallery" element={<Gallery />} />

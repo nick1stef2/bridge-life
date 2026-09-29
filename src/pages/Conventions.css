@@ -1,0 +1,128 @@
+.conventions-page {
+  --paper: #f5f1e8;
+  --ink: #17211c;
+  --muted: #647067;
+  --green: #244b39;
+  --gold: #c59a4a;
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+  color: #f5f7f5;
+}
+
+.conventions-nav,
+.conventions-actions,
+.index-heading-row,
+.notation-grid {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.conventions-nav { justify-content: space-between; margin-bottom: 24px; }
+.conventions-nav a, .back-to-index { color: #cbd8cf; text-decoration: none; }
+.conventions-nav a:hover, .back-to-index:hover { color: #fff; }
+
+.conventions-hero {
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid #34443c;
+  border-radius: 28px;
+  background: radial-gradient(circle at 90% 10%, #33483e, transparent 38%), linear-gradient(135deg, #17231d, #101613);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 24%);
+}
+
+.conventions-kicker, .section-label { margin: 0 0 8px; color: #d9b76f; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+.conventions-hero h1 { margin: 0; max-width: 840px; font-size: clamp(2.2rem, 6vw, 4.8rem); line-height: .98; }
+.conventions-subtitle { margin: 20px 0 28px; color: #d6ded8; font-size: clamp(1rem, 2vw, 1.25rem); }
+.conventions-actions { flex-wrap: wrap; }
+.print-button, .source-button {
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid #718979;
+  border-radius: 12px;
+  background: #d3b069;
+  color: #17211c;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.source-button { background: transparent; color: #eef4ef; }
+
+.notation-card, .conventions-index, .convention-card, .conventions-source {
+  margin-top: 22px;
+  border: 1px solid #303b36;
+  border-radius: 20px;
+  background: #1b2220;
+}
+.notation-card, .conventions-index, .conventions-source { padding: 24px; }
+.notation-card h2, .conventions-index h2 { margin: 0 0 16px; }
+.notation-grid { flex-wrap: wrap; }
+.notation-grid span { padding: 8px 12px; border-radius: 9px; background: #121816; font-weight: 700; }
+.suit-red { color: #ff7c78; }
+.suit-black { color: #f4f7f5; }
+
+.index-heading-row { justify-content: space-between; align-items: end; }
+.conventions-search { width: min(360px, 100%); color: #c5cdc8; font-size: .85rem; }
+.conventions-search span { display: block; margin-bottom: 7px; font-weight: 700; }
+.conventions-search input { width: 100%; min-height: 44px; border: 1px solid #46544d; border-radius: 10px; background: #101613; color: white; padding: 0 14px; font: inherit; }
+.search-count { color: #9eaaa2; }
+.index-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
+.index-links a { padding: 10px 12px; border-radius: 9px; background: #111815; color: #dde7df; text-decoration: none; font-size: .9rem; }
+.index-links a:hover { background: #294737; }
+
+.convention-card { display: grid; grid-template-columns: 72px 1fr; padding: 26px; scroll-margin-top: 20px; }
+.convention-number { color: #d8b568; font-size: 1.4rem; font-weight: 900; }
+.convention-content h2 { margin: 0 0 18px; font-size: clamp(1.35rem, 3vw, 2rem); color: #fff; }
+.convention-content dl, .convention-content dd { margin: 0; }
+.convention-content dl > div { padding: 13px 0; border-top: 1px solid #303b36; }
+.convention-content dt { margin-bottom: 6px; color: #aeb9b1; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.convention-content dd { line-height: 1.65; }
+.convention-content ul { margin: 0; padding-left: 20px; }
+.bidding-sequences { display: flex; flex-wrap: wrap; gap: 8px; }
+.bidding-sequences code { max-width: 100%; padding: 8px 11px; border: 1px solid #496354; border-radius: 8px; background: #101713; color: #f5d797; font-family: ui-monospace, Consolas, monospace; white-space: normal; overflow-wrap: anywhere; }
+.back-to-index { display: inline-block; margin-top: 14px; font-size: .86rem; }
+.no-conventions { padding: 32px; text-align: center; }
+.conventions-source { color: #cbd4ce; line-height: 1.6; }
+.conventions-source a { color: #f0ce87; overflow-wrap: anywhere; }
+
+@media (max-width: 620px) {
+  .conventions-page { width: min(100% - 20px, 1160px); padding-top: 16px; }
+  .conventions-hero { border-radius: 18px; }
+  .index-heading-row { align-items: stretch; flex-direction: column; }
+  .conventions-search { width: 100%; }
+  .index-links { grid-template-columns: 1fr; }
+  .convention-card { grid-template-columns: 1fr; padding: 20px 16px; }
+  .convention-number { margin-bottom: 8px; font-size: .9rem; }
+  .notation-grid { align-items: stretch; flex-direction: column; }
+  .notation-grid span { width: 100%; }
+  .print-button, .source-button { width: 100%; justify-content: center; }
+}
+
+@page { size: A4 portrait; margin: 15mm 14mm 17mm; }
+
+@media print {
+  html, body, #root, .app { background: #fff !important; color: #111 !important; }
+  .conventions-page { width: auto; margin: 0; padding: 0; color: #111; }
+  .conventions-nav, .conventions-actions, .conventions-search, .search-count, .back-to-index { display: none !important; }
+  .conventions-hero { min-height: 235mm; display: flex; flex-direction: column; justify-content: center; border: 0; border-radius: 0; background: #fff; box-shadow: none; color: #111; page-break-after: always; }
+  .conventions-kicker, .section-label { color: #555; }
+  .conventions-hero h1 { color: #111; font-size: 34pt; }
+  .conventions-subtitle { color: #333; font-size: 14pt; }
+  .notation-card, .conventions-index, .convention-card, .conventions-source { border: 1px solid #bbb; background: #fff; color: #111; box-shadow: none; }
+  .notation-card { page-break-before: always; }
+  .notation-grid span, .index-links a { background: #fff; color: #111; border: 1px solid #ccc; }
+  .suit-red { color: #b00020 !important; }
+  .index-links { grid-template-columns: repeat(2, 1fr); }
+  .index-links a { padding: 5px 7px; font-size: 8.5pt; }
+  .conventions-index { break-after: page; }
+  .convention-card { margin-top: 6mm; padding: 5mm; grid-template-columns: 12mm 1fr; break-inside: avoid; page-break-inside: avoid; }
+  .convention-content h2 { color: #111; font-size: 15pt; break-after: avoid; page-break-after: avoid; }
+  .convention-content dt { color: #444; }
+  .convention-content dd { font-size: 9.5pt; line-height: 1.38; }
+  .bidding-sequences code { border-color: #bbb; background: #f5f5f5; color: #111; }
+  .conventions-source { break-inside: avoid; font-size: 9pt; }
+  .conventions-source a { color: #111; text-decoration: none; }
+}
