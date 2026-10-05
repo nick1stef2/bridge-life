@@ -100,6 +100,11 @@ function buildDetailItems(tournament) {
             text: `${round.teamVps}–${round.opponentVps} VP · ${round.deals} διανομές`,
           })),
         ]),
+        ...(tournament.rounds || []).map((round) => ({
+          label: `Γύρος ${round.roundNumber} · ${round.opponent}`,
+          value: `${round.teamImps}–${round.opponentImps} IMP`,
+          text: `${round.teamVps}–${round.opponentVps} VP · ${round.deals} διανομές`,
+        })),
       ]
     : [
         ...(tournament.sourceResultId
@@ -129,11 +134,14 @@ function TeamSummarySection({ tournament }) {
         <h2>
           {tournament.completionStatus === "inProgress"
             ? `Κατάσταση μετά την Ημέρα ${tournament.currentDay}`
-            : "Συνολικό αποτέλεσμα τριημέρου"}
+            : "Συνολικό αποτέλεσμα διοργάνωσης"}
         </h2>
       </div>
       <div className="team-summary-grid">
         <article><span>Γύροι</span><strong>{tournament.totalRounds}</strong></article>
+        {tournament.wins !== undefined && tournament.losses !== undefined && (
+          <article><span>Ρεκόρ</span><strong>{tournament.wins} νίκες · {tournament.losses} ήττα</strong></article>
+        )}
         <article><span>IMP</span><strong>{tournament.impFor}–{tournament.impAgainst}</strong></article>
         <article><span>Διαφορά</span><strong>{tournament.impBalance > 0 ? "+" : ""}{tournament.impBalance} IMP</strong></article>
         <article><span>VP</span><strong>{formatScore(tournament)}</strong></article>
@@ -141,6 +149,12 @@ function TeamSummarySection({ tournament }) {
           <span>{tournament.completionStatus === "inProgress" ? "Τρέχουσα θέση" : "Τελική θέση"}</span>
           <strong>{tournament.position}/{tournament.participants}</strong>
         </article>
+        {tournament.runnerUp && (
+          <article>
+            <span>Διαφορά από 2η · {tournament.runnerUp.teamName}</span>
+            <strong>+{tournament.runnerUp.gap} VP</strong>
+          </article>
+        )}
       </div>
     </section>
   );

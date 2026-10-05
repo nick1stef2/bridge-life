@@ -1,5 +1,16 @@
 export const achievementsData = [
   {
+    id: "achievement-207161",
+    date: "2026-10-02",
+    title: "1η θέση — Ομάδες 1–6 Οκτωβρίου 2026",
+    organization: "ΑΟΤ 26471",
+    partner: "Ομάδα ΣΤΕΦΑΝΑΚΗΣ / FOUR TOGETHER",
+    result: "1/16 · 91,98 VP",
+    note: "Πέντε νίκες σε έξι αγώνες και συνολικό αποτέλεσμα 223–76 IMP (+147).",
+    officialUrl: "https://hellasbridge.org/results/207161",
+    tournamentId: "aot-26471-2026-10-02",
+  },
+  {
     id: "achievement-206945",
     date: "2026-09-28",
     title: "1η θέση — Ζεύγη Δευτέρα 1–9, 4η",

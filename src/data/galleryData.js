@@ -30,8 +30,96 @@ import gallery16 from "../assets/images/gallery/gallery16.jpg";
 import gallery17 from "../assets/images/gallery/galllery17.jpg";
 import gallery18 from "../assets/images/gallery/gallery18.jpg";
 import gallery19 from "../assets/images/gallery/gallery19.jpg";
+import gallery20 from "../assets/images/gallery/gallery20.jpg";
+import gallery21 from "../assets/images/gallery/gallery21.jpg";
+import gallery22 from "../assets/images/gallery/gallery22.jpg";
+import gallery23 from "../assets/images/gallery/gallery23.jpg";
+import gallery24 from "../assets/images/gallery/gallery24.jpg";
+import gallery25 from "../assets/images/gallery/gqllery25.jpg";
+import gallery26 from "../assets/images/gallery/gallery26.jpg";
+import gallery27 from "../assets/images/gallery/gallery27.jpg";
 
 export const galleryData = [
+  {
+    id: "gallery20",
+    image: gallery20,
+    title: "FOUR TOGETHER — 1η θέση στις Ομάδες 1–6",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Η ομάδα ΣΤΕΦΑΝΑΚΗΣ / FOUR TOGETHER με τα κύπελλα της 1ης θέσης.",
+    featured: true,
+  },
+  {
+    id: "gallery21",
+    image: gallery21,
+    title: "Η απονομή της FOUR TOGETHER",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Στιγμιότυπο από την απονομή του ομαδικού τουρνουά 1–6.",
+    featured: false,
+  },
+  {
+    id: "gallery22",
+    image: gallery22,
+    title: "Οι νικητές του ομαδικού 1–6",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Αναμνηστική φωτογραφία της απονομής στο αγωνιστικό μπριτζ Ταταύλα.",
+    featured: false,
+  },
+  {
+    id: "gallery23",
+    image: gallery23,
+    title: "Video στιγμιότυπο από την απονομή",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Στιγμιότυπο από το αρχείο video της βράβευσης.",
+    featured: false,
+  },
+  {
+    id: "gallery24",
+    image: gallery24,
+    title: "FOUR TOGETHER με τα κύπελλα",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Η πρωταθλήτρια ομάδα μετά την ολοκλήρωση των έξι γύρων.",
+    featured: false,
+  },
+  {
+    id: "gallery25",
+    image: gallery25,
+    title: "Νίκος Στεφανάκης — κύπελλο 1ης θέσης",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Ο Νίκος Στεφανάκης με το κύπελλο της ομαδικής νίκης.",
+    featured: false,
+  },
+  {
+    id: "gallery26",
+    image: gallery26,
+    title: "Νίκος Στεφανάκης — απονομή",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Φωτογραφία από την απονομή του τουρνουά Ομάδες 1–6.",
+    featured: false,
+  },
+  {
+    id: "gallery27",
+    image: gallery27,
+    title: "1η θέση — Ομάδες 1–6 Οκτωβρίου",
+    date: "2026-10-04",
+    category: "Αγώνες",
+    tournamentId: "aot-26471-2026-10-02",
+    description: "Ο Νίκος Στεφανάκης με το έπαθλο της FOUR TOGETHER.",
+    featured: false,
+  },
   {
     id: "gallery-20260523-180641",
     image: gallery20260523_180641,

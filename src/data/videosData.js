@@ -1,3 +1,7 @@
+import video15 from "../assets/videos/video15.mp4";
+import video16 from "../assets/videos/video16.mp4";
+import video17 from "../assets/videos/video17.mp4";
+
 export const videosData = [
   {
     id: "video01",
@@ -128,5 +132,35 @@ export const videosData = [
     poster: null,
     featured: false,
     tournamentId: "oamki-206521-2026-09-18-20",
+  },
+  {
+    id: "video15",
+    src: video15,
+    title: "FOUR TOGETHER — Απονομή 1ης θέσης · Video 1",
+    description: "Βίντεο από την απονομή του ομαδικού τουρνουά 1–6 Οκτωβρίου 2026.",
+    category: "Ομαδικά",
+    poster: null,
+    featured: false,
+    tournamentId: "aot-26471-2026-10-02",
+  },
+  {
+    id: "video16",
+    src: video16,
+    title: "FOUR TOGETHER — Απονομή 1ης θέσης · Video 2",
+    description: "Στιγμιότυπα από τη βράβευση της πρωταθλήτριας ομάδας.",
+    category: "Ομαδικά",
+    poster: null,
+    featured: false,
+    tournamentId: "aot-26471-2026-10-02",
+  },
+  {
+    id: "video17",
+    src: video17,
+    title: "FOUR TOGETHER — Απονομή 1ης θέσης · Video 3",
+    description: "Βίντεο από την ολοκλήρωση του τουρνουά με την ομάδα FOUR TOGETHER.",
+    category: "Ομαδικά",
+    poster: null,
+    featured: false,
+    tournamentId: "aot-26471-2026-10-02",
   },
 ];
