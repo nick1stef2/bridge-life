@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { conventionsData, conventionsSource } from "../data/conventionsData";
+import { conventionsData, conventionsResources, conventionsSource } from "../data/conventionsData";
 import "./Conventions.css";
 
 const normalize = (value) =>
@@ -11,9 +11,10 @@ const normalize = (value) =>
 
 function Conventions() {
   const [query, setQuery] = useState("");
+  const dontConvention = conventionsResources.additions[0];
+  const needle = normalize(query.trim());
 
   const visibleConventions = useMemo(() => {
-    const needle = normalize(query.trim());
     if (!needle) return conventionsData;
 
     return conventionsData.filter((convention) =>
@@ -26,7 +27,18 @@ function Conventions() {
         ...convention.notes,
       ].join(" ")).includes(needle),
     );
-  }, [query]);
+  }, [needle]);
+
+  const showDont = !needle || normalize([
+    dontConvention.title,
+    dontConvention.description,
+    ...dontConvention.bids,
+  ].join(" ")).includes(needle);
+
+  const indexItems = [
+    ...visibleConventions.map((convention) => ({ id: convention.id, name: convention.name })),
+    ...(showDont ? [{ id: dontConvention.id, name: dontConvention.title, supplemental: true }] : []),
+  ].sort((a, b) => a.name.localeCompare(b.name, "el", { sensitivity: "base" }));
 
   return (
     <main className="conventions-page">
@@ -38,7 +50,7 @@ function Conventions() {
       <header className="conventions-hero">
         <p className="conventions-kicker">BRIDGE LIFE · ΝΙΚΟΣ – ΜΙΧΑΛΗΣ</p>
         <h1>Εγχειρίδιο Συμβάσεων Bridge</h1>
-        <p className="conventions-subtitle">Συμβάσεις Bridge — Υλικό αναφοράς από την ΕΟΜ</p>
+        <p className="conventions-subtitle">Βιβλιοθήκη αναφοράς συμβάσεων Bridge — ανεξάρτητη από τη σειρά μαθημάτων.</p>
         <div className="conventions-actions">
           <button type="button" onClick={() => window.print()} className="print-button">
             🖨️ Εκτύπωση / Αποθήκευση PDF
@@ -46,8 +58,33 @@ function Conventions() {
           <a href={conventionsSource.url} target="_blank" rel="noreferrer" className="source-button">
             Επίσημη πηγή ΕΟΜ ↗
           </a>
+          <a href={conventionsResources.manual.pdf} target="_blank" rel="noreferrer" className="source-button">
+            Άνοιγμα εγχειριδίου PDF ↗
+          </a>
         </div>
       </header>
+
+      <section className="conventions-resources" aria-labelledby="resources-title">
+        <div className="resource-heading">
+          <p className="section-label">ΒΙΒΛΙΟΘΗΚΗ ΑΝΑΦΟΡΑΣ</p>
+          <h2 id="resources-title">Έγγραφα Συμβάσεων</h2>
+        </div>
+        <div className="resource-grid">
+          <article className="resource-card resource-card-primary">
+            <span className="resource-badge">Κύριο εγχειρίδιο</span>
+            <h3>{conventionsResources.manual.title}</h3>
+            <p>{conventionsResources.manual.description}</p>
+            <a href={conventionsResources.manual.pdf} target="_blank" rel="noreferrer">Άνοιγμα PDF ↗</a>
+          </article>
+          <article className="resource-card" id={`${dontConvention.id}-resource`}>
+            <span className="resource-badge resource-badge-extra">{dontConvention.label}</span>
+            <h3>{dontConvention.title}</h3>
+            <p>{dontConvention.description}</p>
+            <a href={`#${dontConvention.id}`}>Προβολή σύνοψης ↓</a>
+            <a href={dontConvention.pdf} target="_blank" rel="noreferrer">Άνοιγμα κάρτας PDF ↗</a>
+          </article>
+        </div>
+      </section>
 
       <section className="notation-card" aria-labelledby="notation-title">
         <h2 id="notation-title">Bridge notation</h2>
@@ -78,17 +115,44 @@ function Conventions() {
         </div>
 
         <p className="search-count" aria-live="polite">
-          {visibleConventions.length} από {conventionsData.length} συμβάσεις
+          {visibleConventions.length} από {conventionsData.length} συμβάσεις ΕΟΜ
+          {showDont ? " + 1 πρόσθετη" : ""}
         </p>
 
         <div className="index-links">
-          {visibleConventions.map((convention) => (
-            <a key={convention.id} href={`#${convention.id}`}>
-              {convention.name}
+          {indexItems.map((convention) => (
+            <a key={convention.id} href={`#${convention.id}`} className={convention.supplemental ? "supplemental-index-link" : ""}>
+              {convention.name}{convention.supplemental ? " · Πρόσθετο" : ""}
             </a>
           ))}
         </div>
       </section>
+
+      {showDont && (
+        <article className="convention-card supplemental-convention" id={dontConvention.id}>
+          <div className="convention-number">+</div>
+          <div className="convention-content">
+            <span className="resource-badge resource-badge-extra">{dontConvention.label}</span>
+            <h2>{dontConvention.title}</h2>
+            <dl>
+              <div>
+                <dt>Τι είναι / Σκοπός</dt>
+                <dd>{dontConvention.description}</dd>
+              </div>
+              <div>
+                <dt>Βασικές αγορές</dt>
+                <dd className="bidding-sequences">
+                  {dontConvention.bids.map((bid) => <code key={bid}>{bid}</code>)}
+                </dd>
+              </div>
+            </dl>
+            <div className="supplemental-actions">
+              <a href={dontConvention.pdf} target="_blank" rel="noreferrer" className="source-button">Άνοιγμα ΚΑΡΤΑ DONT.pdf ↗</a>
+              <a href="#index-title" className="back-to-index">↑ Ευρετήριο</a>
+            </div>
+          </div>
+        </article>
+      )}
 
       <section className="conventions-list" aria-label="Περιγραφές συμβάσεων">
         {visibleConventions.map((convention, index) => (
@@ -132,7 +196,7 @@ function Conventions() {
         ))}
       </section>
 
-      {visibleConventions.length === 0 && (
+      {visibleConventions.length === 0 && !showDont && (
         <p className="no-conventions">Δεν βρέθηκε σύμβαση με αυτόν τον όρο.</p>
       )}
 

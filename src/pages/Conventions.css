@@ -51,18 +51,32 @@
 }
 .source-button { background: transparent; color: #eef4ef; }
 
-.notation-card, .conventions-index, .convention-card, .conventions-source {
+.notation-card, .conventions-resources, .conventions-index, .convention-card, .conventions-source {
   margin-top: 22px;
   border: 1px solid #303b36;
   border-radius: 20px;
   background: #1b2220;
 }
-.notation-card, .conventions-index, .conventions-source { padding: 24px; }
-.notation-card h2, .conventions-index h2 { margin: 0 0 16px; }
+.notation-card, .conventions-resources, .conventions-index, .conventions-source { padding: 24px; }
+.notation-card h2, .conventions-resources h2, .conventions-index h2 { margin: 0 0 16px; }
 .notation-grid { flex-wrap: wrap; }
 .notation-grid span { padding: 8px 12px; border-radius: 9px; background: #121816; font-weight: 700; }
 .suit-red { color: #ff7c78; }
 .suit-black { color: #f4f7f5; }
+
+.resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.resource-card { padding: 20px; border: 1px solid #3c4a43; border-radius: 14px; background: #121816; }
+.resource-card-primary { border-color: #7c6841; background: linear-gradient(145deg, #20251d, #121816); }
+.resource-card h3 { margin: 12px 0 8px; color: #fff; font-size: 1.25rem; }
+.resource-card p { margin: 0 0 18px; color: #c5cec8; line-height: 1.55; }
+.resource-card a { display: inline-flex; margin: 4px 14px 4px 0; color: #f0ce87; font-weight: 800; text-decoration: none; }
+.resource-badge { display: inline-flex; padding: 5px 9px; border-radius: 999px; background: #3e4b43; color: #e8eee9; font-size: .72rem; font-weight: 900; letter-spacing: .04em; }
+.resource-badge-extra { background: #59471f; color: #ffe2a2; }
+.supplemental-index-link { border: 1px solid #715c2e; }
+.supplemental-convention { border-color: #806936; background: linear-gradient(145deg, #242318, #1b2220); }
+.supplemental-convention .convention-content h2 { margin-top: 12px; }
+.supplemental-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+.supplemental-actions .back-to-index { margin-top: 0; }
 
 .index-heading-row { justify-content: space-between; align-items: end; }
 .conventions-search { width: min(360px, 100%); color: #c5cdc8; font-size: .85rem; }
@@ -98,6 +112,7 @@
   .convention-number { margin-bottom: 8px; font-size: .9rem; }
   .notation-grid { align-items: stretch; flex-direction: column; }
   .notation-grid span { width: 100%; }
+  .resource-grid { grid-template-columns: 1fr; }
   .print-button, .source-button { width: 100%; justify-content: center; }
 }
 
@@ -111,7 +126,9 @@
   .conventions-kicker, .section-label { color: #555; }
   .conventions-hero h1 { color: #111; font-size: 34pt; }
   .conventions-subtitle { color: #333; font-size: 14pt; }
-  .notation-card, .conventions-index, .convention-card, .conventions-source { border: 1px solid #bbb; background: #fff; color: #111; box-shadow: none; }
+  .notation-card, .conventions-resources, .conventions-index, .convention-card, .conventions-source { border: 1px solid #bbb; background: #fff; color: #111; box-shadow: none; }
+  .resource-card { border-color: #bbb; background: #fff; color: #111; }
+  .resource-card h3, .resource-card p { color: #111; }
   .notation-card { page-break-before: always; }
   .notation-grid span, .index-links a { background: #fff; color: #111; border: 1px solid #ccc; }
   .suit-red { color: #b00020 !important; }

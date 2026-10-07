@@ -52,8 +52,8 @@ function HomePage() {
 
         <Link to="/conventions" className="card-link">
           <div className="card">
-            <h2>📖 Εγχειρίδιο Συμβάσεων</h2>
-            <p>Συμβάσεις Bridge — υλικό αναφοράς από την ΕΟΜ</p>
+            <h2>📖 ΣΥΜΒΑΣΕΙΣ</h2>
+            <p>Εγχειρίδιο ΕΟΜ και πρόσθετες κάρτες αναφοράς</p>
           </div>
         </Link>
 

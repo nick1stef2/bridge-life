@@ -1,6 +1,35 @@
+import conventionsManualPdf from "../assets/images/lessons/ΣΥΜΒΑΣΕΙΣ.pdf";
+import dontCardPdf from "../assets/images/lessons/ΚΑΡΤΑ DONT.pdf";
+
 export const conventionsSource = {
   label: "Ελληνική Ομοσπονδία Μπριτζ — Επετηρίδα 2020, σελ. 207–218",
   url: "https://hellasbridge.org/storage/pages/files/Επετηρίδες/epetirida%202020.pdf",
+};
+
+export const conventionsResources = {
+  manual: {
+    id: "conventions-manual",
+    title: "Εγχειρίδιο Συμβάσεων",
+    description: "Η κύρια βιβλιοθήκη συμβάσεων του Bridge Life, βασισμένη στο υλικό αναφοράς της ΕΟΜ.",
+    pdf: conventionsManualPdf,
+  },
+  additions: [
+    {
+      id: "dont-after-1nt",
+      title: "DONT μετά από 1NT",
+      description: "Σύστημα παρεμβολών μετά από άνοιγμα 1NT.",
+      pdf: dontCardPdf,
+      label: "Πρόσθετο υλικό Bridge Life",
+      bids: [
+        "X = μονόχρωμο χέρι",
+        "2♣ = σπαθιά + ανώτερο χρώμα",
+        "2♦ = καρά + ανώτερο χρώμα",
+        "2♥ = κούπες + πίκες",
+        "2♠ = φυσικό",
+        "2NT = τα δύο μινέρ",
+      ],
+    },
+  ],
 };
 
 const entry = (id, name, purpose, details = [], bids = [], notes = []) => ({
