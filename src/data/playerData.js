@@ -7,12 +7,12 @@ export const playerData = {
     platinum: 2,
   },
   unofficialPoints: {
-    black: 649,
+    black: 659,
     gold: 35,
     platinum: 2,
   },
   pendingPoints: {
-    black: 1585,
+    black: 1595,
     gold: 72,
     platinum: 4,
   },
@@ -22,7 +22,7 @@ export const playerData = {
     updateCycle: "κάθε 4 μήνες",
     source: "ΕΟΜ – καρτέλα αθλητή 19350",
     sourceUrl: "https://hellasbridge.org/bridge/players/code/19350",
-    checkedAt: "2026-10-05",
-    pendingNotice: "Η καρτέλα ΕΟΜ εμφανίζει 372 Μ, 13 Χ και 0,6 Π ως προσωρινούς. Σε αυτούς προστίθενται εκκρεμώς οι 277 Μ, 22 Χ και 1,4 Π του Event 207161, χωρίς αλλαγή του επίσημου balance.",
+    checkedAt: "2026-10-07",
+    pendingNotice: "Η καρτέλα ΕΟΜ εμφανίζει 649 Μ, 35 Χ και 2,0 Π ως προσωρινούς. Σε αυτούς προστίθενται εκκρεμώς οι 10 Μ του Event 207285, χωρίς αλλαγή του επίσημου balance.",
   },
 };

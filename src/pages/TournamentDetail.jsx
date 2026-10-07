@@ -115,6 +115,17 @@ function buildDetailItems(tournament) {
         { label: "Σύνολο συμμετοχών", value: toDisplay(tournament.participants) },
         { label: "Master points / M", value: toDisplay(tournament.masterPoints) },
         { label: "Κατηγορίες παικτών", value: formatPlayerCategories(tournament) },
+        ...(tournament.pairCardNumber
+          ? [{ label: "Κάρτα ζεύγους", value: tournament.pairCardNumber }]
+          : []),
+        ...(tournament.totalRounds
+          ? [{ label: "Γύροι / διανομές", value: `${tournament.totalRounds} γύροι · ${tournament.playedBoards} διανομές` }]
+          : []),
+        ...(tournament.rounds || []).map((round) => ({
+          label: `Γύρος ${round.roundNumber} · ${round.opponents}`,
+          value: `Boards ${round.boards}`,
+          text: `Τραπέζι ${round.table} · ${round.direction}`,
+        })),
         ...(tournament.resultImage
           ? [{ label: "Πηγή αποτελέσματος", value: "Screenshot", image: tournament.resultImage }]
           : []),
