@@ -38,8 +38,19 @@ import gallery24 from "../assets/images/gallery/gallery24.jpg";
 import gallery25 from "../assets/images/gallery/gqllery25.jpg";
 import gallery26 from "../assets/images/gallery/gallery26.jpg";
 import gallery27 from "../assets/images/gallery/gallery27.jpg";
+import gallery28 from "../assets/images/gallery/gallery28.jpg";
 
 export const galleryData = [
+  {
+    id: "gallery28",
+    image: gallery28,
+    title: "Ολοκλήρωση Συγκεντρωτικού Ζευγών 1–9",
+    date: "2026-10-08",
+    category: "Αγώνες",
+    tournamentId: "aot-26483-2026-10-08-overall",
+    description: "Στιγμιότυπο από την ολοκλήρωση του Συγκεντρωτικού στον Α.Ο. Ταταύλα.",
+    featured: false,
+  },
   {
     id: "gallery20",
     image: gallery20,

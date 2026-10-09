@@ -114,6 +114,12 @@ function buildDetailItems(tournament) {
         { label: tournament.scoreType === "percentage" ? "Ποσοστό" : "Σκορ", value: formatScore(tournament) },
         { label: "Σύνολο συμμετοχών", value: toDisplay(tournament.participants) },
         { label: "Master points / M", value: toDisplay(tournament.masterPoints) },
+        ...(tournament.extraPoints?.x
+          ? [{ label: "Master points / X", value: tournament.extraPoints.x }]
+          : []),
+        ...(tournament.extraPoints?.p
+          ? [{ label: "Master points / Π", value: tournament.extraPoints.p }]
+          : []),
         { label: "Κατηγορίες παικτών", value: formatPlayerCategories(tournament) },
         ...(tournament.pairCardNumber
           ? [{ label: "Κάρτα ζεύγους", value: tournament.pairCardNumber }]
