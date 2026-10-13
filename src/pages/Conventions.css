@@ -77,6 +77,22 @@
 .supplemental-convention .convention-content h2 { margin-top: 12px; }
 .supplemental-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
 .supplemental-actions .back-to-index { margin-top: 0; }
+.featured-dont { border-color: #b99243; box-shadow: 0 18px 50px rgb(0 0 0 / 20%); }
+.featured-dont-description { margin: 0 0 16px; color: #d8e0da; line-height: 1.55; }
+.dont-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: #d3b069;
+  color: #17211c;
+  font-weight: 900;
+  text-decoration: none;
+}
+.featured-dont-bids { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.featured-dont-bids code { max-width: 100%; padding: 8px 11px; border: 1px solid #6b5931; border-radius: 8px; background: #151710; color: #f5d797; font-family: ui-monospace, Consolas, monospace; white-space: normal; }
 
 .index-heading-row { justify-content: space-between; align-items: end; }
 .conventions-search { width: min(360px, 100%); color: #c5cdc8; font-size: .85rem; }
@@ -114,6 +130,7 @@
   .notation-grid span { width: 100%; }
   .resource-grid { grid-template-columns: 1fr; }
   .print-button, .source-button { width: 100%; justify-content: center; }
+  .dont-card-button { width: 100%; min-height: 56px; padding: 0 12px; box-sizing: border-box; text-align: center; }
 }
 
 @page { size: A4 portrait; margin: 15mm 14mm 17mm; }

@@ -36,9 +36,11 @@ function Conventions() {
   ].join(" ")).includes(needle);
 
   const indexItems = [
-    ...visibleConventions.map((convention) => ({ id: convention.id, name: convention.name })),
     ...(showDont ? [{ id: dontConvention.id, name: dontConvention.title, supplemental: true }] : []),
-  ].sort((a, b) => a.name.localeCompare(b.name, "el", { sensitivity: "base" }));
+    ...visibleConventions
+      .map((convention) => ({ id: convention.id, name: convention.name }))
+      .sort((a, b) => a.name.localeCompare(b.name, "el", { sensitivity: "base" })),
+  ];
 
   return (
     <main className="conventions-page">
@@ -46,6 +48,28 @@ function Conventions() {
         <Link to="/">← Επιστροφή στην αρχική</Link>
         <Link to="/lessons">Lessons</Link>
       </nav>
+
+      {showDont && (
+        <article className="convention-card supplemental-convention featured-dont" id={dontConvention.id}>
+          <div className="convention-number">★</div>
+          <div className="convention-content">
+            <span className="resource-badge resource-badge-extra">ΠΡΩΤΗ ΕΠΙΛΟΓΗ · {dontConvention.label}</span>
+            <h2>{dontConvention.title}</h2>
+            <p className="featured-dont-description">{dontConvention.description}</p>
+            <a
+              href={dontConvention.pdf}
+              target="_blank"
+              rel="noreferrer"
+              className="dont-card-button"
+            >
+              ΑΝΟΙΓΜΑ ΚΑΡΤΑΣ DONT
+            </a>
+            <div className="featured-dont-bids" aria-label="Βασικές αγορές DONT">
+              {dontConvention.bids.map((bid) => <code key={bid}>{bid}</code>)}
+            </div>
+          </div>
+        </article>
+      )}
 
       <header className="conventions-hero">
         <p className="conventions-kicker">BRIDGE LIFE · ΝΙΚΟΣ – ΜΙΧΑΛΗΣ</p>
@@ -75,13 +99,6 @@ function Conventions() {
             <h3>{conventionsResources.manual.title}</h3>
             <p>{conventionsResources.manual.description}</p>
             <a href={conventionsResources.manual.pdf} target="_blank" rel="noreferrer">Άνοιγμα PDF ↗</a>
-          </article>
-          <article className="resource-card" id={`${dontConvention.id}-resource`}>
-            <span className="resource-badge resource-badge-extra">{dontConvention.label}</span>
-            <h3>{dontConvention.title}</h3>
-            <p>{dontConvention.description}</p>
-            <a href={`#${dontConvention.id}`}>Προβολή σύνοψης ↓</a>
-            <a href={dontConvention.pdf} target="_blank" rel="noreferrer">Άνοιγμα κάρτας PDF ↗</a>
           </article>
         </div>
       </section>
@@ -127,32 +144,6 @@ function Conventions() {
           ))}
         </div>
       </section>
-
-      {showDont && (
-        <article className="convention-card supplemental-convention" id={dontConvention.id}>
-          <div className="convention-number">+</div>
-          <div className="convention-content">
-            <span className="resource-badge resource-badge-extra">{dontConvention.label}</span>
-            <h2>{dontConvention.title}</h2>
-            <dl>
-              <div>
-                <dt>Τι είναι / Σκοπός</dt>
-                <dd>{dontConvention.description}</dd>
-              </div>
-              <div>
-                <dt>Βασικές αγορές</dt>
-                <dd className="bidding-sequences">
-                  {dontConvention.bids.map((bid) => <code key={bid}>{bid}</code>)}
-                </dd>
-              </div>
-            </dl>
-            <div className="supplemental-actions">
-              <a href={dontConvention.pdf} target="_blank" rel="noreferrer" className="source-button">Άνοιγμα ΚΑΡΤΑ DONT.pdf ↗</a>
-              <a href="#index-title" className="back-to-index">↑ Ευρετήριο</a>
-            </div>
-          </div>
-        </article>
-      )}
 
       <section className="conventions-list" aria-label="Περιγραφές συμβάσεων">
         {visibleConventions.map((convention, index) => (
