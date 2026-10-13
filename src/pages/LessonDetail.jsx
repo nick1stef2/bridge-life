@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { lessonsData } from "../data/lessonsData";
+import "./LessonDetail.css";
 
 function LessonDetail() {
   const { lessonId } = useParams();
@@ -21,13 +22,7 @@ function LessonDetail() {
   }
 
   return (
-    <div
-      style={{
-        maxWidth: "1000px",
-        margin: "0 auto",
-        padding: "20px",
-      }}
-    >
+    <div className="lesson-detail-page">
       <Link
         to="/lessons"
         style={{
@@ -49,18 +44,45 @@ function LessonDetail() {
         {lesson.title}
       </h1>
 
-      {lesson.images.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={lesson.title}
-          style={{
-            width: "100%",
-            borderRadius: "15px",
-            marginBottom: "20px",
-          }}
-        />
-      ))}
+      {lesson.rules ? (
+        <>
+          <p className="lesson-introduction">{lesson.introduction}</p>
+
+          <div className="lesson-rules-grid">
+            {lesson.rules.map((rule) => (
+              <section className="lesson-rule-card" key={rule.title}>
+                <div className="lesson-rule-heading">
+                  <span className="lesson-rule-number" aria-hidden="true">
+                    {rule.number}
+                  </span>
+                  <h2>{rule.title}</h2>
+                </div>
+
+                <p>{rule.text}</p>
+
+                {rule.example && (
+                  <p className="lesson-rule-example">
+                    <strong>Παράδειγμα:</strong> {rule.example}
+                  </p>
+                )}
+
+                <p className="lesson-rule-takeaway">
+                  <strong>Τι να θυμάμαι:</strong> {rule.takeaway}
+                </p>
+              </section>
+            ))}
+          </div>
+        </>
+      ) : (
+        lesson.images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={lesson.title}
+            className="lesson-detail-image"
+          />
+        ))
+      )}
     </div>
   );
 }
