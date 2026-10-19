@@ -115,6 +115,7 @@ export const tournamentsData = [
     playedBoards: 20,
     location: null,
     includeInPersonalStats: true,
+    achievementId: "achievement-207790",
     verificationStatus: "verified",
     verificationNotes: "Επιβεβαιωμένο από το επίσημο αποτέλεσμα ΕΟΜ 207790 και την κάρτα ζεύγους 21.",
     notes: "1η θέση για το ζευγάρι Νίκος Στεφανάκης – Μιχαήλ Μαστέλλος με 68,33%. Νέα απονομή: 14 μαύροι βαθμοί.",
