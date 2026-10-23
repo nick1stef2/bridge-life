@@ -44,6 +44,17 @@
   margin-bottom: 10px;
 }
 
+.lesson-year-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(111, 168, 220, 0.16);
+  color: #a9d2f4;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .lesson-content p {
   color: #bbbbbb;
 }

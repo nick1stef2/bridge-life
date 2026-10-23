@@ -11,8 +11,95 @@ import preemptiveImg from "../assets/images/lessons/preemptive-openings.jpg";
 import overcallImg from "../assets/images/lessons/overcall-rules.jpg";
 import responseAfterOvercallImg from "../assets/images/lessons/response-after-overcall.jpg";
 import doubleOvercallImg from "../assets/images/lessons/double-overcall.jpg";
+import openerRebidCheatSheet from "../assets/images/lessons/Lesson1_Epanadilosi_Anoixantos.png";
+import openerRebidPdf from "../assets/images/lessons/Lesson1_Epanadilosi_Anoixantos.pdf";
 
 export const lessonsData = [
+  {
+    id: "opener-rebid-after-response",
+    title: "Η Επαναδήλωση του Ανοίξαντος",
+    category: "2η Χρονιά",
+    lessonNumber: "1ο Μάθημα",
+    text: "Μετά από αλλαγή χρώματος του απαντώντος",
+    images: [openerRebidCheatSheet],
+    pdf: openerRebidPdf,
+    cheatSheet: openerRebidCheatSheet,
+    structuredType: "openerRebid",
+    subtitle: "Με τη δεύτερη αγορά μας περιγράφουμε ΔΥΝΑΜΗ + ΚΑΤΑΝΟΜΗ.",
+    strengthLevels: [
+      { range: "12-14", label: "ΑΔΥΝΑΜΟ" },
+      { range: "15-17", label: "ΜΕΣΑΙΟ" },
+      { range: "18-21", label: "ΙΣΧΥΡΟ" },
+    ],
+    rebidMatrix: [
+      {
+        label: "FIT στο χρώμα του responder",
+        weak: "Δίνουμε fit οικονομικά",
+        medium: "Δίνουμε fit με πήδημα",
+        strong: "Δίνουμε fit με διπλό πήδημα",
+      },
+      {
+        label: "ΟΜΑΛΗ ΚΑΤΑΝΟΜΗ",
+        weak: "Αγοράζουμε οικονομικά ΧΑ",
+        medium: "Ανοίγουμε 1ΧΑ",
+        strong: "Αγοράζουμε ΧΑ με πήδημα",
+      },
+      {
+        label: "ΔΕΥΤΕΡΟ ΧΡΩΜΑ",
+        weak: "Αγοράζουμε οικονομικά το 2ο χρώμα",
+        medium: "Αγοράζουμε οικονομικά το 2ο χρώμα",
+        strong: "Αγοράζουμε με πήδημα το 2ο χρώμα",
+      },
+      {
+        label: "ΕΝΑ ΜΑΚΡΥ ΧΡΩΜΑ",
+        weak: "Επαναδηλώνουμε οικονομικά το χρώμα μας",
+        medium: "Επαναδηλώνουμε το χρώμα μας με πήδημα",
+        strong: "Συνήθως αγοράζουμε στο 4 επίπεδο",
+      },
+    ],
+    rebidCases: [
+      {
+        number: 1,
+        title: "FIT ΣΤΟ ΧΡΩΜΑ ΤΟΥ ΑΠΑΝΤΩΝΤΟΣ",
+        takeaway: "Το ύψος που δίνω το fit δείχνει τη δύναμή μου.",
+        examples: [
+          { range: "12-14", rule: "Δίνουμε το fit οικονομικά.", hand: "♠ A764  ♥ AKJ64  ♦ 94  ♣ 63", auction: "1♥ - 1♠  /  2♠" },
+          { range: "15-17", rule: "Δίνουμε το fit κάνοντας ένα πήδημα.", hand: "♠ A764  ♥ AKJ64  ♦ K4  ♣ 63", auction: "1♥ - 1♠  /  3♠" },
+          { range: "18-21", rule: "Δίνουμε το fit με διπλό πήδημα.", hand: "♠ A764  ♥ AKJ64  ♦ A4  ♣ K3", auction: "1♥ - 1♠  /  4♠" },
+        ],
+      },
+      {
+        number: 2,
+        title: "ΟΜΑΛΗ ΚΑΤΑΝΟΜΗ",
+        takeaway: "Με ομαλή κατανομή περιγράφω τη δύναμη μου με τα ΧΑ.",
+        examples: [
+          { range: "12-14", rule: "Αγοράζουμε οικονομικά ΧΑ.", hand: "♠ A75  ♥ A987  ♦ K87  ♣ Q53", auction: "1♣ - 1♠  /  1ΧΑ" },
+          { range: "15-17", rule: "Σύμφωνα με το πρωτότυπο μάθημα: Ανοίγουμε 1ΧΑ.", hand: "♠ A75  ♥ A987  ♦ K87  ♣ AQ3", auction: "Άνοιγμα 1ΧΑ" },
+          { range: "18-19", rule: "Αγοράζουμε ΧΑ με πήδημα.", hand: "♠ A75  ♥ AK87  ♦ K87  ♣ AJ3", auction: "1♣ - 1♠  /  2ΧΑ" },
+        ],
+      },
+      {
+        number: 3,
+        title: "ΔΕΥΤΕΡΟ ΧΡΩΜΑ",
+        takeaway: "Δείχνουμε 5φυλλο πρώτο χρώμα και 4φυλλο δεύτερο χρώμα.",
+        examples: [
+          { range: "12-14", rule: "Αγοράζουμε οικονομικά το δεύτερο χρώμα.", hand: "♠ 6  ♥ J86  ♦ AK986  ♣ AJ63", auction: "1♦ - 1♠  /  2♣" },
+          { range: "15-17", rule: "Αγοράζουμε επίσης οικονομικά το δεύτερο χρώμα.", hand: "♠ 6  ♥ KJ6  ♦ AK986  ♣ AJ63", auction: "1♦ - 1♠  /  2♣" },
+          { range: "18-21", rule: "Αγοράζουμε με πήδημα το δεύτερο χρώμα.", hand: "♠ 6  ♥ KJ6  ♦ AK986  ♣ AKJ3", auction: "1♦ - 1♠  /  3♣" },
+        ],
+      },
+      {
+        number: 4,
+        title: "ΕΝΑ ΜΟΝΟ ΜΑΚΡΥ ΧΡΩΜΑ",
+        takeaway: "Χωρίς fit και χωρίς δεύτερο χρώμα, επαναδηλώνω το μακρύ χρώμα μου.",
+        examples: [
+          { range: "12-14", rule: "Αγοράζουμε οικονομικά ξανά το χρώμα μας.", hand: "♠ 5  ♥ KQJ642  ♦ A53  ♣ Q32", auction: "1♥ - 1♠  /  2♥" },
+          { range: "15-17", rule: "Επαναδηλώνουμε το χρώμα μας με πήδημα.", hand: "♠ 5  ♥ KQJ642  ♦ A53  ♣ AQ2", auction: "1♥ - 1♠  /  3♥" },
+          { range: "18-21", rule: "Συνήθως αγοράζουμε στο 4 επίπεδο το χρώμα μας.", hand: "♠ 5  ♥ KQJ642  ♦ AK3  ♣ AQ2", auction: "1♥ - 1♠  /  4♥" },
+        ],
+      },
+    ],
+  },
   {
     id: "stayman",
     title: "Stayman",

@@ -27,6 +27,11 @@ function Lessons() {
               />
 
               <div className="lesson-content">
+                {lesson.lessonNumber && (
+                  <span className="lesson-year-label">
+                    {lesson.category} · {lesson.lessonNumber}
+                  </span>
+                )}
                 <h2>{lesson.title}</h2>
                 <p>{lesson.text}</p>
               </div>
