@@ -1,5 +1,16 @@
 export const achievementsData = [
   {
+    id: "achievement-208054",
+    date: "2026-10-25",
+    title: "3η θέση — Συγκεντρωτικό 1–6 Κυριακής",
+    organization: "ΑΟΤ 26513",
+    partner: "Πολλαπλοί συμπαίκτες",
+    result: "3/14 · 59,20%",
+    note: "Επίσημη τελική κατάταξη Πολυημέρου και απονομή 30 μαύρων και 2 χρυσών βαθμών.",
+    officialUrl: "https://hellasbridge.org/results/208054",
+    tournamentId: "aot-26513-2026-10-25-overall",
+  },
+  {
     id: "achievement-207790",
     date: "2026-10-18",
     title: "1η θέση — Ζεύγη 1–6 Κυριακής, 5η Ημερίδα",
