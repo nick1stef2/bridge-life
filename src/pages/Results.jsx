@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { tournamentsData } from "../data/tournamentsData";
+import { formatPlacement } from "../utils/placements";
 import "./Results.css";
 
 const filters = ["Όλοι", "Ζεύγη", "Ομαδικά", "Mitchell", "Howell"];
@@ -139,7 +140,7 @@ function buildSummaryCards(results) {
     },
     {
       label: "Καλύτερη θέση",
-      value: bestPosition ? bestPosition.position : missingValue,
+      value: bestPosition ? formatPlacement(bestPosition.position, bestPosition.isTied) : missingValue,
       text: bestPosition ? `${bestPosition.title || missingValue} - ${formatDate(bestPosition.date)}` : missingValue,
     },
     {
@@ -304,7 +305,7 @@ function Results() {
                     </Link>
                   </td>
                   <td>{formatPartnerOrTeam(result)}</td>
-                  <td>{toDisplay(result.position)}</td>
+                  <td>{formatPlacement(result.position, result.isTied)}</td>
                   <td>{formatResultScore(result)}</td>
                   <td>{formatPlayerCategories(result)}</td>
                 </tr>

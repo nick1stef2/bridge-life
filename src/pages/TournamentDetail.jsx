@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { tournamentsData } from "../data/tournamentsData";
 import { videosData } from "../data/videosData";
+import { formatPlacement } from "../utils/placements";
 import "./TournamentDetail.css";
 
 const missingValue = "—";
@@ -59,7 +60,7 @@ function buildDetailItems(tournament) {
           : []),
         {
           label: tournament.completionStatus === "inProgress" ? "Τρέχουσα θέση" : "Τελική θέση",
-          value: toDisplay(tournament.position),
+          value: formatPlacement(tournament.position, tournament.isTied),
         },
         {
           label: tournament.completionStatus === "inProgress" ? "Τρέχον σκορ" : "Τελικό σκορ",
@@ -110,7 +111,7 @@ function buildDetailItems(tournament) {
         ...(tournament.sourceResultId
           ? [{ label: "Event ID ΕΟΜ", value: tournament.sourceResultId }]
           : []),
-        { label: "Θέση", value: toDisplay(tournament.position) },
+        { label: "Θέση", value: formatPlacement(tournament.position, tournament.isTied) },
         { label: tournament.scoreType === "percentage" ? "Ποσοστό" : "Σκορ", value: formatScore(tournament) },
         { label: "Σύνολο συμμετοχών", value: toDisplay(tournament.participants) },
         { label: "Master points / M", value: toDisplay(tournament.masterPoints) },
@@ -164,7 +165,7 @@ function TeamSummarySection({ tournament }) {
         <article><span>VP</span><strong>{formatScore(tournament)}</strong></article>
         <article>
           <span>{tournament.completionStatus === "inProgress" ? "Τρέχουσα θέση" : "Τελική θέση"}</span>
-          <strong>{tournament.position}/{tournament.participants}</strong>
+          <strong>{formatPlacement(tournament.position, tournament.isTied)}/{tournament.participants}</strong>
         </article>
         {tournament.runnerUp && (
           <article>
@@ -319,7 +320,7 @@ function TournamentDetail() {
         </article>
         <article>
           <span>Θέση</span>
-          <strong>{toDisplay(tournament.position)}</strong>
+          <strong>{formatPlacement(tournament.position, tournament.isTied)}</strong>
         </article>
         <article>
           <span>{tournament.scoreType === "percentage" ? "Ποσοστό" : "Σκορ"}</span>
