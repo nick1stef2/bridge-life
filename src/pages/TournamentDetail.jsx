@@ -52,11 +52,35 @@ function formatPlayerCategories(tournament) {
   return `${tournament.playerCategory} – ${tournament.partnerCategory}`;
 }
 
+function formatTeamRoundText(round) {
+  const parts = [];
+
+  if (round.teamVps !== null && round.teamVps !== undefined) {
+    parts.push(
+      round.opponentVps !== null && round.opponentVps !== undefined
+        ? `${round.teamVps}–${round.opponentVps} VP`
+        : `${round.teamVps} VP`,
+    );
+  }
+
+  if (round.deals) {
+    parts.push(`${round.deals} διανομές`);
+  }
+
+  return parts.join(" · ") || null;
+}
+
 function buildDetailItems(tournament) {
   const resultItems = tournament.eventFormat === "teams"
     ? [
         ...(tournament.sourceResultIds?.length
           ? [{ label: "Event ID ΕΟΜ", value: tournament.sourceResultIds.join(", ") }]
+          : []),
+        ...(tournament.completionStatus === "inProgress"
+          ? [
+              { label: "Κατάσταση", value: "Σε εξέλιξη" },
+              { label: "Κατάταξη", value: "ΠΡΟΣΩΡΙΝΗ ΚΑΤΑΤΑΞΗ" },
+            ]
           : []),
         {
           label: tournament.completionStatus === "inProgress" ? "Τρέχουσα θέση" : "Τελική θέση",
@@ -98,13 +122,23 @@ function buildDetailItems(tournament) {
           ...(day.rounds || []).map((round) => ({
             label: `Γύρος ${round.roundNumber} · ${round.opponent}`,
             value: `${round.teamImps}–${round.opponentImps} IMP`,
-            text: `${round.teamVps}–${round.opponentVps} VP · ${round.deals} διανομές`,
+            text: formatTeamRoundText(round),
           })),
+          ...(day.rounds || []).flatMap((round) =>
+            (round.segments || []).map((segment) => ({
+              label: `${segment.label} · ${segment.opponent}`,
+              value: `${segment.teamImps}–${segment.opponentImps} IMP`,
+            })),
+          ),
         ]),
         ...(tournament.rounds || []).map((round) => ({
           label: `Γύρος ${round.roundNumber} · ${round.opponent}`,
           value: `${round.teamImps}–${round.opponentImps} IMP`,
-          text: `${round.teamVps}–${round.opponentVps} VP · ${round.deals} διανομές`,
+          text: formatTeamRoundText(round),
+        })),
+        ...(tournament.provisionalStandings || []).map((standing) => ({
+          label: `${standing.position}η · ${standing.teamName}`,
+          value: `${standing.score} VP`,
         })),
       ]
     : [
