@@ -107,6 +107,7 @@ export const lessonsData = [
     category: "2η Χρονιά",
     lessonNumber: "2ο Μάθημα",
     text: "Μετά από την επαναδήλωση του ανοίξαντος",
+    images: [openerRebidCheatSheet],
     document: responderSecondBidDocx,
     structuredType: "responderSecondBid",
     subtitle: "Ο απαντών συνδυάζει τη δική του δύναμη με όσα έδειξε ο ανοίξας και αποφασίζει το τελικό ύψος.",
