@@ -278,7 +278,9 @@ function RelatedVideosSection({ tournament }) {
       <div className="tournament-videos-grid">
         {relatedVideos.map((video) => (
           <article key={video.id}>
-            <video controls playsInline preload="metadata" src={video.src} />
+            <video controls playsInline preload="metadata">
+              <source src={video.src} type="video/mp4" />
+            </video>
             <div>
               <h3>{video.title}</h3>
               <p>{video.description}</p>

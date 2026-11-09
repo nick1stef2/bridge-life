@@ -116,8 +116,9 @@ function Videos() {
               playsInline
               preload="metadata"
               poster={selectedVideo.poster || undefined}
-              src={selectedVideo.src}
-            />
+            >
+              <source src={selectedVideo.src} type="video/mp4" />
+            </video>
             <figcaption>
               <span>{toDisplay(selectedVideo.category)}</span>
               <h2>{selectedVideo.title}</h2>
