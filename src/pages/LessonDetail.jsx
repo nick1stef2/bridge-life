@@ -85,6 +85,42 @@ function LessonDetail() {
     </div>
   );
 
+  const renderResponderSecondBidLesson = () => (
+    <div className="responder-second-bid-lesson">
+      <p className="rebid-kicker">{lesson.lessonNumber} - {lesson.category}</p>
+      <p className="rebid-subtitle">{lesson.subtitle}</p>
+
+      <div className="rebid-resources" aria-label="Υλικό μαθήματος">
+        <a href={lesson.document} target="_blank" rel="noreferrer">Άνοιγμα πλήρους μαθήματος</a>
+      </div>
+
+      <section className="second-bid-summary" aria-labelledby="second-bid-summary-title">
+        <h2 id="second-bid-summary-title">Τα βασικά σε έναν πίνακα</h2>
+        <div className="second-bid-table-wrap">
+          <table className="second-bid-table">
+            <thead>
+              <tr><th>Κατάσταση</th><th>Δεύτερη απάντηση</th><th>Τι δείχνει</th></tr>
+            </thead>
+            <tbody>
+              {lesson.secondBidTable.map((row) => (
+                <tr key={row.situation}>
+                  <td data-label="Κατάσταση">{row.situation}</td>
+                  <td data-label="Δεύτερη απάντηση">{row.action}</td>
+                  <td data-label="Τι δείχνει">{row.meaning}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="rebid-remember">
+        <h2>ΤΙ ΝΑ ΘΥΜΑΜΑΙ</h2>
+        <ol>{lesson.secondBidReminders.map((item) => <li key={item}>{item}</li>)}</ol>
+      </section>
+    </div>
+  );
+
   return (
     <div className="lesson-detail-page">
       <Link
@@ -108,7 +144,9 @@ function LessonDetail() {
         {lesson.title}
       </h1>
 
-      {lesson.structuredType === "openerRebid" ? renderOpenerRebidLesson() : lesson.rules ? (
+      {lesson.structuredType === "openerRebid" ? renderOpenerRebidLesson()
+        : lesson.structuredType === "responderSecondBid" ? renderResponderSecondBidLesson()
+        : lesson.rules ? (
         <>
           <p className="lesson-introduction">{lesson.introduction}</p>
 

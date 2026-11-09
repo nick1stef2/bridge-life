@@ -13,6 +13,7 @@ import responseAfterOvercallImg from "../assets/images/lessons/response-after-ov
 import doubleOvercallImg from "../assets/images/lessons/double-overcall.jpg";
 import openerRebidCheatSheet from "../assets/images/lessons/Lesson1_Epanadilosi_Anoixantos.png";
 import openerRebidPdf from "../assets/images/lessons/Lesson1_Epanadilosi_Anoixantos.pdf";
+import responderSecondBidDocx from "../assets/images/lessons/ΔΕΥΤΕΡΗ ΑΠΑΝΤΗΣΗ ΑΠΑΝΤΩΤΟΣ ΜΕΤΑ ΑΠΟ ΕΠΑΝΑΔΗΛΩΣΗ ΑΝΟΙΞΑΝΤΟΣ.docx?url";
 
 export const lessonsData = [
   {
@@ -98,6 +99,59 @@ export const lessonsData = [
           { range: "18-21", rule: "Συνήθως αγοράζουμε στο 4 επίπεδο το χρώμα μας.", hand: "♠ 5  ♥ KQJ642  ♦ AK3  ♣ AQ2", auction: "1♥ - 1♠  /  4♥" },
         ],
       },
+    ],
+  },
+  {
+    id: "responder-second-bid-after-opener-rebid",
+    title: "Δεύτερη Απάντηση του Απαντώντος",
+    category: "2η Χρονιά",
+    lessonNumber: "2ο Μάθημα",
+    text: "Μετά από την επαναδήλωση του ανοίξαντος",
+    document: responderSecondBidDocx,
+    structuredType: "responderSecondBid",
+    subtitle: "Ο απαντών συνδυάζει τη δική του δύναμη με όσα έδειξε ο ανοίξας και αποφασίζει το τελικό ύψος.",
+    secondBidTable: [
+      {
+        situation: "Η πρώτη απάντηση ήταν οριακή",
+        action: "Pass στο τελικό συμβόλαιο του ανοίξαντος",
+        meaning: "Έχουμε ήδη δείξει δύναμη και κατανομή. Σε πρόταση του ανοίξαντος: minimum Pass, maximum μανς.",
+      },
+      {
+        situation: "Αδύνατο χέρι περίπου 6–9 πόντων",
+        action: "Pass ή οικονομική βελτίωση του συμβολαίου",
+        meaning: "Δεν ελπίζουμε σε μανς. Αλλάζουμε χρώμα μόνο για να παίξουμε πιο ασφαλές μερικό συμβόλαιο.",
+      },
+      {
+        situation: "Χέρι πρότασης περίπου 10–11 πόντων",
+        action: "2ΧΑ, αύξηση στο επίπεδο 3 ή πήδημα στο δικό μακρύ χρώμα",
+        meaning: "Ρωτάμε αν ο άξονας έχει τη δύναμη για μανς. Ο ανοίξας με minimum πασάρει, με maximum αγοράζει τη μανς.",
+      },
+      {
+        situation: "Βέβαιη δύναμη μανς",
+        action: "Δηλώνουμε αμέσως τη μανς",
+        meaning: "Με την επαναδήλωση ξέρουμε ότι ο άξονας διαθέτει τουλάχιστον 25 πόντους και επιλέγουμε το καλύτερο συμβόλαιο.",
+      },
+      {
+        situation: "Χρειαζόμαστε περισσότερες πληροφορίες",
+        action: "Αγοράζουμε νέο χρώμα",
+        meaning: "Η αγορά είναι επιτακτική και ζητά νέα περιγραφή του χεριού του ανοίξαντος, πριν αποφασίσουμε το τελικό συμβόλαιο.",
+      },
+      {
+        situation: "Κοντά στους 33 πόντους",
+        action: "Πρόταση για σλεμ",
+        meaning: "Συνεχίζουμε επιτακτικά ή, αν έχει βρεθεί fit, διερευνούμε το σλεμ.",
+      },
+      {
+        situation: "33 ή περισσότεροι πόντοι",
+        action: "Δηλώνουμε σλεμ ή ρωτάμε άσους με 4ΧΑ",
+        meaning: "Ο άξονας έχει τη δύναμη για σλεμ και ελέγχουμε τους άσους πριν οριστικοποιήσουμε το συμβόλαιο.",
+      },
+    ],
+    secondBidReminders: [
+      "Πρώτα αποφασίζω αν έχω fit και ποιο είναι το καλύτερο συμβόλαιο.",
+      "Με fit σε minor και δύναμη μανς, συνήθως προτιμάμε 3ΧΑ όταν υπάρχουν κρατήματα.",
+      "Με αδύνατο μισφίτ χέρι σταματάμε όσο γίνεται χαμηλότερα.",
+      "Κάθε δεύτερη απάντηση πρέπει να δείχνει αν θέλουμε να σταματήσουμε, να προτείνουμε ή να επιβάλουμε το τελικό συμβόλαιο.",
     ],
   },
   {

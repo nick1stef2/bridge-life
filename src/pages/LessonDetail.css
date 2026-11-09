@@ -131,6 +131,15 @@
 .rebid-remember li { margin: 7px 0; }
 .rebid-memory-line { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .rebid-memory-line b { flex: 1 1 220px; padding: 10px; border-radius: 9px; background: #4a3b1d; text-align: center; }
+.second-bid-summary { margin-bottom: 28px; padding: 20px; border: 1px solid #334b5d; border-radius: 18px; background: #161f27; }
+.second-bid-summary h2 { margin: 0 0 16px; text-align: center; }
+.second-bid-table-wrap { overflow-x: auto; }
+.second-bid-table { width: 100%; border-collapse: collapse; line-height: 1.45; }
+.second-bid-table th, .second-bid-table td { padding: 13px 14px; border: 1px solid #3a5264; vertical-align: top; text-align: left; }
+.second-bid-table th { background: #17344b; color: #fff; }
+.second-bid-table tbody tr:nth-child(odd) { background: #1c2832; }
+.second-bid-table tbody tr:nth-child(even) { background: #21313d; }
+.second-bid-table td:nth-child(2) { color: #fff; font-weight: 800; }
 
 @media (max-width: 700px) {
   .rebid-subtitle { padding: 0 10px; font-size: 18px; }
@@ -148,4 +157,12 @@
   .rebid-case h2 { font-size: 20px; }
   .rebid-auction { font-size: 18px; }
   .rebid-remember { padding: 17px; }
+  .second-bid-summary { padding: 13px; }
+  .second-bid-table, .second-bid-table tbody, .second-bid-table tr, .second-bid-table td { display: block; width: 100%; }
+  .second-bid-table thead { display: none; }
+  .second-bid-table tr { margin-bottom: 12px; border: 1px solid #3a5264; border-radius: 10px; overflow: hidden; }
+  .second-bid-table tr:last-child { margin-bottom: 0; }
+  .second-bid-table td { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 10px; border: 0; border-bottom: 1px solid #3a5264; }
+  .second-bid-table td:last-child { border-bottom: 0; }
+  .second-bid-table td::before { content: attr(data-label); color: #8ec5e1; font-weight: 800; }
 }
