@@ -1,5 +1,16 @@
 export const achievementsData = [
   {
+    id: "achievement-208692",
+    date: "2026-11-08",
+    title: "3η θέση — Ζεύγη 1–6 Κυριακής, 2η Ημερίδα",
+    organization: "ΑΟΤ 26539",
+    partner: "Μιχαήλ Μαστέλλος",
+    result: "3/13 · 59,67%",
+    note: "Επίσημο αποτέλεσμα ημερίδας και απονομή 7 μαύρων βαθμών.",
+    officialUrl: "https://hellasbridge.org/results/208692",
+    tournamentId: "aot-26539-2026-11-08",
+  },
+  {
     id: "achievement-208674",
     date: "2026-11-08",
     title: "1η θέση — Ομάδες 1–6 Νοεμβρίου 2026",

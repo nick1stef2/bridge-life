@@ -233,6 +233,53 @@
   display: block;
 }
 
+.series-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.series-progress-grid article {
+  display: flex;
+  min-width: 0;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #303842;
+  border-radius: 12px;
+  background: #151a20;
+}
+
+.series-progress-grid article > span {
+  color: #8fbc8f;
+  font-size: 22px;
+}
+
+.series-progress-grid article.pending > span {
+  color: #777777;
+}
+
+.series-progress-grid strong,
+.series-progress-grid small,
+.series-progress-grid a {
+  display: block;
+}
+
+.series-progress-grid small {
+  margin-top: 6px;
+  color: #bbbbbb;
+  line-height: 1.4;
+}
+
+.series-progress-grid a {
+  margin-top: 10px;
+  color: #d8e8c8;
+}
+
+.series-aggregate-note {
+  margin: 18px 0 0;
+  color: #bbbbbb;
+}
+
 .team-summary-grid span {
   color: #bbbbbb;
 }

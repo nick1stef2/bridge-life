@@ -228,6 +228,49 @@ function TeamSummarySection({ tournament }) {
   );
 }
 
+function SeriesProgressSection({ tournament }) {
+  if (!tournament.seriesSessions?.length) return null;
+
+  const completedSessions = new Map(
+    tournament.seriesSessions.map((session) => [session.sessionNumber, session]),
+  );
+
+  return (
+    <section className="tournament-section series-progress-section">
+      <div className="tournament-section-heading">
+        <h2>Πρόοδος σειράς</h2>
+        <span>{tournament.seriesCompletedSessions}/{tournament.seriesTotalSessions}</span>
+      </div>
+      <div className="series-progress-grid">
+        {Array.from({ length: tournament.seriesTotalSessions }, (_, index) => index + 1).map((sessionNumber) => {
+          const session = completedSessions.get(sessionNumber);
+          return (
+            <article className={session ? "complete" : "pending"} key={sessionNumber}>
+              <span aria-hidden="true">{session ? "●" : "○"}</span>
+              <div>
+                <strong>{sessionNumber}η ημερίδα</strong>
+                {session ? (
+                  <>
+                    <small>{formatDate(session.date)} · {session.position}/{session.participants} · {session.score}%</small>
+                    <Link to={`/tournament/${session.tournamentId}`}>Προβολή αποτελέσματος</Link>
+                  </>
+                ) : (
+                  <small>Δεν έχει ολοκληρωθεί</small>
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {tournament.officialAggregateStatus === "notPublished" && (
+        <p className="series-aggregate-note">
+          Η επίσημη συγκεντρωτική κατάταξη δεν έχει ακόμη δημοσιευτεί από την ΕΟΜ.
+        </p>
+      )}
+    </section>
+  );
+}
+
 function RelatedGallerySection({ tournament }) {
   if (!tournament.showRelatedGallery || !tournament.galleryIds?.length) return null;
 
@@ -418,6 +461,7 @@ function TournamentDetail() {
 
       <main className="tournament-sections">
         <TeamSummarySection tournament={tournament} />
+        <SeriesProgressSection tournament={tournament} />
         <RelatedGallerySection tournament={tournament} />
         <RelatedVideosSection tournament={tournament} />
         {detailSections.filter((section) => (detailItems[section.key] || []).length).map((section) => (
