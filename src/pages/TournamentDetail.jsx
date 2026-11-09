@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { tournamentsData } from "../data/tournamentsData";
+import { galleryData } from "../data/galleryData";
 import { videosData } from "../data/videosData";
 import { formatPlacement } from "../utils/placements";
 import "./TournamentDetail.css";
@@ -103,6 +104,10 @@ function buildDetailItems(tournament) {
         ...(tournament.extraPoints?.p
           ? [{ label: "Προσωρινοί βαθμοί Π", value: tournament.extraPoints.p }]
           : []),
+        ...(tournament.teamMemberAwards || []).map((award) => ({
+          label: `Απονομή · ${award.player}`,
+          value: `${award.black} Μ · ${award.gold} Χ · ${String(award.platinum).replace(".", ",")} Π`,
+        })),
         ...(tournament.resultImage
           ? [{ label: "Πηγή τελικού αποτελέσματος", value: "Screenshot", image: tournament.resultImage }]
           : []),
@@ -114,10 +119,14 @@ function buildDetailItems(tournament) {
         ...(tournament.teamDays || []).flatMap((day) => [
           {
             label: `Ημέρα ${day.dayNumber} · ${formatDate(day.date)}`,
-            value: day.position
-              ? `${day.position}/${day.participants} · ${day.cumulativeVps} VP`
+            value: day.dailyVps
+              ? `${day.dailyVps} VP · ${day.dailyImpBalance > 0 ? "+" : ""}${day.dailyImpBalance} IMP`
               : `${day.cumulativeVps} VP σωρευτικά`,
-            text: day.seating || null,
+            text: [
+              day.position ? `Συγκεντρωτικά: ${day.position}/${day.participants} · ${day.cumulativeVps} VP` : null,
+              day.highlight,
+              day.seating,
+            ].filter(Boolean).join(" · ") || null,
           },
           ...(day.rounds || []).map((round) => ({
             label: `Γύρος ${round.roundNumber} · ${round.opponent}`,
@@ -136,7 +145,7 @@ function buildDetailItems(tournament) {
           value: `${round.teamImps}–${round.opponentImps} IMP`,
           text: formatTeamRoundText(round),
         })),
-        ...(tournament.provisionalStandings || []).map((standing) => ({
+        ...(tournament.finalStandings || tournament.provisionalStandings || []).map((standing) => ({
           label: `${standing.position}η · ${standing.teamName}`,
           value: `${standing.score} VP`,
         })),
@@ -192,7 +201,14 @@ function TeamSummarySection({ tournament }) {
       <div className="team-summary-grid">
         <article><span>Γύροι</span><strong>{tournament.totalRounds}</strong></article>
         {tournament.wins !== undefined && tournament.losses !== undefined && (
-          <article><span>Ρεκόρ</span><strong>{tournament.wins} νίκες · {tournament.losses} ήττα</strong></article>
+          <article>
+            <span>Ρεκόρ</span>
+            <strong>
+              {tournament.wins} νίκες
+              {tournament.draws !== undefined ? ` · ${tournament.draws} ισοπαλία` : ""}
+              {` · ${tournament.losses} ήττα`}
+            </strong>
+          </article>
         )}
         <article><span>IMP</span><strong>{tournament.impFor}–{tournament.impAgainst}</strong></article>
         <article><span>Διαφορά</span><strong>{tournament.impBalance > 0 ? "+" : ""}{tournament.impBalance} IMP</strong></article>
@@ -207,6 +223,38 @@ function TeamSummarySection({ tournament }) {
             <strong>+{tournament.runnerUp.gap} VP</strong>
           </article>
         )}
+      </div>
+    </section>
+  );
+}
+
+function RelatedGallerySection({ tournament }) {
+  if (!tournament.showRelatedGallery || !tournament.galleryIds?.length) return null;
+
+  const relatedImages = tournament.galleryIds
+    .map((galleryId) => galleryData.find((item) => item.id === galleryId))
+    .filter(Boolean);
+
+  if (!relatedImages.length) return null;
+
+  return (
+    <section className="tournament-section tournament-gallery-section">
+      <div className="tournament-section-heading">
+        <h2>Φωτογραφίες απονομής</h2>
+        <span>{relatedImages.length}</span>
+      </div>
+      <div className="tournament-gallery-grid">
+        {relatedImages.map((item) => (
+          <article key={item.id}>
+            <a href={item.image} target="_blank" rel="noreferrer">
+              <img src={item.image} alt={item.title} />
+            </a>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -368,6 +416,7 @@ function TournamentDetail() {
 
       <main className="tournament-sections">
         <TeamSummarySection tournament={tournament} />
+        <RelatedGallerySection tournament={tournament} />
         <RelatedVideosSection tournament={tournament} />
         {detailSections.filter((section) => (detailItems[section.key] || []).length).map((section) => (
           <TournamentSection

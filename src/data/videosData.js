@@ -1,8 +1,19 @@
 import video15 from "../assets/videos/video15.mp4";
 import video16 from "../assets/videos/video16.mp4";
 import video17 from "../assets/videos/video17.mp4";
+import video18 from "../assets/videos/video18.mp4";
 
 export const videosData = [
+  {
+    id: "video18",
+    src: video18,
+    title: "FOUR TOGETHER — Απονομή 1ης θέσης Νοεμβρίου",
+    description: "Βίντεο από την απονομή της FOUR TOGETHER στο τριήμερο Ομάδων 1–6, 6–8 Νοεμβρίου 2026.",
+    category: "Ομαδικά",
+    poster: null,
+    featured: true,
+    tournamentId: "aot-26533-2026-11-06-08",
+  },
   {
     id: "video01",
     src: "/videos/video01.mp4",

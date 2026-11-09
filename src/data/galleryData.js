@@ -39,8 +39,52 @@ import gallery25 from "../assets/images/gallery/gqllery25.jpg";
 import gallery26 from "../assets/images/gallery/gallery26.jpg";
 import gallery27 from "../assets/images/gallery/gallery27.jpg";
 import gallery28 from "../assets/images/gallery/gallery28.jpg";
+import gallery29 from "../assets/images/gallery/gallery29.jpg";
+import gallery30 from "../assets/images/gallery/gallery30.jpg";
+import gallery31 from "../assets/images/gallery/gallery31.jpg";
+import gallery34 from "../assets/images/gallery/gallery34.png";
 
 export const galleryData = [
+  {
+    id: "gallery29",
+    image: gallery29,
+    title: "FOUR TOGETHER — Πρωταθλήτρια Ομάδων 1–6",
+    date: "2026-11-08",
+    category: "Αγώνες",
+    tournamentId: "aot-26533-2026-11-06-08",
+    description: "Αυθεντικό στιγμιότυπο από την απονομή της 1ης θέσης στον Α.Ο. Ταταύλα.",
+    featured: true,
+  },
+  {
+    id: "gallery30",
+    image: gallery30,
+    title: "Η απονομή της FOUR TOGETHER",
+    date: "2026-11-08",
+    category: "Αγώνες",
+    tournamentId: "aot-26533-2026-11-06-08",
+    description: "Η ομάδα με τα κύπελλα μετά την ολοκλήρωση του τριημέρου.",
+    featured: false,
+  },
+  {
+    id: "gallery31",
+    image: gallery31,
+    title: "1η θέση — ΑΟΤ Ομάδες 1–6 Νοεμβρίου",
+    date: "2026-11-08",
+    category: "Αγώνες",
+    tournamentId: "aot-26533-2026-11-06-08",
+    description: "Αυθεντική φωτογραφία της FOUR TOGETHER από τη βράβευση.",
+    featured: false,
+  },
+  {
+    id: "gallery34",
+    image: gallery34,
+    title: "FOUR TOGETHER — Επίσημη αναμνηστική εικόνα",
+    date: "2026-11-08",
+    category: "Αγώνες",
+    tournamentId: "aot-26533-2026-11-06-08",
+    description: "Πρόσθετη αναμνηστική εικόνα της βράβευσης· οι αυθεντικές φωτογραφίες παραμένουν το κύριο υλικό.",
+    featured: false,
+  },
   {
     id: "gallery28",
     image: gallery28,

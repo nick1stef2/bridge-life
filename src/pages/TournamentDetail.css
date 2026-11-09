@@ -242,6 +242,40 @@
   font-size: 24px;
 }
 
+.tournament-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tournament-gallery-grid article {
+  overflow: hidden;
+  border: 1px solid #303842;
+  border-radius: 16px;
+  background: #151a20;
+}
+
+.tournament-gallery-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.tournament-gallery-grid article > div {
+  padding: 16px;
+}
+
+.tournament-gallery-grid h3,
+.tournament-gallery-grid p {
+  margin: 0;
+}
+
+.tournament-gallery-grid p {
+  margin-top: 8px;
+  color: #bbbbbb;
+}
+
 .tournament-videos-grid article {
   overflow: hidden;
   border: 1px solid #303842;
