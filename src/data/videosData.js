@@ -1,7 +1,8 @@
 import video15 from "../assets/videos/video15.mp4";
 import video16 from "../assets/videos/video16.mp4";
 import video17 from "../assets/videos/video17.mp4";
-import video18 from "../assets/videos/video18.mp4";
+
+const video18 = "https://media.githubusercontent.com/media/nick1stef2/bridge-life/main/src/assets/videos/video18.mp4";
 
 export const videosData = [
   {
