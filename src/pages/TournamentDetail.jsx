@@ -251,7 +251,7 @@ function SeriesProgressSection({ tournament }) {
                 <strong>{sessionNumber}η ημερίδα</strong>
                 {session ? (
                   <>
-                    <small>{formatDate(session.date)} · {session.position}/{session.participants} · {session.score}%</small>
+                    <small>{formatDate(session.date)} · {formatPlacement(session.position, session.isTied)}/{session.participants} · {session.score}%</small>
                     <Link to={`/tournament/${session.tournamentId}`}>Προβολή αποτελέσματος</Link>
                   </>
                 ) : (
