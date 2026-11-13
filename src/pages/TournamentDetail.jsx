@@ -244,9 +244,10 @@ function SeriesProgressSection({ tournament }) {
       <div className="series-progress-grid">
         {Array.from({ length: tournament.seriesTotalSessions }, (_, index) => index + 1).map((sessionNumber) => {
           const session = completedSessions.get(sessionNumber);
+          const sessionHasOccurred = sessionNumber <= tournament.seriesCompletedSessions;
           return (
-            <article className={session ? "complete" : "pending"} key={sessionNumber}>
-              <span aria-hidden="true">{session ? "●" : "○"}</span>
+            <article className={sessionHasOccurred ? "complete" : "pending"} key={sessionNumber}>
+              <span aria-hidden="true">{sessionHasOccurred ? "●" : "○"}</span>
               <div>
                 <strong>{sessionNumber}η ημερίδα</strong>
                 {session ? (
@@ -255,7 +256,7 @@ function SeriesProgressSection({ tournament }) {
                     <Link to={`/tournament/${session.tournamentId}`}>Προβολή αποτελέσματος</Link>
                   </>
                 ) : (
-                  <small>Δεν έχει ολοκληρωθεί</small>
+                  <small>{sessionHasOccurred ? "Δεν υπάρχει προσωπική εγγραφή στο app" : "Δεν έχει ολοκληρωθεί"}</small>
                 )}
               </div>
             </article>
