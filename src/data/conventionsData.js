@@ -29,6 +29,27 @@ export const conventionsResources = {
         "2NT = τα δύο μινέρ",
       ],
     },
+    {
+      id: "inverted-minors-quick",
+      title: "INVERTED MINORS",
+      description: "Αντιστροφή των αυξήσεων σε άνοιγμα 1♣ ή 1♦, με πλήρη συνέχεια μέχρι το τελικό συμβόλαιο.",
+      label: "Πρόσθετο υλικό Bridge Life",
+      actionHref: "#inverted-minors-full",
+      actionLabel: "Πλήρης συνέχεια αγοράς",
+      bids: [
+        "1♣–2♣ = δυνατό raise, περίπου 10+ HCP, πραγματικό fit",
+        "1♦–2♦ = δυνατό raise, περίπου 10+ HCP, 4+ ♦",
+        "1♣–3♣ = αδύναμο / preemptive raise",
+        "1♦–3♦ = αδύναμο / preemptive raise",
+      ],
+      continuations: [
+        "2NT = minimum / balanced",
+        "3m = minimum, χωρίς καλύτερη περιγραφική αγορά",
+        "Νέο χρώμα = stopper/control και έρευνα για game",
+        "Πρώτα 3NT → αν δεν είναι ασφαλές 5m → με extras slam exploration",
+      ],
+      reminder: "Η αγορά ΔΕΝ τελειώνει στο 2♣ / 2♦.",
+    },
   ],
 };
 

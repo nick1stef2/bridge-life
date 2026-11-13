@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { conventionsData, conventionsResources, conventionsSource } from "../data/conventionsData";
+import { invertedMinorsLesson } from "../data/invertedMinorsData";
 import "./Conventions.css";
 
 const normalize = (value) =>
@@ -11,7 +12,7 @@ const normalize = (value) =>
 
 function Conventions() {
   const [query, setQuery] = useState("");
-  const dontConvention = conventionsResources.additions[0];
+  const supplementalConventions = conventionsResources.additions;
   const needle = normalize(query.trim());
 
   const visibleConventions = useMemo(() => {
@@ -29,14 +30,15 @@ function Conventions() {
     );
   }, [needle]);
 
-  const showDont = !needle || normalize([
-    dontConvention.title,
-    dontConvention.description,
-    ...dontConvention.bids,
-  ].join(" ")).includes(needle);
+  const visibleSupplements = supplementalConventions.filter((convention) => !needle || normalize([
+    convention.title,
+    convention.description,
+    ...convention.bids,
+    ...(convention.continuations || []),
+  ].join(" ")).includes(needle));
 
   const indexItems = [
-    ...(showDont ? [{ id: dontConvention.id, name: dontConvention.title, supplemental: true }] : []),
+    ...visibleSupplements.map((convention) => ({ id: convention.id, name: convention.title, supplemental: true })),
     ...visibleConventions
       .map((convention) => ({ id: convention.id, name: convention.name }))
       .sort((a, b) => a.name.localeCompare(b.name, "el", { sensitivity: "base" })),
@@ -49,26 +51,37 @@ function Conventions() {
         <Link to="/lessons">Lessons</Link>
       </nav>
 
-      {showDont && (
-        <article className="convention-card supplemental-convention featured-dont" id={dontConvention.id}>
-          <div className="convention-number">★</div>
-          <div className="convention-content">
-            <span className="resource-badge resource-badge-extra">ΠΡΩΤΗ ΕΠΙΛΟΓΗ · {dontConvention.label}</span>
-            <h2>{dontConvention.title}</h2>
-            <p className="featured-dont-description">{dontConvention.description}</p>
-            <a
-              href={dontConvention.pdf}
-              target="_blank"
-              rel="noreferrer"
-              className="dont-card-button"
-            >
-              ΑΝΟΙΓΜΑ ΚΑΡΤΑΣ DONT
-            </a>
-            <div className="featured-dont-bids" aria-label="Βασικές αγορές DONT">
-              {dontConvention.bids.map((bid) => <code key={bid}>{bid}</code>)}
-            </div>
-          </div>
-        </article>
+      {visibleSupplements.length > 0 && (
+        <section className="supplemental-grid" aria-label="Πρόσθετα σκονάκια συμβάσεων">
+          {visibleSupplements.map((convention, index) => (
+            <article className="convention-card supplemental-convention featured-dont" id={convention.id} key={convention.id}>
+              <div className="convention-number">★</div>
+              <div className="convention-content">
+                <span className="resource-badge resource-badge-extra">{index === 0 ? "ΠΡΩΤΗ ΕΠΙΛΟΓΗ · " : ""}{convention.label}</span>
+                <h2>{convention.title}</h2>
+                <p className="featured-dont-description">{convention.description}</p>
+                <a
+                  href={convention.pdf || convention.actionHref}
+                  target={convention.pdf ? "_blank" : undefined}
+                  rel={convention.pdf ? "noreferrer" : undefined}
+                  className="dont-card-button"
+                >
+                  {convention.actionLabel || "ΑΝΟΙΓΜΑ ΚΑΡΤΑΣ DONT"}
+                </a>
+                <div className="featured-dont-bids" aria-label={`Βασικές αγορές ${convention.title}`}>
+                  {convention.bids.map((bid) => <code key={bid}>{bid}</code>)}
+                </div>
+                {convention.continuations?.length > 0 && (
+                  <div className="quick-continuations">
+                    <strong>Μετά το 1m–2m</strong>
+                    {convention.continuations.map((item) => <span key={item}>{item}</span>)}
+                  </div>
+                )}
+                {convention.reminder && <p className="quick-reminder">{convention.reminder}</p>}
+              </div>
+            </article>
+          ))}
+        </section>
       )}
 
       <header className="conventions-hero">
@@ -133,7 +146,7 @@ function Conventions() {
 
         <p className="search-count" aria-live="polite">
           {visibleConventions.length} από {conventionsData.length} συμβάσεις ΕΟΜ
-          {showDont ? " + 1 πρόσθετη" : ""}
+          {visibleSupplements.length ? ` + ${visibleSupplements.length} πρόσθετες` : ""}
         </p>
 
         <div className="index-links">
@@ -143,6 +156,57 @@ function Conventions() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section className="inverted-minors-lesson" id={invertedMinorsLesson.id} aria-labelledby="inverted-minors-title">
+        <header className="lesson-section-hero">
+          <p className="section-label">ΠΛΗΡΕΣ ΜΑΘΗΜΑ · {invertedMinorsLesson.partnership}</p>
+          <h2 id="inverted-minors-title">{invertedMinorsLesson.title}</h2>
+          {invertedMinorsLesson.introduction.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </header>
+
+        <div className="lesson-topic-grid">
+          {invertedMinorsLesson.sections.map((section) => (
+            <article className="lesson-topic" key={section.title}>
+              <h3>{section.title}</h3>
+              <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="auction-tree-grid">
+          {invertedMinorsLesson.trees.map((tree) => (
+            <article className="auction-tree" key={tree.title}>
+              <h3>{tree.title}</h3>
+              {tree.branches.map((branch, index) => (
+                <div className="auction-tree-step" key={branch}>
+                  <span>{index + 1}</span><p>{branch}</p>
+                </div>
+              ))}
+            </article>
+          ))}
+        </div>
+
+        <section className="examples-section" aria-labelledby="examples-title">
+          <h3 id="examples-title">12 πλήρη παραδείγματα</h3>
+          <div className="examples-grid">
+            {invertedMinorsLesson.examples.map((example) => (
+              <article className="example-card" key={example.number}>
+                <div className="example-heading"><strong>Παράδειγμα {example.number}</strong><span>{example.contract}</span></div>
+                <p><b>Opener ({example.openerHcp} HCP):</b> {example.opener}</p>
+                <p><b>Responder ({example.responderHcp} HCP):</b> {example.responder}</p>
+                <code>{example.auction}</code>
+                <p><b>Τι θυμάμαι:</b> {example.takeaway}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <aside className="common-mistakes">
+          <h3>Συχνά λάθη</h3>
+          <ul>{invertedMinorsLesson.commonMistakes.map((mistake) => <li key={mistake}>{mistake}</li>)}</ul>
+        </aside>
+        <a href="#inverted-minors-quick" className="back-to-index">↑ Επιστροφή στο σκονάκι</a>
       </section>
 
       <section className="conventions-list" aria-label="Περιγραφές συμβάσεων">
@@ -187,7 +251,7 @@ function Conventions() {
         ))}
       </section>
 
-      {visibleConventions.length === 0 && !showDont && (
+      {visibleConventions.length === 0 && visibleSupplements.length === 0 && (
         <p className="no-conventions">Δεν βρέθηκε σύμβαση με αυτόν τον όρο.</p>
       )}
 
