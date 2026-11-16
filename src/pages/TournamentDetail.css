@@ -280,6 +280,41 @@
   color: #bbbbbb;
 }
 
+.qualification-tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.qualification-tracker-grid article {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #303842;
+  border-radius: 12px;
+  background: #151a20;
+}
+
+.qualification-tracker-grid span,
+.qualification-tracker-grid strong {
+  display: block;
+}
+
+.qualification-tracker-grid span {
+  color: #bbbbbb;
+}
+
+.qualification-tracker-grid strong {
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+  font-size: 21px;
+}
+
+.qualification-note {
+  margin: 18px 0 0;
+  color: #d8e8c8;
+  font-weight: 700;
+}
+
 .team-summary-grid span {
   color: #bbbbbb;
 }

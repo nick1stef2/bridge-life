@@ -252,8 +252,17 @@ function SeriesProgressSection({ tournament }) {
                 <strong>{sessionNumber}η ημερίδα</strong>
                 {session ? (
                   <>
-                    <small>{formatDate(session.date)} · {formatPlacement(session.position, session.isTied)}/{session.participants} · {session.score}%</small>
-                    <Link to={`/tournament/${session.tournamentId}`}>Προβολή αποτελέσματος</Link>
+                    <small>
+                      {formatDate(session.date)} · {formatPlacement(session.position, session.isTied)}/{session.participants} · {session.score}
+                      {session.scoreUnit ? ` ${session.scoreUnit}` : "%"}
+                    </small>
+                    {session.tournamentId ? (
+                      <Link to={`/tournament/${session.tournamentId}`}>Προβολή αποτελέσματος</Link>
+                    ) : (
+                      <a href={`https://hellasbridge.org/results/${session.eventId}`} target="_blank" rel="noreferrer">
+                        Επίσημο αποτέλεσμα ΕΟΜ
+                      </a>
+                    )}
                   </>
                 ) : (
                   <small>{sessionHasOccurred ? "Δεν υπάρχει προσωπική εγγραφή στο app" : "Δεν έχει ολοκληρωθεί"}</small>
@@ -268,6 +277,35 @@ function SeriesProgressSection({ tournament }) {
           Η επίσημη συγκεντρωτική κατάταξη δεν έχει ακόμη δημοσιευτεί από την ΕΟΜ.
         </p>
       )}
+    </section>
+  );
+}
+
+function QualificationTrackerSection({ tournament }) {
+  const tracker = tournament.qualificationTracker;
+  if (!tracker) return null;
+
+  const statusLabel = tracker.status === "qualifying"
+    ? "QUALIFYING"
+    : tracker.status === "outside"
+      ? "CURRENTLY OUTSIDE"
+      : "PENDING / NOT YET DETERMINED";
+
+  return (
+    <section className="tournament-section qualification-tracker-section">
+      <div className="tournament-section-heading">
+        <h2>Πανελλήνιο — Qualification Tracker</h2>
+        <span>{tracker.sessionsCompleted}/{tracker.sessionsCompleted + tracker.sessionsRemaining}</span>
+      </div>
+      <div className="qualification-tracker-grid">
+        <article><span>Current rank</span><strong>{toDisplay(tracker.currentRank)}</strong></article>
+        <article><span>Qualification cutoff</span><strong>{toDisplay(tracker.cutoff)}</strong></article>
+        <article><span>Current status</span><strong>{statusLabel}</strong></article>
+        <article><span>Margin</span><strong>{toDisplay(tracker.margin)}</strong></article>
+        <article><span>Remaining sessions</span><strong>{tracker.sessionsRemaining}</strong></article>
+        <article><span>Next phase</span><strong>{tracker.nextPhaseDate ? formatDate(tracker.nextPhaseDate) : missingValue}</strong></article>
+      </div>
+      {tracker.note && <p className="qualification-note">{tracker.note}</p>}
     </section>
   );
 }
@@ -463,6 +501,7 @@ function TournamentDetail() {
       <main className="tournament-sections">
         <TeamSummarySection tournament={tournament} />
         <SeriesProgressSection tournament={tournament} />
+        <QualificationTrackerSection tournament={tournament} />
         <RelatedGallerySection tournament={tournament} />
         <RelatedVideosSection tournament={tournament} />
         {detailSections.filter((section) => (detailItems[section.key] || []).length).map((section) => (
