@@ -121,6 +121,56 @@ function LessonDetail() {
     </div>
   );
 
+  const renderPreferenceLesson = () => (
+    <div className="preference-lesson">
+      <p className="rebid-subtitle">{lesson.subtitle}</p>
+
+      <div className="rebid-resources" aria-label="Υλικό μαθήματος">
+        <a href={lesson.document} target="_blank" rel="noreferrer">Άνοιγμα μαθήματος δασκάλου</a>
+      </div>
+
+      <section className="preference-key-rule" aria-labelledby="preference-key-rule-title">
+        <h2 id="preference-key-rule-title">Ο βασικός κανόνας</h2>
+        <p>
+          Όταν ο responder έχει ήδη δείξει αδύνατο χέρι, η επαναφορά στο πρώτο
+          χρώμα του opener είναι συχνά απλή <strong>ΠΡΟΤΙΜΗΣΗ</strong> και όχι πρόσθετη δύναμη ή
+          εγγύηση πλήρους fit.
+        </p>
+      </section>
+
+      <div className="preference-rules-grid">
+        {lesson.preferenceRules.map((rule) => (
+          <section className="preference-rule" key={rule.title}>
+            <h2>{rule.title}</h2>
+            <p>{rule.text}</p>
+          </section>
+        ))}
+      </div>
+
+      <section className="preference-examples" aria-labelledby="preference-examples-title">
+        <h2 id="preference-examples-title">Πρακτικά παραδείγματα</h2>
+        <div className="preference-example-grid">
+          {lesson.preferenceExamples.map((example) => (
+            <article key={example.title}>
+              <h3>{example.title}</h3>
+              <p className="preference-auction">{example.auction}</p>
+              <p>{example.explanation}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="preference-quick-guide" aria-labelledby="preference-quick-guide-title">
+        <h2 id="preference-quick-guide-title">ΠΡΟΤΙΜΗΣΗ — QUICK GUIDE</h2>
+        <div className="preference-quick-list">
+          {lesson.preferenceQuickGuide.map((item) => (
+            <p key={item.cue}><strong>{item.cue}:</strong><span>→ {item.action}</span></p>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+
   return (
     <div className="lesson-detail-page">
       <Link
@@ -146,6 +196,7 @@ function LessonDetail() {
 
       {lesson.structuredType === "openerRebid" ? renderOpenerRebidLesson()
         : lesson.structuredType === "responderSecondBid" ? renderResponderSecondBidLesson()
+        : lesson.structuredType === "preference" ? renderPreferenceLesson()
         : lesson.rules ? (
         <>
           <p className="lesson-introduction">{lesson.introduction}</p>

@@ -141,6 +141,27 @@
 .second-bid-table tbody tr:nth-child(even) { background: #21313d; }
 .second-bid-table td:nth-child(2) { color: #fff; font-weight: 800; }
 
+.preference-lesson { color: #edf3f7; }
+.preference-key-rule { margin-bottom: 20px; padding: 20px 22px; border: 2px solid #d6a84b; border-radius: 18px; background: #332b18; }
+.preference-key-rule h2 { margin: 0 0 10px; color: #ffdc8a; }
+.preference-key-rule p { margin: 0; font-size: 18px; line-height: 1.6; }
+.preference-rules-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 24px; }
+.preference-rule { min-width: 0; padding: 18px; border: 1px solid #334b5d; border-radius: 14px; background: #1c2832; }
+.preference-rule h2 { margin: 0 0 9px; color: #8ec5e1; font-size: 20px; }
+.preference-rule p { margin: 0; line-height: 1.55; }
+.preference-examples { margin-bottom: 24px; padding: 20px; border: 1px solid #334b5d; border-radius: 18px; background: #161f27; }
+.preference-examples > h2 { margin: 0 0 16px; text-align: center; }
+.preference-example-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.preference-example-grid article { min-width: 0; padding: 16px; border-radius: 12px; background: #24313c; }
+.preference-example-grid h3 { margin: 0 0 10px; font-size: 18px; }
+.preference-example-grid p { margin: 8px 0 0; line-height: 1.5; }
+.preference-auction { color: #fff; font-size: 19px; font-weight: 800; }
+.preference-quick-guide { padding: 22px; border: 2px solid #6fa8dc; border-radius: 18px; background: #172b3a; }
+.preference-quick-guide h2 { margin: 0 0 15px; color: #a9d8ef; text-align: center; }
+.preference-quick-list { display: grid; gap: 8px; }
+.preference-quick-list p { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 12px; margin: 0; padding: 10px 12px; border-radius: 9px; background: #213b4d; line-height: 1.45; }
+.preference-quick-list span { color: #fff; }
+
 @media (max-width: 700px) {
   .rebid-subtitle { padding: 0 10px; font-size: 18px; }
   .rebid-resources a { width: 100%; text-align: center; }
@@ -165,4 +186,10 @@
   .second-bid-table td { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 10px; border: 0; border-bottom: 1px solid #3a5264; }
   .second-bid-table td:last-child { border-bottom: 0; }
   .second-bid-table td::before { content: attr(data-label); color: #8ec5e1; font-weight: 800; }
+  .preference-key-rule { padding: 17px; }
+  .preference-key-rule p { font-size: 17px; }
+  .preference-rules-grid, .preference-example-grid { grid-template-columns: 1fr; }
+  .preference-examples { padding: 13px; }
+  .preference-quick-guide { padding: 16px; }
+  .preference-quick-list p { grid-template-columns: 1fr; gap: 4px; }
 }
