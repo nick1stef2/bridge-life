@@ -7,13 +7,13 @@ export const playerData = {
     platinum: 2,
   },
   unofficialPoints: {
-    black: 1370,
-    gold: 70,
+    black: 1391,
+    gold: 72,
     platinum: 3.7,
   },
   pendingPoints: {
-    black: 2306,
-    gold: 107,
+    black: 2327,
+    gold: 109,
     platinum: 5.7,
   },
   officialStatus: {
@@ -23,6 +23,6 @@ export const playerData = {
     source: "ΕΟΜ – καρτέλα αθλητή 19350",
     sourceUrl: "https://hellasbridge.org/bridge/players/code/19350",
     checkedAt: "2026-11-20",
-    pendingNotice: "Η καρτέλα ΕΟΜ εμφανίζει 1.370 Μ, 70 Χ και 3,7 Π ως προσωρινούς. Το Event 209258 δεν εμφανίζει απονομή. Το συγκεντρωτικό 209259 εμφανίζει 21 Μ και 2 Χ, αλλά η απονομή δεν έχει ακόμη ενσωματωθεί στο προσωρινό balance της καρτέλας αθλητή και δεν προστέθηκε χειροκίνητα στα συνολικά.",
+    pendingNotice: "Η καρτέλα ΕΟΜ εμφανίζει 1.370 Μ, 70 Χ και 3,7 Π ως προσωρινούς. Προστέθηκε στην προσωρινή εκτίμηση η επίσημη απονομή του Event 209259: 21 Μ και 2 Χ. Το Event 209258 δεν εμφανίζει απονομή.",
   },
 };
