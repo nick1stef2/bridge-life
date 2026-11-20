@@ -255,6 +255,7 @@ function SeriesProgressSection({ tournament }) {
                     <small>
                       {formatDate(session.date)} · {formatPlacement(session.position, session.isTied)}/{session.participants} · {session.score}
                       {session.scoreUnit ? ` ${session.scoreUnit}` : "%"}
+                      {session.excludedFromAggregate ? " · Δεν προσμετρήθηκε στο συγκεντρωτικό" : ""}
                     </small>
                     {session.tournamentId ? (
                       <Link to={`/tournament/${session.tournamentId}`}>Προβολή αποτελέσματος</Link>
@@ -275,6 +276,12 @@ function SeriesProgressSection({ tournament }) {
       {tournament.officialAggregateStatus === "notPublished" && (
         <p className="series-aggregate-note">
           Η επίσημη συγκεντρωτική κατάταξη δεν έχει ακόμη δημοσιευτεί από την ΕΟΜ.
+        </p>
+      )}
+      {tournament.officialAggregateStatus === "published" && (
+        <p className="series-aggregate-note">
+          Τελικό συγκεντρωτικό: {formatPlacement(tournament.position, tournament.isTied)}/{tournament.participants} ζεύγη · {formatScore(tournament)}
+          {tournament.aggregateSessionsCounted ? ` · προσμετρήθηκαν ${tournament.aggregateSessionsCounted} από ${tournament.seriesTotalSessions} ημερίδες` : ""}.
         </p>
       )}
     </section>
