@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "boards": 24,
+  "uniqueCards": "24/24",
+  "thirteenPerSeat": "24/24",
+  "hcpTotal": "24/24",
+  "auctionHandLogic": "24/24 constrained by trump fit, defensive strength and action profile",
+  "blindFilesLeakFree": true,
+  "fixedPartnership": "North = Νίκος, South = Μιχάλης",
+  "issues": []
+}

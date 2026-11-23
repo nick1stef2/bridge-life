@@ -1,0 +1,25 @@
+﻿Board,Category,Scoring,Correct action,Contract,Exam
+1,Προφανές κοντρ,MP,Double,5♦X,No
+2,Προφανές pass,IMP,Pass,2♥,No
+3,Penalty ή αγορά;,MP,Bid,3♥,No
+4,Προφανές κοντρ,IMP,Double,4♠X,No
+5,Οριακή απόφαση,MP,Pass,3♣,No
+6,Προφανές κοντρ,MP,Double,2♠X,No
+7,Preempt,IMP,Bid,3♥,No
+8,Θυσία,MP,Double,5♣X,No
+9,Παγίδα vulnerability,IMP,Pass,2♥,No
+10,Partner double,MP,Pass,3♥X,No
+11,Defense after double,IMP,Double,2♠X,No
+12,Scoring trap,MP,Bid,4♦,No
+13,Game contract,IMP,Double,4♠X,No
+14,Misleading hand,MP,Pass,2♥,No
+15,Penalty ή αγορά;,IMP,Bid,2♥,No
+16,Partner double,MP,Double,2♥X,No
+17,Μικτό τεστ,IMP,Double,4♥X,Yes
+18,Μικτό τεστ,MP,Pass,2♠,Yes
+19,Μικτό τεστ,IMP,Bid,3♣,Yes
+20,Μικτό τεστ,MP,Double,2♠X,Yes
+21,Μικτό τεστ,IMP,Pass,2♠,Yes
+22,Μικτό τεστ,MP,Bid,3♥,Yes
+23,Μικτό τεστ,IMP,Double,5♣X,Yes
+24,Μικτό τεστ,MP,Pass,2♠,Yes

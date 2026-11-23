@@ -171,6 +171,31 @@ function LessonDetail() {
     </div>
   );
 
+  const renderPenaltyDoubleLesson = () => (
+    <div className="penalty-double-lesson">
+      <p className="rebid-subtitle">{lesson.subtitle}</p>
+      <section className="penalty-system-note"><strong>Σύστημα ζευγαριού:</strong> {lesson.systemNote}</section>
+
+      <section className="penalty-section">
+        <h2>Double δεν σημαίνει πάντα τιμωρία</h2>
+        <div className="penalty-meaning-grid">{lesson.doubleMeanings.map(([name, meaning]) => <article key={name}><h3>{name}</h3><p>{meaning}</p></article>)}</div>
+      </section>
+
+      <div className="penalty-rule-grid">{lesson.decisionRules.map((rule) => <section key={rule.title}><h2>{rule.title}</h2><ul>{rule.bullets.map((item) => <li key={item}>{item}</li>)}</ul></section>)}</div>
+
+      <section className="penalty-section">
+        <h2>Vulnerability και πραγματικό penalty score</h2>
+        <div className="penalty-table-wrap"><table><thead><tr><th>Αποτέλεσμα</th><th>Χωρίς Double</th><th>Με Double</th></tr></thead><tbody>{lesson.scoringRows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div>
+      </section>
+
+      <div className="penalty-format-grid">{lesson.formatNotes.map((item) => <section key={item.title}><h2>{item.title}</h2><p>{item.text}</p></section>)}</div>
+
+      <section className="penalty-quick-guide"><h2>ΚΟΝΤΡ ΤΙΜΩΡΙΑΣ — QUICK CHECK</h2><ol>{lesson.quickChecklist.map((item) => <li key={item}>{item}</li>)}</ol><p><strong>Μνήμη:</strong> Ατού + λεβέ + θέση ονέρ + vulnerability + scoring. Αν λείπει ένα από αυτά, ξανασκέψου πριν πεις Double.</p></section>
+
+      <section className="penalty-resources"><h2>Προπόνηση Νίκου–Μιχάλη</h2><p>24 τυφλές διανομές με σταθερό North = Νίκος και South = Μιχάλης. Τα live PBN/LIN δεν αποκαλύπτουν τη λύση.</p><div>{lesson.trainingResources.map((item) => <a key={item.href} href={item.href} target="_blank" rel="noreferrer">{item.label}</a>)}</div></section>
+    </div>
+  );
+
   return (
     <div className="lesson-detail-page">
       <Link
@@ -197,6 +222,7 @@ function LessonDetail() {
       {lesson.structuredType === "openerRebid" ? renderOpenerRebidLesson()
         : lesson.structuredType === "responderSecondBid" ? renderResponderSecondBidLesson()
         : lesson.structuredType === "preference" ? renderPreferenceLesson()
+        : lesson.structuredType === "penaltyDouble" ? renderPenaltyDoubleLesson()
         : lesson.rules ? (
         <>
           <p className="lesson-introduction">{lesson.introduction}</p>
