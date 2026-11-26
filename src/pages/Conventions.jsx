@@ -4,6 +4,11 @@ import { conventionsData, conventionsResources, conventionsSource } from "../dat
 import { invertedMinorsLesson } from "../data/invertedMinorsData";
 import "./Conventions.css";
 
+const teamConventionCards = [
+  { name: "ΝΙΚΟΣ – ΜΙΧΑΛΗΣ", pdf: "nikos-michalis-EOM.pdf" },
+  { name: "ΒΑΝΝΑ – ΠΕΤΡΟΣ", pdf: "vanna-petros-EOM.pdf" },
+];
+
 const normalize = (value) =>
   value
     .normalize("NFD")
@@ -50,6 +55,25 @@ function Conventions() {
         <Link to="/">← Επιστροφή στην αρχική</Link>
         <Link to="/lessons">Lessons</Link>
       </nav>
+
+      <section aria-labelledby="team-convention-cards">
+        <h2 id="team-convention-cards">♠ ♥ ΚΑΡΤΕΣ ΣΥΜΒΑΣΕΩΝ – 4TOGETHER ♦ ♣</h2>
+        <p>Προσχέδιο – προς επιβεβαίωση. Ανεπίσημες κάρτες αναφοράς σε Α4.</p>
+        <div className="supplemental-grid">
+          {teamConventionCards.map(({ name, pdf }) => {
+            const href = `${import.meta.env.BASE_URL}4together/${pdf}`;
+            return (
+              <article className="convention-card" key={name}>
+                <div className="convention-content">
+                  <h3>{name}</h3>
+                  <p><a className="dont-card-button" href={href} target="_blank" rel="noreferrer">Προβολή κάρτας συμβάσεων</a></p>
+                  <a href={href} download>Λήψη PDF</a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
       {visibleSupplements.length > 0 && (
         <section className="supplemental-grid" aria-label="Πρόσθετα σκονάκια συμβάσεων">
