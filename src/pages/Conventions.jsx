@@ -5,8 +5,7 @@ import { invertedMinorsLesson } from "../data/invertedMinorsData";
 import "./Conventions.css";
 
 const teamConventionCards = [
-  { name: "ΝΙΚΟΣ – ΜΙΧΑΛΗΣ", pdf: "nikos-michalis-EOM.pdf" },
-  { name: "ΒΑΝΝΑ – ΠΕΤΡΟΣ", pdf: "vanna-petros-EOM.pdf" },
+  { name: "ΝΙΚΟΣ – ΜΙΧΑΛΗΣ", pdf: "nikos-michalis-A5-team-card.pdf" },
 ];
 
 const normalize = (value) =>
@@ -58,7 +57,7 @@ function Conventions() {
 
       <section aria-labelledby="team-convention-cards">
         <h2 id="team-convention-cards">♠ ♥ ΚΑΡΤΕΣ ΣΥΜΒΑΣΕΩΝ – 4TOGETHER ♦ ♣</h2>
-        <p>Προσχέδιο – προς επιβεβαίωση. Ανεπίσημες κάρτες αναφοράς σε Α4.</p>
+        <p>Προσχέδιο – προς επιβεβαίωση. Ανεπίσημη κάρτα αναφοράς σε Α5.</p>
         <div className="supplemental-grid">
           {teamConventionCards.map(({ name, pdf }) => {
             const href = `${import.meta.env.BASE_URL}4together/${pdf}`;
